@@ -1,0 +1,365 @@
+question,response,retrieved_context,retrieve_time_sec,generate_time_sec,precision,recall,f1,correctness
+"The following questions are in reference to a hypothetical “Loan Arranger” system. The Loan Arranger is meant to assist a “consolidating organization”, a specific type of business in the financial domain.
+Bank customers often borrow money from banks; they promise to repay the loan plus interest over a certain period of time. Each of these loans is an ultimately lucrative proposition for the bank, but usually a long period of time is required for the bank to collect its earnings. Also, there is always the chance that a borrower will be unable to repay the loan. Consolidating organizations make money by buying loans from banks and reselling them to investors. Loan analysts, employed by the consolidating organization, work with investors to select a set of loans that meet their requirements in terms of time, risk, and initial purchase price.
+The Loan Arranger application has two main types of functionality. First, it tracks all of the loans that are owned by the consolidating organization. (The entire set of loans owned by the organization is known as its “portfolio”.) In order to track loans correctly, the Loan Arranger must interface with the banks to find out about new loans that should be added to the portfolio, or updates to loans that are already in the portfolio. Secondly, the Loan Arranger allows a loan analyst to select a subset of loans from the portfolio that match an investor's desired investment characteristics (these subsets of loans are referred to as “bundles”). The loan analyst can either select the bundle manually, or ask the system to select an optimal bundle given the investor's constraints. The Loan Arranger then updates the portfolio when the bundle is purchased by the investor. There are numerous constraints on how this functionality is to be achieved; most mportantly, the Loan Arranger must be usable by more than one analyst at a time.
+As a first step in developing the Loan Arranger, the development team meets with a representative from the consolidating organization to formulate a set of requirements.
+
+Image Description: A state diagram for class 'Borrower' showing three states: Good Status, Late Status, and Default Status. There is a start state leading to Good Status. From Good Status, a transition labeled 'All loans are good' points back to Good Status. A transition labeled 'A loan is late' points from Good Status to Late Status. A transition labeled 'A loan is default' points from Good Status to Default Status. From Late Status, a transition labeled 'A loan is late' points back to Late Status. A transition labeled 'All loans are good' points from Late Status to Good Status. A transition labeled 'A loan is default' points from Late Status to Default Status. From Default Status, a transition labeled 'A loan is default' points back to Default Status. There is a final state leading from Default Status.
+43.  TRUE or FALSE: It cannot be determined what state an object of type Borrower will be in when it is created.","TRUE. The context does not provide information about the initial state of a Borrower object upon creation, only the states and transitions between them.","[CHUNK #1]
+## Preconditions and Assumptions
+
+- The Loan Arranger system assumes that there already exist lenders, borrowers, and loans from which to choose, and that investors exist who are interested in buying bundles of loans.
+- The Loan Arranger system contains a repository of information about loans from a variety of lenders.This repository may be empty.
+- At  regular  intervals, each  lender  provides  reports  listing  the  loans  that  it  has made.Loans that have already been purchased by FCO will be indicated on these reports.
+- Each loan in the Loan Arranger repository represents an investment to then be bundled and sold with other loans.
+- The Loan Arranger system may be used by up to four loan analysts simultaneously.
+
+## High-Level Description of Functionality
+
+1. The Loan Arranger system will receive monthly reports from each lender of new loans issued by that lender.The loans in the report recently purchased by FCO for its investment portfolio will be marked in the report. The Loan Arranger system will use the report information to update its repository of available loans.
+2. The Loan Arranger system will receive monthly reports from each lender providing updates about the status of loans issued by that lender.The updated information will include: the current interest rate for an adjustable rate mortgage, and the status of the borrower with respect to the loan (good, late, or default). For loans in the  FCO  portfolio, the  Loan Arranger  will  update  the  data  in  the  repository. Loans not in the FCO portfolio will also be examined in order to determine if a borrower's standing should be updated. FCO will provide each lender with the format for the reports, so that all reports will share a common format.
+3. The loan analyst can change individual data records as described in Data Operations.
+4. All new data must be validated before they are added to the repository (according to the rules described in Data Constraints).
+5. The loan analyst can use the Loan Arranger to identify bundles of loans to sell to particular investors.
+
+## Functional Requirements
+
+[CHUNK #2]
+## TABLE 2.3 ( continued )
+
+Lending institution: A synonym for lender. See lender .
+
+Loan: Aloan is a set of information that describes a home loan and the borrower-identifying information associated with the loan.The following information is associated with each loan: loan amount, interest rate, interest rate type (adjustable or f fixed), settlement date (the date the borrower originally borrowed the money from the lender), term (expressed as number of years), borrower, lender, loan type (jumbo or regular), and property (identif fied by the address of the property).A loan must have exactly one associated lender and exactly one associated borrower. In addition, each loan is identif fied with a loan risk and a loan status.
+
+Loan analyst: The loan analyst is a professional employee of FCO who is trained in using the Loan Arranger system to manage and bundle loans. Loan analysts are familiar with the terminology of loans and lending, but they may not have all the relevant information at hand with which to evaluate a single loan or collection of loans.
+
+Loan risk: Each loan is associated with a level of risk, indicated by an integer from 1 to 100. 1 represents the lowest-risk loan; that is, it is unlikely that the borrower will be late or default on this loan. 100 represents the highest risk; that is, it is almost certain that the borrower will default on this loan.
+
+Loan status: A loan can have one of three status designations: good, late, or default.A loan is in good status if the borrower has made all payments up to the current time.A loan is in late status if the borrower's last payment was made but not by the payment due date.A loan is in default status if the borrower's last payment was not received within 10 days of the due date.
+
+Loan type: A loan is either a jumbo mortgage, where the property is valued in excess of $275,000, or a regular mortgage, where the property value is $275,000 or less.
+
+Portfolio: The collection of loans purchased by FCO and available for inclusion in a bundle.The repository maintained by the Loan Arranger contains information about all of the loans in the portfolio.
+
+[CHUNK #3]
+FIGURE 4.11 UML statechart diagram for Loan class.
+
+<!-- image -->
+
+the center section of the state.The state's lower section lists actions and activities on the state's  local  variables  as  well  as  on  the  object's  attributes. The  distinction  between actions and activities is subtle: an action is a computation that takes relatively no time to complete and that is uninterruptible, such as assigning an expression to a variable or sending a message. An action can be triggered by a transition entering or exiting the state, in which case it is designated by keyword entry or exit followed by arbitrarily many actions and generated events; or it  can  be  triggered  by  the  occurrence  of  an event, in which case it is designated by the event name followed by arbitrarily many actions and generated events. In our Loan statechart, variable num renews is incremented every time state item  on  loan is  entered, that is, every time the loan is renewed; and  a recallNotify event  is  sent  to  the Patron whenever a recall event is received in that state. In contrast to actions, an activity is a more complex computation that executes over a period of time and that may be interruptible, such as executing an operation. Activities are initiated on entry to the state. When a transition, including a looping transition like the one triggered by renew , executes, the order in which actions are applied is as follows: first, the exit actions of the transition's source state are applied, followed by the transition's own actions, followed by the entry actions and activities of the new state.
+
+The semantics of UML diagrams, and how the different diagrams fit together, are intentionally undefined, so that specifiers can ascribe semantics that best fit their problem. However, most practitioners view UML statecharts as communicating finite-state machines with first-in, first-out (FIFO) communication channels. Each object's state machine has an input queue that holds the messages sent to the object from other objects in the model or from the model's environment. Messages are stored in the input
+
+[CHUNK #4]
+Lender: A lender is an institution that makes loans to borrowers.A lender can have zero, one, or many loans.
+
+Lender information: Lender information is descriptive data that are imported from outside the application. Lender information cannot be changed or deleted.The following information is associated with each lender: lender name (institution), lender contact (person at that institution), phone number for contact, a unique lender identification number. Once added to the system, a lender entry can be edited but not removed.
+",0.504,1.095,0.9999999999,0.0,0.0,0.45948619081522146
+What is the difference between technical and business quality? Explain why each is important.,"Technical quality refers to the attributes of a software product and its development process, such as operational performance, fault tolerance, security, maintainability, and adherence to cost and timing parameters. It is often measured by metrics like uptime, maintenance costs, and fault rates. Business quality, on the other hand, focuses on the value the software provides to the business, such as the number of claims processed or other quantitative business outcomes. 
+
+Technical quality is important because it ensures the software functions reliably, efficiently, and securely, which supports smooth operations. Business quality is crucial because it aligns the software with the organization's goals and justifies the investment by delivering measurable business value. Without business quality, even technically excellent software may not be launched if it does not clearly support business objectives.","[CHUNK #1]
+Several researchers have taken a close look at the relationships between business value and technical value. For example, Simmons interviewed many Australian businesses  to  determine  how  they  make  their  information  technology-related  business decisions. She  proposes  a  framework  for  understanding  what  companies  mean  by 'business value' (Simmons 1996). In a report by Favaro and Pfleeger (1997), Steve Andriole, chief information officer for Cigna Corporation, a large U.S. insurance company, described how his company distinguishes technical value from business value:
+
+We measure the quality [of our software] by the obvious metrics: up versus down time, maintenance costs, costs connected with modifications, and the like. In other words, we manage development based on operational performance within cost parameters. HOW the vendor provides cost-effective performance is less of a concern than the results of the effort. . . . The issue of business versus technical value is near and dear to our heart . . . and one [on] which we focus a great deal of attention. I guess I am surprised to learn that companies would contract with companies for their technical value, at the relative expense of business value. If anything, we err on the other side! If there is not clear (expected) business  value  (expressed  quantitatively: number  of  claims  processed, etc.)  then  we  can't launch a systems project. We take very seriously the 'purposeful' requirement phase of the project, when we ask:'why do we want this system?' and 'why do we care?'
+
+[CHUNK #2]
+needed to verify these assumptions and to determine which aspects of quality affect the product's actual use.We may have to develop models that link the product view to the user view.
+
+Customers or marketers often take a user view of quality. Researchers sometimes hold a product view, and the development team has a manufacturing view. If the differences in viewpoints are not made explicit, then confusion and misunderstanding can lead to bad decisions and  poor  products. The  value-based  view  can  link  these  disparate  pictures  of  quality. By equating quality to what the customer is willing to pay, we can look at trade-offs between cost and  quality, and  we  can  manage  conflicts  when  they  arise. Similarly, purchasers  compare product costs with potential benefits, thinking of quality as value for money.
+
+Kitchenham and Pfleeger (1996) investigated the answer to this question in their introduction to a special issue of IEEE Software on quality. They note that the context helps to determine the answer. Faults tolerated in word processing software may not be acceptable in safety-critical or mission-critical systems. Thus, we must consider quality in at least three ways: the quality of the product, the quality of the process that results in the product, and the quality of the product in the context of the business environment in which the product will be used.
+
+## The Quality of the Product
+
+We can ask people to name the characteristics of software that contribute to its overall quality, but we are likely to get different answers from each person we ask. This difference occurs because the importance of the characteristics depends on who is analyzing the software. Users judge software to be of high quality if it does what they want in a way that is easy to learn and easy to use. However, sometimes quality and functionality are intertwined; if something is hard to learn or use but its functionality is worth the trouble, then it is still considered to have high quality.
+
+[CHUNK #3]
+- Where and when are we likely to find a particular kind of fault?
+- How can we find faults earlier in the development process?
+- How can we build in fault tolerance so that we minimize the likelihood that a fault will become a failure?
+- How can we design secure, high-quality systems?
+- Are there alternative activities that can make our process more effective or efficient at ensuring quality?
+
+These questions can be applied to the whole development process or to a subprocess, such as configuration management, reuse, or testing; we will investigate these processes in later chapters.
+
+In the 1990s, there was a well-publicized focus on process modeling and process improvement  in  software  engineering. Inspired  by  the  work  of  Deming  and  Juran, and implemented by companies such as IBM, process guidelines such as the Capability
+
+Maturity Model (CMM), ISO 9000, and Software Process Improvement and Capability dEtermination (SPICE) suggested that by improving the software development process, we can improve the quality of the resulting products.In Chapter 2,we will see how to identify relevant process activities and model their effects on intermediate and final products. Chapters 12 and 13 will examine process models and improvement frameworks in depth.
+
+## Quality in the Context of the Business Environment
+
+When the focus of quality assessment is on products and processes, we usually measure quality with mathematical expressions involving faults, failures, and timing. Rarely is the scope broadened to include a business perspective, where quality is viewed in terms of the products and services being provided by the business in which the software is embedded. That is, we look at the technical value of our products, rather than more broadly at their business value, and we make decisions based only on the resulting products' technical quality. In other words, we assume that improving technical quality will automatically translate into business value.
+
+[CHUNK #4]
+- Specify a quantitative description for each adverb and adjective so that the meaning of qualifiers is clear and unambiguous.
+- Replace pronouns with specific names of entities.
+- Make sure that every noun is defined in exactly one place in the requirements documents.
+
+An alternative approach, advocated by the Quality Function Deployment (QFD) school (Akao 1990), is to realize quality requirements as special-purpose functional requirements, and to test quality requirements by testing how well their associated functional requirements have been satisfied.This approach works better for some quality requirements than it does for others. For example, real-time requirements can be expressed as additional conditions or constraints on when required functionality occurs. Other quality requirements, such as security, maintainability, and performance, may be satisfied by adopting existing designs and protocols that have been developed specifically to optimize a particular quality requirement.
+
+reflect  on  which  of  the  requested  services  and  features  are  most  essential. A  loose prioritization scheme might separate requirements into three categories:
+
+1. Requirements that absolutely must be met (Essential)
+2. Requirements that are highly desirable but not necessary (Desirable)
+3. Requirements that are possible but could be eliminated (Optional)
+",1.356,4.032,0.9999999999,1.0,0.99999999995,0.9404818032408275
+What does it mean to say that a design review should be “egoless”? Why are egoless reviews necessary? Suggest some s teps that may help achieve egoless reviews.,"A design review is described as “egoless” because the criticism and discussion are directed at the design process and the product, not at the individuals involved. Participants focus on investigating the integrity of the design rather than judging the designers themselves. This approach fosters a collaborative environment where everyone works toward the same goal without personal conflicts.
+
+Egoless reviews are necessary to encourage open communication, reduce defensiveness, and ensure that faults are identified and addressed objectively. This helps in finding problems early when they are easier and less expensive to fix.
+
+Steps to help achieve egoless reviews include:
+- Directing comments and criticism at the design and process, not at people.
+- Encouraging all participants to share responsibility for the design.
+- Having a moderator who maintains objectivity, balances discussion, and acts as an intermediary between opposing viewpoints.
+- Keeping the review atmosphere informal and focused on the product.
+- Including diverse team members who represent different perspectives and roles.
+- Using a recorder to document discussions impartially without participating in debates.","[CHUNK #1]
+An active  design  review (Parnas  and  Weiss  1985)  is  a  particularly  effective method for evaluating the quality of the SAD and determining whether it contains the right information. In an active review, reviewers exercise the design document by using it in ways that developers will use the final document in practice. That is, rather than reading  the  documentation  and  looking  for  problems, which  is  characterized  as  a passive  review  process , the  reviewers  are  given  or  devise  questions  that  they  must answer by looking up information in the SAD. Each reviewer represents a different class of reader and is asked questions suitable to his or her use of a SAD.Thus, a maintainer  may  be  asked  to  determine  which  software  units  would  be  affected  by  an expected change to the system, whereas a program designer may be asked to explain why an interface's preconditions are necessary.
+
+In general, the point of the design review is to detect faults rather than correct them. It is important to remember that those who participate in the review are investigating the integrity of the design, not of the designers. Thus, the review is valuable in emphasizing to all concerned that we are working toward the same goal. The criticism and discussion during the design review are egoless, because comments are directed at the process and the product, not at the participants.The review process encourages and enhances communication among the diverse members of the team.
+
+Moreover, the process benefits everyone by finding faults and problems when they are easy and inexpensive to correct. It is far easier to change something in its abstract, conceptual stage than when it is already implemented. Much of the difficulty and expense of fixing faults  late  in  development  derive  from  tracking  a  fault  to  its source. If a fault is spotted in the design review, there is a good chance that the problem is located somewhere in the design. However, if a fault is not detected until the system
+
+[CHUNK #2]
+Developers who are not involved with the project provide an outsider's perspective. They can be objective when commenting on the proposed design, because they have no personal stake in it. In fact, they may have fresh ideas and can offer a new slant on things.They also act as ad hoc verifiers, checking that the design is correct, is consistent, and conforms to good design practice. By participating in the review, they assume equal responsibility for the design with the designers themselves. This shared responsibility forces all in the review process to scrutinize every design detail.
+
+During  the  review, we  present  the  proposed  architecture  to  our  audience. In doing so, we demonstrate that the design has the required structure, function, and characteristics specified by the requirements documents.Together, we confirm that the proposed design includes the required hardware, interfaces with other systems, input, and output. We trace typical  execution  paths  through  the  architecture, to  convince  ourselves that the communication and coordination mechanisms work properly. We also trace  exceptional  execution  paths, to  review  the  design  measures  we  have  taken  to detect and recover from faults and bad inputs.To validate nonfunctional requirements, we review the results of analyses that have been performed to predict likely system behavior, and we examine any documented design rationale that pertains to quality attributes.
+
+Any discrepancies found during the review are noted by the recorder and discussed by the group as a whole. We resolve minor issues as they appear. However, if major faults or misunderstandings arise, we may agree to revise the design. In this case, we schedule another design review to evaluate the new design. Just as the Howells would rather redo the blueprints of their house than tear out the foundation and walls later and start again, we too would rather redesign the system now, on paper, instead of later, as code.
+
+## Verification
+
+[CHUNK #3]
+misunderstandings,inconsistencies,and other faults.The process,known as a code review , is similar to the requirements and design reviews discussed in earlier chapters.A team is formed, composed of you as the programmer and three or four other technical experts; the team studies the program in an organized way to look for faults.The technical experts can be other programmers, designers, technical writers, or project supervisors. Whereas the design review team included customer representatives,the code review team contains no one from the customer's organization. Customers express requirements and approve the proposed design; they are interested in implementation only when we can demonstrate that the system as a whole works according to their description.
+
+Code Walkthroughs. There are two types of code review: a walkthrough and an inspection. In a walkthrough , you present your code and accompanying documentation to  the  review  team, and the team comments on their correctness. During the walkthrough, you lead and control the discussion.The atmosphere is informal, and the focus of attention is on the code, not the coder. Although supervisory personnel may be present, the walkthrough has no influence on your performance appraisal, consistent with the general intent of testing: finding faults, but not necessarily fixing them.
+
+[CHUNK #4]
+## Validation
+
+During validation, we make sure that all aspects of the requirements are addressed by our design.To do that, we invite several key people to the review:
+
+- the analyst(s) who helped to define the system requirements
+- the system architect(s)
+- the program designer(s) for this project
+
+- a system tester
+- a system maintainer
+- a moderator
+- a recorder
+- other interested system developers who are not otherwise involved in this project
+
+The number of people actually at the review depends on the size and complexity of the system under development. Every member of the review team should have the authority to act as a representative of his or her organization and to make decisions and commitments. The  total  number  should  be  kept  small, so  that  discussion  and  decision making are not hampered.
+
+The moderator leads the discussion but has no vested interest in the project itself. He or she encourages discussion, acts as an intermediary between opposing viewpoints, keeps the discussion moving, and maintains objectivity and balance in the process.
+
+Because it is difficult to take part in the discussion and also record the main points and  outcomes, another  impartial  participant  is  recruited  to  serve  as  recorder. The recorder does not get involved in the issues that arise; his or her sole job is to document what  transpires. However, more  than  stenographic  skills  are  required; the  recorder must have enough technical knowledge to understand the proceedings and record relevant technical information.
+",0.785,4.531,0.9999999999,1.0,0.99999999995,0.7681821228510691
+"Jenna, a project manager, has developed a new technique for estimating project size. She has been using the new technique on several projects. Her estimates and the actual values for project size are shown below. The criteria for a good estimating technique are: 75% of the estimates should be within 25% of the actual; and the mean magnitude of the relative estimate errors should be less than 25%. Use the table of project size estimates and the criteria given to answer the questions about Jenna's estimating technique. Project Estimate Actual A 8060 8000 B 9000 10000 C 7000 7200 D 15000 13000 E 10000 9600. Based on the criteria for a good estimation technique and the estimate data gathered so far, is the new technique a good one? (Yes/No)","First, calculate the relative estimate error (REE) for each project:
+
+REE = |Estimate - Actual| / Actual
+
+- Project A: |8060 - 8000| / 8000 = 60 / 8000 = 0.0075 (0.75%)
+- Project B: |9000 - 10000| / 10000 = 1000 / 10000 = 0.10 (10%)
+- Project C: |7000 - 7200| / 7200 = 200 / 7200 ≈ 0.0278 (2.78%)
+- Project D: |15000 - 13000| / 13000 = 2000 / 13000 ≈ 0.1538 (15.38%)
+- Project E: |10000 - 9600| / 9600 = 400 / 9600 ≈ 0.0417 (4.17%)
+
+Next, check how many estimates are within 25% of the actual:
+
+All five projects have REE less than 0.25 (25%), so 100% are within 25%.
+
+Calculate the mean magnitude of the relative estimate errors (MMREE):
+
+MMREE = (0.0075 + 0.10 + 0.0278 + 0.1538 + 0.0417) / 5 ≈ 0.06616 (6.62%)
+
+Since 75% of estimates are within 25% (actually 100% here), and MMREE is less than 25%, the technique meets both criteria.
+
+### Answer:  
+Yes, Jenna's new estimating technique is a good one based on the given criteria.","[CHUNK #1]
+FIGURE 3.12 Changes in estimation accuracy as project progresses (Boehm et al. 1995).
+
+<!-- image -->
+
+be refined, based on more complete information about the project's characteristics. Figure 3.12 illustrates how uncertainty early in the project can affect the accuracy of cost and size estimates (Boehm et al. 1995).
+
+The stars represent size estimates from actual projects, and the pluses are cost estimates. The funnel-shaped lines narrowing to the right represent Boehm's sense of how our estimates get more accurate as we learn more about a project. Notice that when the specifics of the project are not yet known, the estimate can differ from the eventual actual cost by a factor of 4. As decisions are made about the product and the process, the factor decreases. Many experts aim for estimates that are within 10 percent of the actual value, but Boehm's data indicate that such estimates typically occur only when the project is almost done-too late to be useful for project management.
+
+To address the need for producing accurate estimates, software engineers have developed techniques for capturing the relationships among effort and staff characteristics, project requirements, and other factors that can affect the time, effort, and cost of developing a software system. For the rest of this chapter, we focus on effort-estimation techniques.
+
+## Expert Judgment
+
+Many effort-estimation  methods  rely  on  expert  judgment. Some  are  informal  techniques, based on a manager's experience with similar projects.Thus, the accuracy of the prediction  is  based  on  the  competence, experience, objectivity, and  perception  of the estimator. In its simplest form, such an estimate makes an educated guess about the effort needed to build an entire system or its subsystems. The complete estimate can be computed from either a top-down or a bottom-up analysis of what is needed.
+
+[CHUNK #2]
+- frequent requests for changes by users
+- overlooked tasks
+- users' lack of understanding of their own requirements
+- insufficient analysis when developing an estimate
+- lack of coordination of systems development, technical services, operations, data administration, and other functions during development
+- lack of an adequate method or guidelines for estimating Several aspects of the project were noted as key influences on the estimate:
+- complexity of the proposed application system
+- required integration with existing systems
+- complexity of the programs in the system
+- size of the system expressed as number of functions or programs
+- capabilities of the project team members
+- project team's experience with the application
+- anticipated frequency or extent of potential changes in user requirements
+- project team's experience with the programming language
+- database management system
+- number of project team members
+- extent of programming or documentation standards
+- availability of tools such as application generators
+- team's experience with the hardware
+
+the cost component with the greatest degree of uncertainty. We have seen how work style, project  organization, ability, interest, experience, training, and other employee characteristics can affect the time it takes to complete a task. Moreover, when a group of  workers  must  communicate  and  consult  with  one  another, the  effort  needed  is increased by the time required for meetings, documentation, and training.
+
+Cost, schedule, and effort estimation must be done as early as possible during the project's life cycle, since it affects resource allocation and project feasibility. (If it costs too much, the customer may cancel the project.) But estimation should be done repeatedly throughout the life cycle; as aspects of the project change, the estimate can
+
+FIGURE 3.12 Changes in estimation accuracy as project progresses (Boehm et al. 1995).
+
+<!-- image -->
+
+[CHUNK #3]
+for unplanned activities, yet the statistical evidence across many projects suggests that unplanned activities are very likely to happen. Nevertheless, managers favored the singular evidence and would not include a factor for unplanned activities in their estimation process.
+
+In addition, we must remember that recall is affected by both the recency and vividness of an experience. The further into the past a factor occurred, the greater the tendency of the recaller to discount its significance. In one sense, this diminishing significance may be sensible, given that the way in which we develop software has changed considerably over the years. On the other hand, many risks, such as requirements being modified or misunderstood, have changed little.
+
+Anchoring-and-adjustment is another common technique employed by estimators. Here the estimator selects an analogous situation and then adjusts it to suit the new circumstances. However, there is considerable evidence to suggest that estimators are unduly cautious when making the adjustment. In other words, the anchoring dominates and then insufficient adaptation is made. This approach may be influenced by recall, in  that  the  most  suitable  analogies  may  be  overlooked  because  they  are  not recent.
+
+A reluctance to appear negative can also affect expert judgment. DeMarco (1982) reminds us that 'realism can be mistaken for disloyalty,' leading to undue optimism in making predictions, both individually and in groups.
+
+## How Groups Really Make Decisions
+
+Many organizations use group decision-making techniques to derive important projections or estimates. For example, the Delphi technique (see Sidebar 14.1) enables several estimators to combine their disparate estimates into one with which all can feel comfortable.
+
+## SIDEBAR 14.1 DELPHI TECHNIQUES
+
+[CHUNK #4]
+Encouragingly, a similar observational study using postgraduate students at the University of Maryland yielded comparable results, in that successive rounds of the Delphi technique led to a substantial reduction in the range of estimates. In this case, the estimation task was a theoretical one, so the accuracy of the estimates could not be assessed. At Maryland, all the students were working practitioners with considerable experience; they were enrolled in a Master's of Software Engineering program. The class of ten was divided into three teams of three or four students each. As part of a more general project involving requirements elicitation, analysis, and estimation, the individuals on each team used two products, Data Salvage (an analogy tool developed at  Bournemouth University) and Revic (a COCOMO-based tool developed for the U.S. Department of Defense), to generate initial estimates for their team project.Then, after  a  lesson  in  how  to  use  the  Delphi  method, the  students  were  observed  and
+",0.589,5.205,0.9999999999,0.8,0.8888888888493828,0.8646562658954816
+"One source of problems in the requirements phase can be the rela tionship between system developers and their customers. What are some negative stereotypes customers may hold about developers? What could you, as a developer on a project, do to minimize the impact of those negative stereotypes?","The context does not provide specific details about the negative stereotypes customers may hold about developers. However, it mentions that users and developers may have preconceptions (right or wrong) about each other's values and behaviors, which can affect the development process. To minimize the impact of these negative stereotypes, a developer should use excellent interpersonal skills, communicate clearly, understand the customer's concerns, and work collaboratively to address conflicts and misunderstandings during requirements analysis.","[CHUNK #1]
+Each stakeholder has a particular view of the system and how it should work, and often these views conflict. One of the many skills of a requirements analyst is the ability to understand each view and capture the requirements in a way that reflects the concerns of each participant. For example, a customer may specify that a system perform a particular task, but the customer is not necessarily the user of the proposed system.The user may want the task to be performed in three modes: a learning mode, a novice mode, and an expert mode; this separation will allow the user to learn and master the system gradually. Some systems are implemented in this way, so that new users can adapt to the new system gradually. However, conflicts can arise when ease of use suggests a slower system than response-time requirements permit.
+
+Also,different participants may expect differing levels of detail in the requirements documentation, in which case the requirements will need to be packaged in different ways for different people. In addition, users and developers may have preconceptions (right or wrong) about what the other group values and how it acts. Table 4.1 summarizes some of the common stereotypes.This table emphasizes the role that human interaction plays in the development of software systems; good requirements analysis requires excellent interpersonal skills as well as solid technical skills.The book's Web site contains suggestions for addressing each of these differences in perception.
+
+In addition to interviewing stakeholders, other means of eliciting requirements include
+
+- Reviewing available documentation, such as documented procedures of manual tasks, and specifications or user manuals of automated systems
+- Observing the current system (if one exists), to gather objective information about how the users perform their tasks, and to better understand the system we are about to automate or to change; often, when a new computer system is developed,
+
+[CHUNK #2]
+Whenever a problem is identified, the problem is documented, its cause is determined, and the requirements analysts are charged with the task of fixing the problem. For example, validation may reveal that there is a great misunderstanding about the way in which a certain function will produce results.The customers may require data to be reported in miles, whereas the users want the data in kilometers.The customers may set a reliability or availability goal that developers deem impossible to meet.These conflicts need to be resolved before design can begin. To resolve a conflict, the developers
+
+may need to construct simulations or prototypes to explore feasibility constraints and then work with the customer to agree on an acceptable requirement. Sidebar 4.8 discusses the nature and number of requirements-related problems you are likely to find.
+
+Our choice of validation technique depends on the experience and preferences of the stakeholders and on the technique's appropriateness for the notations used in the requirements definition. Some notations have tool support for checking consistency and completeness. There are also tools that can help with the review process and with tracking problems and their resolutions. For example, some tools work with you and the customer to reduce the amount of uncertainty in the requirements.This book's Web page points to requirements-related tools.
+
+## SIDEBAR 4.8 NUMBER OF REQUIREMENTS FAULTS
+
+H ow many development problems are created during the process of capturing requirements? There are varying claims. Boehm and Papaccio (1988), in a paper analyzing software at IBM and TRW, found that most errors are made during design, and there are usually three design faults for every two coding faults. They point out that the high number of faults attributed to the design stage could derive from requirements errors. In his book on software engineering  economics, Boehm  (1981)  cites  studies  by  Jones  and Thayer  and  others  that attribute
+
+[CHUNK #3]
+## SIDEBAR 4.1 WHY ARE REQUIREMENTS IMPORTANT?
+
+The hardest single part of building a software system is deciding precisely what to build. No other part of the conceptual work is as difficult as establishing the detailed technical requirements, including all the interfaces to people, to machines, and to other software systems. No other part of the work so cripples the resulting system if done wrong. No other part is more difficult to rectify later.
+
+(Brooks 1987)
+
+I n 1994, the Standish Group surveyed over 350 companies about their over 8000 software projects to find out how well they were faring.The results are sobering.Thirty-one percent of the software projects were canceled before they were completed. Moreover, in large companies, only 9% of the projects were delivered on time and within budget; 16% met those criteria in small companies (Standish 1994). Similar results have been reported since then; the bottom line is that developers have trouble delivering the right system on time and within budget.
+
+To understand why, Standish (1995) asked the survey respondents to explain the causes of the failed projects.The top factors were reported to be
+
+1. Incomplete requirements (13.1%)
+2. Lack of user involvement (12.4%)
+3. Lack of resources (10.6%)
+4. Unrealistic expectations (9.9%)
+5. Lack of executive support (9.3%)
+6. Changing requirements and specifications (8.7%)
+7. Lack of planning (8.1%)
+8. System no longer needed (7.5%)
+
+Notice that some part of the requirements elicitation, definition, and management process is involved in almost all of these causes.Lack of care in understanding,documenting,and managing requirements can lead to a myriad of problems:building a system that solves the wrong problem,that doesn't function as expected, or that is difficult for the users to understand and use.
+
+[CHUNK #4]
+22. Sometimes a customer requests a requirement that you know is impossible to implement. Should you agree to put the requirement in the definition and specification documents anyway, thinking that you might come up with a novel way of meeting it, or thinking that you will ask that the requirement be dropped later? Discuss the ethical implications of promising what you know you cannot deliver.
+23. Find a set of natural-language requirements at your job or at this book's Web site. Review the requirements to determine if there are any problems. For example, are they consistent? Ambiguous? Conflicting? Do they contain any design or implementation decisions? Which representation techniques might help reveal and eliminate these problems? If the problems remain in the requirements, what is their likely impact as the system is designed and implemented?
+
+[CHUNK #5]
+## Resolving Conflicts
+
+In trying to elicit all types of requirements from all of the relevant stakeholders, we are bound to encounter conflicting ideas of what the requirements ought to be. It usually helps to ask the customer to prioritize requirements. This task forces the customer to
+",0.477,2.298,0.9999999999,1.0,0.99999999995,0.5179262517582355
+What is software engineering and how does it fit into computer science?,"Software engineering is a discipline focused on building software products, encompassing all activities involved in developing a software system from the initial idea to the final product. It emphasizes general-purpose design principles, patterns, and criteria, and addresses the challenges of designing and managing large software systems. Unlike computer science, which centers on data, data transformation, and algorithms, software engineering is more applied and broader in scope, involving technical and nontechnical skills such as communication, project management, and understanding social impacts. While computer science provides the technical foundation, software engineering applies this knowledge to produce high-quality, robust, and maintainable software.","[CHUNK #1]
+Software  engineering  courses  build  on  these  foundations  in  computing  and engineering, and introduce the concepts that we cover in this book, including requirements elicitation, software design principles, technical documentation, project management, testing, and verification. In addition, a software engineering curriculum is likely to  include  nontechnical  courses  in  communications, humanities, and  social  sciences. Software engineering projects tend to involve large numbers of people, so software engineers need to understand the dynamics of group interaction to know how to motivate individuals to pursue a common goal. They need to consider the impact of their technology on users and on society as a whole, and they may need to make decisions that take human and social values into account. They may also have to interact with specialists  from  other  disciplines  who  have  varied  levels  of  software  expertise. This work calls for strong communication, business, and reasoning skills.
+
+As such, software engineering is more general, is more applied, and has a broader scope than computer science. At its core, computer science focuses on data, data transformation, and algorithms; advanced courses present designs and programming techniques for specific  application  domains. In  contrast, software  engineering  focuses  on building software products. It looks at all the activities involved in developing a software
+
+system from initial idea to final product. Moreover, software engineering design concepts tend  to  focus  on  general-purpose  design  principles, patterns, and  criteria; advanced courses present design and analysis techniques that scale to large software systems.
+
+[CHUNK #2]
+## Software Engineering Education
+
+Historically, software engineering has been considered a relatively small aspect of computer science. At best, a university computer science curriculum included a course on software  engineering, usually  offered  in  the  junior  or  senior  year. At  the  least, it included several lectures on the meaning and intent of software engineering. With the increasing emphasis on software quality and security, and with the recent push to professionalize software developers, universities have increasingly viewed software engineering as a distinct academic discipline. There are now many ways in which a student can navigate through a university curriculum and end up with a software engineering education:
+
+- Specializing in software engineering as part of a computer science major
+- Specializing in software engineering as part of a computer engineering major
+- Specializing in software engineering as part of an engineering major
+- Majoring in software engineering as a separate degree from computer science or computer engineering
+
+As Table 14.6 shows, a software engineering program borrows from both computer science and engineering curricula. Computer science courses provide the technical  knowledge  and  expertise  needed  to  create  and  manipulate  software  artifacts: programming  principles; data  structures; algorithm  paradigms; programming  languages; grammars, parsing, and translation; concurrency and control structures; and the theoretical limits of computing. In addition, computer science and computer engineering courses cover key system components (e.g., computer architecture, operating system, middleware, networks)  and  key  software  components  (e.g., databases, user interfaces), and how the design and implementation of these components can affect the performance, usability, and quality of our software.
+
+[CHUNK #3]
+FIGURE 1.3 The relationship between computer science and software engineering.
+
+<!-- image -->
+
+functions of a computer as part of a general solution, rather than with the structure or theory of the computer itself.
+
+## 1.2 HOW SUCCESSFUL HAVE WE BEEN?
+
+Writing software is an art as well as a science, and it is important for you as a student of computer science to understand why. Computer scientists and software engineering researchers study computer mechanisms and theorize about how to make them more productive or efficient. However, they also design computer systems and write programs to perform tasks on those systems, a practice that involves a great deal of art, ingenuity, and skill. There may be many ways to perform a particular task on a particular system, but some are better than others. One way may be more efficient, more precise, easier to modify, easier to use, or easier to understand. Any hacker can write code to make something work, but it takes the skill and understanding of a professional software engineer to produce code that is robust, easy to understand and maintain, and does its job in the most efficient and effective way possible. Consequently, software engineering is about designing and developing high-quality software.
+
+Before we examine what is needed to produce quality software systems,let us look back to see how successful we have been. Are users happy with their existing software systems? Yes and no. Software has enabled us to perform tasks more quickly and effectively than ever before. Consider life before word processing, spreadsheets, electronic mail, or sophisticated telephony, for example.And software has supported life-sustaining or life-saving advances in medicine, agriculture, transportation, and most other industries. In addition, software has enabled us to do things that were never imagined in the past: microsurgery, multimedia education, robotics, and more.
+
+[CHUNK #4]
+system from initial idea to final product. Moreover, software engineering design concepts tend  to  focus  on  general-purpose  design  principles, patterns, and  criteria; advanced courses present design and analysis techniques that scale to large software systems.
+
+Although it is tempting to try to classify software engineering as just another branch of engineering, this 'natural' mapping has a fatal flaw: whereas most engineers produce physical artifacts that are deployed in the real world and obey physical laws, software engineers produce software artifacts that are deployed on computers (which are artificial  worlds)  and  obey  the  laws  and  limits  of  computing. Most  noticeably, a physical artifact has continuous behavior, which means that we can test the product in one situation and extrapolate how it will behave in related situations. Software artifacts cannot  exhibit  continuous  behavior, which  means  that  similar  inputs  may  result  in wildly  different  output  values. Also, software  is  implemented  using  discrete-valued variables, and  the  imprecision  introduced  by  such  variables  can  accumulate  in  long computations.'Off by one' errors in other engineering disciplines are inconsequential, but such errors in software are disastrous. Thus, many of the traditional modeling and evaluation techniques in the engineer's standard toolkit are inappropriate for software. Software's flexibility and malleability belie its complexity; even small changes can have large effects, so design and testing are often far more difficult than in other engineering domains.
+",2.265,4.778,0.9999999999,0.45454545454545453,0.6249999999804687,0.6066665222810488
+"Choose a software system that you use and for which there is some feature of the interface that you, as a user, dislike. Briefly describe the software and why you consider this feature of the interface to be a pr oblem. Speculate as to whether the problem could have been avoided during design. If so, what changes to the design process would have been necessary?","I use a project management software that has a complex and cluttered dashboard interface. The problem is that important information is hard to find quickly, which slows down my workflow and causes frustration.
+
+This problem could likely have been avoided during the design process by involving users more actively in reviewing and providing feedback on the interface at multiple stages. According to the context, allowing customers to review plans and make changes throughout development helps ensure the product meets their needs. Additionally, better coordination within the design team to document and integrate different parts of the system could have improved the interface's usability. Emphasizing flexibility and iterative feedback in the design process would have helped address this issue early on.","[CHUNK #1]
+- software supplier.Thus, for each system that we build, we must evaluate the tradeoff between early delivery and easier maintenance.
+- New vs. known technologies: New technologies, architectural styles, and components  may  require  new  expertise. Past  examples  of  such  technological  breakthroughs  include  object-oriented  programming, middleware  technologies, and open-systems standards; a more recent example is the prevalence of cheap multiprocessors. Acquiring expertise costs money and delays product release, as we either learn how to use the new technology or hire new personnel who already have that knowledge. Eventually, we must develop the expertise ourselves. But for a given project, we must decide when and how to pay the costs and reap the benefits of applying new technology.
+
+## 5.6 COLLABORATIVE DESIGN
+
+Not all design questions are technical. Many are sociological, in that the design of software systems is usually performed by a team of developers, rather than by a single person. A  design  team  works  collaboratively, often  by  assigning  different  parts  of  the design to various people. Several issues must be addressed by the team, including who is best suited to design each aspect of the system, how to document the design so that each team member understands the designs of others, and how to coordinate the resulting software units so that they work well when integrated together. The design team must be aware of the causes of design breakdown (Sidebar 5.7) and use the team's strengths to address them.
+
+## SIDEBAR 5.7 THE CAUSES OF DESIGN BREAKDOWN
+
+G uindon, Krasner, and  Curtis  (1987)  studied  the  habits  of  designers  on  19  projects  to determine what causes the design process to break down. They found three classes of breakdown: lack of knowledge, cognitive limitations, and a combination of the two.
+
+The main types of process breakdown were
+
+[CHUNK #2]
+For computing professionals, another conflict arises whenever change is necessary. Principles of software engineering compete with expediency and cost. Often, a problem may be fixed in one of two ways: a quick but inelegant solution that works but does not fit the system's design or coding strategy, or a more involved but elegant way that is consistent with the guiding principles used to generate the rest of the system.As we noted earlier, programmers may be forced to compromise elegance and design principles because a change is needed immediately.
+
+When such compromises are made,several related events may make future maintenance more difficult. First, the complaint is usually brought to the attention of the maintainers by a user or operator. This person is not likely to understand the problem in the context of design and code, only in the context of daily operations. Second, solving  the  problem involves only the immediate correction of a fault. No allowance is made for  revising  the  system  or  program  design  to  make  the  overall  system  more
+
+understandable or to make the change consistent with the rest of the system's components. These two factors combine to present the maintenance team with a quick repair as its limited goal. The team is forced to concentrate its resources on a problem about which it may have little understanding.
+
+The team must resolve an additional conflict.When a system is developed to solve an initial problem, its developers sometimes try to solve similar problems without changing the design and code. Such systems often run slowly because their general-purpose code must evaluate a large number of cases or possibilities.To improve performance, the system can incorporate special-purpose components that sacrifice generality for speed. The special-purpose components are often smaller because they need not consider every eventuality. The resulting system can be changed easily, at a cost of the time it takes to modify or enhance the system or program design.The team must weigh generality against speed when deciding how and why to make a modification or correction.
+
+[CHUNK #3]
+Think back to our house-building example. During the building process, the Howells continually reviewed the plans. They also had many opportunities to change their minds about what they wanted. In the same way, software development allows the customer to review the plans at every step and to make changes in the design. After all, if the developer produces a marvelous product that does not meet the customer's needs, the resultant system will have wasted everyone's time and effort.
+
+For this reason, it is essential that our software engineering tools and techniques be used with an eye toward flexibility. In the past, we as developers assumed that our customers knew from the start what they wanted. That stability is not usually the case. As the various stages of a project unfold, constraints arise that were not anticipated at the beginning. For instance, after having chosen hardware and software to use for a project, we may find that a change in the customer requirements makes it difficult to use a particular database management system to produce menus exactly as promised to the customer. Or we may find that another system with which ours is to interface has changed its procedure or the format of the expected data.We may even find that hardware or software does not work quite as the vendor's documentation had promised. Thus,we must remember that each project is unique and that tools and techniques must be chosen that reflect the constraints placed on the individual project.
+
+We must also acknowledge that most systems do not stand by themselves. They interface with other systems, either to receive or to provide information. Developing
+
+such systems is complex simply because they require a great deal of coordination with the systems with which they communicate.This complexity is especially true of systems that are being developed concurrently. In the past, developers had difficulty ensuring the accuracy and completeness of the documentation of interfaces among systems. In subsequent chapters, we will address the issue of controlling the interface problem.
+
+## The Nature of the Change
+",0.664,2.939,0.9999999999,0.0,0.0,0.15706758868230072

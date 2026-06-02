@@ -1,0 +1,127 @@
+{
+  "run_id": "20260401_002708_6130",
+  "timestamp": "2026-04-01T00:27:12.468608",
+  "query": "What is ragas 0.3",
+  "result": {
+    "answer": "The provided documents do not contain specific information about \"ragas 0.3.\" The term \"ragas\" generally refers to melodic frameworks in Indian classical music used to evoke specific emotions and can be performed using instruments or sung vocally. If \"ragas 0.3\" refers to a specific concept or version within a different context, further information would be needed to provide an accurate answer.",
+    "run_id": "20260401_002708_6130"
+  },
+  "num_documents": 5,
+  "traces": [
+    {
+      "event_type": "query_start",
+      "component": "rag_system",
+      "data": {
+        "run_id": "20260401_002708_6130",
+        "question": "What is ragas 0.3",
+        "question_length": 17,
+        "top_k": 3,
+        "total_documents": 5
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_start",
+        "query": "What is ragas 0.3",
+        "query_length": 17,
+        "top_k": 3,
+        "total_documents": 5
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_complete",
+        "num_retrieved": 3,
+        "scores": [
+          1,
+          1,
+          1
+        ],
+        "document_ids": [
+          0,
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_start",
+        "query": "What is ragas 0.3",
+        "query_length": 17,
+        "top_k": 3,
+        "total_documents": 5
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_complete",
+        "num_retrieved": 3,
+        "scores": [
+          1,
+          1,
+          1
+        ],
+        "document_ids": [
+          0,
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "event_type": "llm_call",
+      "component": "openai_api",
+      "data": {
+        "operation": "generate_response",
+        "model": "gpt-4o",
+        "query": "What is ragas 0.3",
+        "prompt_length": 482,
+        "context_length": 215,
+        "num_context_docs": 3
+      }
+    },
+    {
+      "event_type": "llm_response",
+      "component": "openai_api",
+      "data": {
+        "operation": "generate_response",
+        "response_length": 397,
+        "usage": {
+          "completion_tokens": 80,
+          "prompt_tokens": 115,
+          "total_tokens": 195,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model": "gpt-4o"
+      }
+    },
+    {
+      "event_type": "query_complete",
+      "component": "rag_system",
+      "data": {
+        "run_id": "20260401_002708_6130",
+        "success": true,
+        "response_length": 397,
+        "num_retrieved": 3
+      }
+    }
+  ]
+}
