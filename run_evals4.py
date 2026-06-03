@@ -16,10 +16,10 @@ from difflib import get_close_matches, SequenceMatcher
 
 load_dotenv()
 
-INPUT_DATAJSON = "dataset_v1.json"
-INPUT_DATASET = "EXPs/hsf_multi_75_25_fixed_cite.csv"
-OUTPUT_FILE = "hsf_multi_7525_2505.csv"
-DATASET_NAME = "hsf_multi_7525_2505"
+INPUT_DATAJSON = "dataset_v2.json"
+INPUT_DATASET = "EXPs/v1/normal_v2.csv"
+OUTPUT_FILE = "normal_v2.csv"
+DATASET_NAME = "normal_v2"
 
 def fuzzy_lookup(question, source_dict, cutoff=0.9):
     """
@@ -112,24 +112,40 @@ async def run_experiment(row):
         response = row.get("response", "")
         retrieved_context = row.get("retrieved_context", "")
 
+        print("\n\nProcessing question: ")
+        print(question[:120])
         # Fuzzy lookup
         matched = fuzzy_lookup(question, source_text_dict, cutoff=0.87)
         reference = matched.get("source_text", "")
         ground_truth = matched.get("ground_truth", "")
         
-        is_abstain_groundtruth = get_close_matches(ground_truth, ["The chatbot can't answer this question. Please try again with another question."])
-        is_abstain_response = get_close_matches(response, ["The chatbot can't answer this question. Please try again with another question."])
-        # correctness
+        is_abstain_groundtruth = bool(get_close_matches(
+            ground_truth,
+            ["The chatbot can't answer this question. Please try again with another question."],
+            n=1,
+            cutoff=0.8
+        ))
+        is_abstain_response = bool(get_close_matches(
+            response,
+            ["The chatbot can't answer this question. Please try again with another question."],
+            n=1,
+            cutoff=0.8
+        ))
+        
+        # correctness & true abstention
+        true_abstention_val = None
         if ground_truth:
             if is_abstain_groundtruth:
                 correct_val = 1 if is_abstain_response else 0
-            else:     
+                true_abstention_val = int(is_abstain_response)
+            else:
                 correct = await cr_scorer.ascore(
                     user_input=question,
                     response=response,
                     reference=ground_truth
                 )
                 correct_val = correct.value
+                true_abstention_val = int(is_abstain_response)
         else:
             correct_val = "N/A"
 
@@ -150,7 +166,8 @@ async def run_experiment(row):
             f1 = (2 * prec * rec) / (prec + rec) if (prec + rec) else 0
         else:
             prec = rec = f1 = "N/A"
-            
+        
+        # faithfulness    
         if retrieved_context:
             if get_close_matches(
                 response,
@@ -159,6 +176,7 @@ async def run_experiment(row):
                 cutoff=0.8
             ):
                 faithfulness_score = "N/A"
+                    
             else:
                 faithfulness = await faithfulness_scorer.ascore(
                     user_input=question,
@@ -177,7 +195,8 @@ async def run_experiment(row):
             "recall": rec,
             "f1": f1,
             "correctness": correct_val,
-            "faithfulness": faithfulness_score
+            "faithfulness": faithfulness_score,
+            "true_abstention": true_abstention_val
         }
 
 # ---------- Main ----------
@@ -195,7 +214,7 @@ async def main():
     results = await run_experiment.arun(rag_dataset)
 
     # Save results to CSV
-    output_dir = Path(f"EXPs/{DATASET_NAME}")
+    output_dir = Path(f"EXPs/v1/run_result")
     output_dir.mkdir(exist_ok=True)
     output_file = output_dir / f"{OUTPUT_FILE}"
     

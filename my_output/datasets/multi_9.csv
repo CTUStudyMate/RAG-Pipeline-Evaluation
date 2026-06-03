@@ -1,56 +1,11 @@
-import os
-import sys
-from pathlib import Path
-from dotenv import load_dotenv
-import csv
-import json
-import asyncio
+question,response,retrieved_context,retrieve_time_sec,generate_time_sec
+"Look through several issues of software magazines (IEEE Computer and IEEE Software are good choices) from the 1970's, 1980's and recent issues.  Compare the types of problems and solutions described in the older issues with those described in the more  recent issues.","Older issues of software magazines such as IEEE Software and Communications of the ACM from the 1970s and 1980s focused on foundational topics like testing philosophy, specific testing techniques, and maintenance challenges.
 
-from openai import AsyncOpenAI  # Use AsyncOpenAI for async compatibility
-from ragas import experiment, Dataset  # Corrected Dataset import
-from ragas.embeddings import embedding_factory
-from ragas.llms import llm_factory
-from ragas.metrics import DiscreteMetric
-from ragas.metrics.collections import ContextRecall, ContextPrecision, Faithfulness, AnswerCorrectness
-from difflib import get_close_matches
+These older issues also addressed testing considerations such as black-box testing and inspection techniques, and maintenance issues including legacy systems and reverse engineering.
 
-load_dotenv()
+More recent issues of software magazines have expanded focus to include test-driven development, software dependability, usability testing, and the challenges of testing object-oriented systems.
 
-
-
-def fuzzy_lookup(question, source_dict, cutoff=0.9):
-    """
-    Tìm question gần giống nhất trong source_dict, trả về dict {"source_text":..., "grading_notes":...}
-    Nếu không tìm thấy match nào đủ gần, trả về dict trống.
-    """
-    # Lấy list keys của source_dict
-    keys = list(source_dict.keys())
-    # Tìm gần giống nhất
-    matches = get_close_matches(question, keys, n=1, cutoff=cutoff)
-    if matches:
-        return source_dict[matches[0]]
-    else:
-        return {"source_text": "", "grading_notes": ""}
-
-# Add current dir to sys.path
-sys.path.insert(0, str(Path(__file__).parent))
-
-openai_client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
-llm = llm_factory("gpt-4o-mini", client=openai_client)
-embeddings = embedding_factory("openai", model="text-embedding-3-small", client=openai_client)
-
-# cr_scorer = AnswerCorrectness(llm=llm, embeddings=embeddings)
-ctx_rec_scorer = ContextRecall(llm=llm)
-async def test_metric():
-    # result = await cr_scorer.ascore(
-    #     user_input="When was the first super bowl?",
-    #     response="I don't know",
-    #     reference="I don't know"
-    # )
-    
-    question = "Look through several issues of software magazines (IEEE Computer and IEEE Software are good choices) from the 1970's, 1980's and recent issues.  Compare the types of problems and solutions described in the older issues with those described in the more  recent issues."
-    retrieved_context = """
-    
+Recent issues also address broader software engineering topics such as software certification, licensing, ethics, and group decision-making models.","
 [0]
 [SECTION]: Testing the System > 9.16 Key References
 [CONTENT]: There have been several special issues of IEEE Software focused on the topics covered in this chapter. The June 1992 and May 1995 issues looked at reliability, the March 1991 issue focused on testing, and the May 2007 issue addressed test-driven development.
@@ -81,15 +36,4 @@ The International Conference on Software Maintenance is held every year, sponsor
 For information about the Delphi technique, see Linstone and Turoff (1975), and Turoff and Hiltz (1995).
 Discussion  of  software  engineering  licensing  is  addressed  in  the  November/ December 1999 issue of IEEE Software and the May 2000 issue of IEEE Computer . Kaner and Pels (1998) consider who is responsible when software fails, and what you can do as a consumer when your software product does not work properly.
 Other excellent references related to software certification and licensing include Allen and Hawthorn (1999), Canadian Engineering Quality Board (2001), Knight and Leveson (1986), Notkin (2000), Parnas (2000), and Shaw (1990). As you will see, many of the guidelines are in draft form, because licensing and accreditation issues are still being discussed in the software engineering community. The Professional Engineers Act, one  of  the  statutes  of  the  province  of  Ontario, can  be  found  at  http://www. e-laws.gov.on.ca/html/statutes/english/elaws_statutes_90p28_e.htm. A  description  of the  University  of  Waterloo  software  engineering  program  is  at  http://www.softeng. uwaterloo.ca An excellent discussion of ethics and the role of personal responsibility can be found in Baase (2002).
-    """
-   
-    reference =  """Wasserman (1995) points out that the changes since the 1970s have been dramatic. For example, early applications were intended to run on a single processor, usually a mainframe. The input was linear, usually a deck of cards or an input tape, and the output was alphanumeric. The system was designed in one of two basic ways: as a transformation, where input was converted to output, or as a transaction, where input determined which function would be performed. Today’s software-based systems are far different and more complex... \n\nIn his Stevens lecture, Wasserman (1996) summarized these changes by identifying seven key factors that have altered software engineering practice... \n1. criticality of time-to-market for commercial products \n2. shifts in the economics of computing: lower hardware costs and greater development and maintenance costs \n3. availability of powerful desktop computing \n4. extensive local- and wide-area networking \n5. availability and adoption of object-oriented technology \n6. graphical user interfaces using windows, icons, menus, and pointers \n7. unpredictability of the waterfall model of software development [5, 6]"""
-    recall = await ctx_rec_scorer.ascore(
-                user_input=question,
-                retrieved_contexts=[retrieved_context],
-                reference=reference
-            )
-    print(f"Recall: {recall.value}")
-
-
-asyncio.run(test_metric())
+",2.443,12.707

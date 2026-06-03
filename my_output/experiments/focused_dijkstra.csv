@@ -1,0 +1,8 @@
+question,response,retrieved_context,retrieve_time_sec,generate_time_sec,precision,recall,f1,correctness,faithfulness,true_abstention
+"Look through several issues of software magazines (IEEE Computer and IEEE Software are good choices) from the 1970's, 1980's and recent issues.  Compare the types of problems and solutions described in the older issues with those described in the more  recent issues.",,,"Older issues of software magazines such as IEEE Software and Communications of the ACM from the 1970s and 1980s focused on foundational topics like testing philosophy, specific testing techniques, and maintenance challenges.
+
+These older issues also addressed testing considerations such as black-box testing and inspection techniques, and maintenance issues including legacy systems and reverse engineering.
+
+More recent issues of software magazines have expanded focus to include test-driven development, software dependability, usability testing, and the challenges of testing object-oriented systems.
+
+Recent issues also address broader software engineering topics such as software certification, licensing, ethics, and group decision-making models.",2.443,0.0,0.0,0,0,N/A,0

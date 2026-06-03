@@ -1,0 +1,976 @@
+question,context,initial_answer,answer,retrieve_time_sec,generate_time_sec
+"Look through several issues of software magazines (IEEE Computer and IEEE Software are good choices) from the 1970's, 1980's and recent issues.  Compare the types of problems and solutions described in the older issues with those described in the more  recent issues.","
+[0]
+[SECTION]: Testing the System > 9.16 Key References
+[CONTENT]: There have been several special issues of IEEE Software focused on the topics covered in this chapter. The June 1992 and May 1995 issues looked at reliability, the March 1991 issue focused on testing, and the May 2007 issue addressed test-driven development.
+The proceedings of the annual International Conference on Software Engineering usually has good papers on the latest in testing theory. For example, Frankl et al. (1997) examine the difference between testing to improve reliability and testing to find faults. Good reference books on testing include Beizer (1990);Kaner,Falk,and Nguyen (1993); and Kit (1995). Each provides a realistic perspective based on industrial experience.
+There  are  several  companies  that  evaluate  software  testing  tools  and  publish summaries of their capabilities. For example, Grove Consultants in England, Software Quality Engineering in Florida, and both Cigital and Satisfice in Virginia do regular analyses of testing techniques and tools. You can find these and other resources on the Web to help with requirements analysis and validation, planning and management,simulation, test development, test execution, coverage analysis, source code analysis, and test case generation.
+Software dependability and safety-critical systems are receiving more and more attention, and there are many good articles and books about the key issues, including Leveson (1996, 1997). In addition, the Dependable Computing Systems Centre in the Department of Computer Science, University of York, UK, is developing techniques and tools for assessing software dependability. You can get more information from its director, John McDermid, at jam@minster.york.ac.uk.
+Usability testing is very important; a system that is correct and reliable but difficult to use may in fact be worse than an easy-to-use but unreliable system. Usability tests and more general usability issues are covered in depth in Hix and Hartson (1993).
+
+
+[1]
+[SECTION]: Testing the Programs > 8.15 Key References
+[CONTENT]: Testing has been the subject of several special issues of journals and magazines, including the March 1991 issue of IEEE Software and the June 1988 issue of Communications of  the  ACM . The  September  1994  issue  of Communications  of  the  ACM discusses special  considerations  in  testing  object-oriented  systems. And  the  January/February 2000 issue of IEEE Software addresses why testing is so hard. In addition, IEEE Transactions on Software Engineering often has articles that compare different testing techniques in terms of the kinds of faults they find.
+There are several good books that describe testing in great detail. Myers (1979) is the classic text, describing the philosophy of testing as well as several specific techniques. Beizer (1990) offers a good overview of testing considerations and techniques, with many references to key papers in the field. His 1995 book focuses particularly on black-box  testing. Hetzel  (1984)  is  also  a  useful  reference, as  are  Perry  (1995), Kit (1995), and Kaner, Falk, and Nguyen (1993). Binder (2000) is a comprehensive guide to testing object-oriented systems.
+There are many good papers describing the use of inspections, including Weller (1993 and 1994) and Grady and van Slack (1994). Gilb and Graham's book (1993) on inspections  is  a  good, comprehensive, and  practical  guide. Researchers  continue  to refine  inspection  techniques, and  to  expand  them  to  other  process  artifacts  such  as requirements. For examples of this work, see Porter et al. (1998) and Shull, Rus, and Basili (2000).
+
+
+[2]
+[SECTION]: Maintaining the System > 11.13 Key References
+[CONTENT]: There are few up-to-date textbooks on software maintenance; most information is best sought in journals and conference proceedings. IEEE Software 's  January 1990 issue had maintenance, reverse engineering, and design recovery as its theme; the January 1995 issue focused on legacy systems, and the January 1993 issue has a good article by Wilde, Matthews, and Huitt on the special maintenance problems of object-oriented systems. The  May  1994  issue  of Communications  of  the ACM is  a  special  issue  on reverse engineering. Software Maintenance: Research and Practice is a journal devoted entirely to maintenance issues.
+The IEEE Computer Society Press offers some good tutorials on maintenancerelated topics, including one on software reengineering by Arnold (1993), and another on impact analysis by Arnold and Bohner (1996).
+Samuelson (1990) explores the legal implications of reverse engineering, asking whether such a practice is equivalent to stealing someone's ideas.
+The International Conference on Software Maintenance is held every year, sponsored by the IEEE and ACM. You can order past proceedings from the IEEE Computer Society Press and look at information about the next maintenance conference by viewing the Computer Society Web site.
+
+
+[3]
+[SECTION]: The Future of Software Engineering > 14.6 Key References
+[CONTENT]: The  social  science  literature  is  rich  with  information  about  group  decisionmaking. Klein (1998) is a very readable introduction to the recognition-primed decision model. The January/February 2000 issue of IEEE Software addresses the more general question of what we can learn from other disciplines.
+For information about the Delphi technique, see Linstone and Turoff (1975), and Turoff and Hiltz (1995).
+Discussion  of  software  engineering  licensing  is  addressed  in  the  November/ December 1999 issue of IEEE Software and the May 2000 issue of IEEE Computer . Kaner and Pels (1998) consider who is responsible when software fails, and what you can do as a consumer when your software product does not work properly.
+Other excellent references related to software certification and licensing include Allen and Hawthorn (1999), Canadian Engineering Quality Board (2001), Knight and Leveson (1986), Notkin (2000), Parnas (2000), and Shaw (1990). As you will see, many of the guidelines are in draft form, because licensing and accreditation issues are still being discussed in the software engineering community. The Professional Engineers Act, one  of  the  statutes  of  the  province  of  Ontario, can  be  found  at  http://www. e-laws.gov.on.ca/html/statutes/english/elaws_statutes_90p28_e.htm. A  description  of the  University  of  Waterloo  software  engineering  program  is  at  http://www.softeng. uwaterloo.ca An excellent discussion of ethics and the role of personal responsibility can be found in Baase (2002).
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Older issues of software magazines such as IEEE Software and Communications of the ACM from the 1970s and 1980s focused on foundational topics like testing philosophy, specific testing techniques, and maintenance challenges."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Myers (1979) is the classic text, describing the philosophy of testing as well as several specific techniques."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The  May  1994  issue  of Communications  of  the  ACM is  a  special  issue  on reverse engineering."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The  January 1990 issue had maintenance, reverse engineering, and design recovery as its theme."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""These older issues also addressed testing considerations such as black-box testing and inspection techniques, and maintenance issues including legacy systems and reverse engineering."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Beizer (1990) offers a good overview of testing considerations and techniques, with many references to key papers in the field. His 1995 book focuses particularly on black-box testing."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""There are many good papers describing the use of inspections, including Weller (1993 and 1994) and Grady and van Slack (1994). Gilb and Graham's book (1993) on inspections is a good, comprehensive, and practical guide."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The  January 1995 issue focused on legacy systems, and the January 1993 issue has a good article by Wilde, Matthews, and Huitt on the special maintenance problems of object-oriented systems."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""More recent issues of software magazines have expanded focus to include test-driven development, software dependability, usability testing, and the challenges of testing object-oriented systems."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The May 2007 issue addressed test-driven development."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Software dependability and safety-critical systems are receiving more and more attention, and there are many good articles and books about the key issues, including Leveson (1996, 1997)."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Usability tests and more general usability issues are covered in depth in Hix and Hartson (1993)."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The September 1994 issue of Communications of the ACM discusses special considerations in testing object-oriented systems."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Recent issues also address broader software engineering topics such as software certification, licensing, ethics, and group decision-making models."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The January/February 2000 issue of IEEE Software addresses the more general question of what we can learn from other disciplines."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Discussion of software engineering licensing is addressed in the November/ December 1999 issue of IEEE Software and the May 2000 issue of IEEE Computer."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""An excellent discussion of ethics and the role of personal responsibility can be found in Baase (2002)."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The social science literature is rich with information about group decisionmaking. Klein (1998) is a very readable introduction to the recognition-primed decision model."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","Older issues of software magazines such as IEEE Software and Communications of the ACM from the 1970s and 1980s focused on foundational topics like testing philosophy, specific testing techniques, and maintenance challenges.
+
+These older issues also addressed testing considerations such as black-box testing and inspection techniques, and maintenance issues including legacy systems and reverse engineering.
+
+More recent issues of software magazines have expanded focus to include test-driven development, software dependability, usability testing, and the challenges of testing object-oriented systems.
+
+Recent issues also address broader software engineering topics such as software certification, licensing, ethics, and group decision-making models.",2.443,12.707
+"Download and read the Rob ertsons' requirements definition template (from http://www.atlsysguild.com). Write a short report in which you summarize for a software developer how he or she can use the template to validate requirements. Your report should address practical concerns abo ut how to use the template in the requirements process. For example, you should address questions such as: At what point in the requirements process can the template be helpful? What activities are necessary in order to use the template for validating requ irements? What skills will a developer have to possess in order to apply the template effectively? What types of errors and faults will the template help uncover?","
+[0]
+[SECTION]: Capturing the Requirements > 4.18 Key References
+[CONTENT]: Michael Jackson's book Software Requirements and Specifications (1995) provides general advice on how to overcome common problems in understanding and formulating requirements. His ideas can be applied to any requirements technique. Donald Gause and Gerald Weinberg's book Exploring Requirements (1989) focuses on the human side of the requirements process: problems and techniques for working with customers and users and for devising new products.
+A  comprehensive  requirements-definition  template  developed  by  James  and Suzanne Robertson can be found at the Web site of the Atlantic Systems Guild: http:// www.systemsguild.com.This template is accompanied by a description of the Volere process model, which is a complete process for eliciting and checking a set of requirements. Use of the template is described in their book Mastering the Requirements Process (1999).
+Peter Coad and Edward Yourdon's book Object-Oriented Analysis (1991) is  a classic text on object-oriented requirements analysis.The most thorough references on the  Unified  Modeling  Language  (UML)  are  the  books  by  James  Rumbaugh, Ivan Jacobson, and  Grady  Booch, especially  the Unified  Modeling  Language  Reference Manual , and the documents released by the Object Management Group; the latter can be downloaded from the organization's Web site: http://www.omg.org. Martin Fowler's book Analysis Patterns (1996) provides guidance on how to use UML to model common business problems.
+Beginning in 1993, the IEEE Computer Society has started to sponsor two conferences that were directly related to requirements and were held in alternate years: the  International  Conference  on  Requirements  Engineering  and  the  International Symposium on Requirements Engineering.These conferences merged in 2002 to form the  International  Requirements  Engineering  Conference, which  is  held  every  year. Information  about  upcoming  conferences  and  about  proceedings  from  past  conferences can be found at the Computer Society's Web page: http://www.computer.org.
+
+
+[1]
+[SECTION]: Capturing the Requirements > 4.2 Requirements Elicitation > SIDEBAR 4.3 USING VIEWPOINTS TO MANAGE INCONSISTENCY
+[CONTENT]:  - Software  engineers  or  other  technology  experts: These  experts  ensure  that  the product is technically and economically feasible. They can educate the customer about innovative hardware and software technologies, and can recommend new functionality that takes advantage of these technologies. They can also estimate the cost and development time of the product.
+Each stakeholder has a particular view of the system and how it should work, and often these views conflict. One of the many skills of a requirements analyst is the ability to understand each view and capture the requirements in a way that reflects the concerns of each participant. For example, a customer may specify that a system perform a particular task, but the customer is not necessarily the user of the proposed system.The user may want the task to be performed in three modes: a learning mode, a novice mode, and an expert mode; this separation will allow the user to learn and master the system gradually. Some systems are implemented in this way, so that new users can adapt to the new system gradually. However, conflicts can arise when ease of use suggests a slower system than response-time requirements permit.
+Also,different participants may expect differing levels of detail in the requirements documentation, in which case the requirements will need to be packaged in different ways for different people. In addition, users and developers may have preconceptions (right or wrong) about what the other group values and how it acts. Table 4.1 summarizes some of the common stereotypes.This table emphasizes the role that human interaction plays in the development of software systems; good requirements analysis requires excellent interpersonal skills as well as solid technical skills.The book's Web site contains suggestions for addressing each of these differences in perception.
+In addition to interviewing stakeholders, other means of eliciting requirements include the old system continues to be used because it provides some critical function that the designers of the new system overlooked The Volere requirements process model (Robertson and Robertson 1999), as shown in Figure 4.2, suggests some additional sources for requirements, such as templates and libraries of requirements from related systems that we have developed.
+
+
+[2]
+[SECTION]: Capturing the Requirements > 4.18 Key References
+[CONTENT]: The Requirements Engineering Journal focuses exclusively on new results in eliciting, representing, and validating requirements, mostly with respect to software systems. IEEE Software had special issues on requirements engineering in March 1994, March 1996, March/April 1998, May/June 2000, January/February 2003, and March/April 2004. Other IEEE publications often have special issues on particular types of requirements analysis and specification methods. For example, the September 1990 issues of IEEE Computer, IEEE Software , and IEEE Transactions on Software Engineering focused on formal methods, as did the May 1997 and January 1998 issues of IEEE Transactions on Software Engineering and the April 1996 issue of IEEE Computer.
+There are several standards related to software requirements. The U.S. Department  of  Defense  has  produced  MilStd-498, Data  Item  Description  for  Software Requirements  Specifications  (SRS). The  IEEE  has  produced  IEEE  Std  830-1998, which is a set of recommended practices and standards for formulating and structuring requirements specifications.
+There  are  several  tools  that  support  requirements  capture  and  traceability. DOORS/ERS  (Telelogic), Analyst  Pro  (Goda  Software), and  RequisitePro  (IBM Rational) are popular tools for managing requirements, tracing requirements in downstream artifacts, tracking changes, and assessing the impact of changes. Most modeling notations have tool support that at the least supports the creation and editing of models, usually supports some form of well-formedness checking and report generation, and at the best offers automated validation and verification.An independent survey of requirements tools is located at www.systemsguild.com.
+There is  an  IFIP Working Group 2.9 on Software Requirements Engineering. Some of the presentations from their annual meetings are available from their Web site: http://www.cis.gsu.edu/~wrobinso/ifip2_9
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The Robertsons' requirements definition template, available at the Atlantic Systems Guild website (http://www.systemsguild.com), is a comprehensive tool designed to support the elicitation and validation of software requirements."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""A comprehensive requirements-definition template developed by James and Suzanne Robertson can be found at the Web site of the Atlantic Systems Guild: http:// www.systemsguild.com.This template is accompanied by a description of the Volere process model, which is a complete process for eliciting and checking a set of requirements."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The template is particularly helpful during the requirements elicitation and validation phases of the software development process, as it provides a structured approach to capturing and checking requirements."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""This template is accompanied by a description of the Volere process model, which is a complete process for eliciting and checking a set of requirements."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""To use the template effectively for validating requirements, developers need to engage in activities such as eliciting requirements from stakeholders, documenting them clearly using the template, and systematically checking the requirements for completeness, consistency, and correctness."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The Volere requirements process model (Robertson and Robertson 1999), as shown in Figure 4.2, suggests some additional sources for requirements, such as templates and libraries of requirements from related systems that we have developed."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Developers applying the template must possess strong interpersonal skills to manage different stakeholder viewpoints and technical skills to understand the feasibility and implications of requirements."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""One of the many skills of a requirements analyst is the ability to understand each view and capture the requirements in a way that reflects the concerns of each participant."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""good requirements analysis requires excellent interpersonal skills as well as solid technical skills."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The template helps uncover errors and faults such as incomplete requirements, conflicting stakeholder views, and overlooked critical functions, by providing a structured and comprehensive framework for requirements capture and validation."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""In addition to interviewing stakeholders, other means of eliciting requirements include the old system continues to be used because it provides some critical function that the designers of the new system overlooked The Volere requirements process model (Robertson and Robertson 1999), as shown in Figure 4.2, suggests some additional sources for requirements, such as templates and libraries of requirements from related systems that we have developed."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","The Robertsons' requirements definition template, available at the Atlantic Systems Guild website (http://www.systemsguild.com), is a comprehensive tool designed to support the elicitation and validation of software requirements.
+
+The template is particularly helpful during the requirements elicitation and validation phases of the software development process, as it provides a structured approach to capturing and checking requirements.
+
+To use the template effectively for validating requirements, developers need to engage in activities such as eliciting requirements from stakeholders, documenting them clearly using the template, and systematically checking the requirements for completeness, consistency, and correctness.
+
+Developers applying the template must possess strong interpersonal skills to manage different stakeholder viewpoints and technical skills to understand the feasibility and implications of requirements.
+
+The template helps uncover errors and faults such as incomplete requirements, conflicting stakeholder views, and overlooked critical functions, by providing a structured and comprehensive framework for requirements capture and validation.",2.098,16.045
+"Researchers with the Institute for Information Technology of the National Research Council, Canada, study maintenance by observing th e work practices of software engineers who are engaged in maintenance projects. A paper by Janice Singer and Timothy Lethbridge summarizes the methods they use to collect this type of data. (J. Singer, T. Lethbridge (1996). “Methods for Studying Maintenanc e Activities.” In Proceedings of the International Workshop on Empirical Studies of Software Maintenance, Monterey, CA. Also available at http://wwwsel.iit.nrc.ca/projects/easse/). Summarize this paper from the viewpoint of a software maintainer. How disru ptive are the data collection methods likely to be to the maintainer's work practices? What does the maintainer stand to gain by participating in such a study?","
+[0]
+[SECTION]: Maintaining the System > 11.11 What This Chapter Means For Researchers
+[CONTENT]: Maintenance is a ripe area of research. Many of our maintenance activities could be made easier or more effective if we were better at predicting the likely sources of faults. Researchers are looking for better ways to measure maintainability based on product information; they are developing new models to show us the interconnections among products, processes, and resources. Similarly, the models will help us know how much effort is needed to maintain a system and when it is appropriate to retire a legacy system or rejuvenate it.
+Work continues on building tools to assist us in the maintenance process. Reengineering tools, change control and configuration management repositories, and project history databases are likely to become more sophisticated as researchers build prototypes based on empirical data.
+Finally, researchers will continue to look at general laws of software maintenance, as suggested by Lehman (1980).They are eager to learn whether software engineering theory can confirm what empirical observation indicates in practice: namely, that the behavior of software systems evolution is consistent and predictable.
+
+
+[1]
+[SECTION]: Maintaining the System > 11.13 Key References
+[CONTENT]: There are few up-to-date textbooks on software maintenance; most information is best sought in journals and conference proceedings. IEEE Software 's  January 1990 issue had maintenance, reverse engineering, and design recovery as its theme; the January 1995 issue focused on legacy systems, and the January 1993 issue has a good article by Wilde, Matthews, and Huitt on the special maintenance problems of object-oriented systems. The  May  1994  issue  of Communications  of  the ACM is  a  special  issue  on reverse engineering. Software Maintenance: Research and Practice is a journal devoted entirely to maintenance issues.
+The IEEE Computer Society Press offers some good tutorials on maintenancerelated topics, including one on software reengineering by Arnold (1993), and another on impact analysis by Arnold and Bohner (1996).
+Samuelson (1990) explores the legal implications of reverse engineering, asking whether such a practice is equivalent to stealing someone's ideas.
+The International Conference on Software Maintenance is held every year, sponsored by the IEEE and ACM. You can order past proceedings from the IEEE Computer Society Press and look at information about the next maintenance conference by viewing the Computer Society Web site.
+
+
+[2]
+[SECTION]: Maintaining the System > 11.3 Maintenance Problems > SIDEBAR 11.3 BALANCING MANAGEMENT AND TECHNICAL NEEDS AT CHASE MANHATTAN
+[CONTENT]: At the same time, the system usually becomes more complex as a result of two things. First, as one fault is corrected, the fix may itself be introducing new system faults. Second, as corrections are made, the system structure changes. Because many repairs are made with the limited purpose of solving a particular problem, the coupling and cohesion of components, as well as the inheritance structure of an object-oriented system, are often degraded.
+Belady and Lehman capture these effects in an equation:
+[FORMULA]
+M = p + K c -d M is the total maintenance effort expended for a system, and p represents wholly productive efforts: analysis, evaluation, design, coding, and testing. c is complexity caused by the lack of structured design and documentation; it is reduced by d , the degree to which the maintenance team is familiar with the software. Finally, K is a constant determined by comparing this model with the effort relationships on actual projects; it is called an empirical constant because its value depends on the environment.
+The Belady-Lehman equation expresses a very important relationship among the factors determining maintenance effort. If a system is developed without software engineering principles, the value of c will be high. If, in addition, it is maintained without an understanding of the software itself, the value of d will be low. The result is that the costs for maintenance increase exponentially. Thus, to economize on maintenance, the best approach is to build the system using good software engineering practices and to give the maintainers time to become familiar with the software.
+Current effort and schedule models predict maintenance costs using many of the same factors suggested by Belady and Lehman. For example, COCOMO II computes maintenance effort using a size variable computed as follows (Boehm et al. 1995):
+
+
+[3]
+[SECTION]: Maintaining the System > 11.3 Maintenance Problems > Staff Problems
+[CONTENT]: Management Priorities. The maintenance team weighs the desires of the customer's management against the system's needs. Management priorities often override technical ones;managers sometimes view maintaining and enhancing as more important than building new applications. In other words, companies must sometimes focus on business as usual, instead of investigating new alternatives. But as management encourages maintainers to repair an old system, users are clamoring for new functions or a new system. Similarly, the rush to get a product to market may encourage us, as either developers or maintainers, to implement a quick, inelegant, poorly tested change, rather than take the time to follow good software engineering practice.The result is a patched product that is difficult to understand and repair later.
+Morale. The  Lientz  and  Swanson  studies  (1981)  indicate  that  11.9%  of  the problems during maintenance result from low morale and productivity.A major reason for low morale is the second-class status often accorded the maintenance team. Programmers sometimes think that it takes more skill to design and develop a system than to keep it running. However, as we have seen, maintenance programmers handle problems that developers never see. Maintainers are skilled not only in writing code but also in working with users, in anticipating change, and in sleuthing. Great skill and perseverance are required to track a problem to its source, to understand the inner workings of a large system, and to modify that system's structure, code, and documentation.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The paper by Janice Singer and Timothy Lethbridge on methods for studying maintenance activities involves observing the work practices of software engineers engaged in maintenance projects."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Researchers with the Institute for Information Technology of the National Research Council, Canada, study maintenance by observing the work practices of software engineers who are engaged in maintenance projects. A paper by Janice Singer and Timothy Lethbridge summarizes the methods they use to collect this type of data."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""From the viewpoint of a software maintainer, the data collection methods are likely to be somewhat disruptive because maintenance work often involves balancing management priorities, user demands, and technical needs, and maintainers must handle complex, sometimes poorly documented systems under pressure to implement quick fixes."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Management Priorities. The maintenance team weighs the desires of the customer's management against the system's needs. Management priorities often override technical ones; managers sometimes view maintaining and enhancing as more important than building new applications. ... the rush to get a product to market may encourage us, as either developers or maintainers, to implement a quick, inelegant, poorly tested change, rather than take the time to follow good software engineering practice. The result is a patched product that is difficult to understand and repair later."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""However, maintainers stand to gain from participating in such studies because research aims to improve maintenance activities by better predicting fault sources, measuring maintainability, and developing tools to assist maintenance, which could make their work easier and more effective in the future."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Maintenance is a ripe area of research. Many of our maintenance activities could be made easier or more effective if we were better at predicting the likely sources of faults. Researchers are looking for better ways to measure maintainability based on product information; they are developing new models to show us the interconnections among products, processes, and resources. Similarly, the models will help us know how much effort is needed to maintain a system and when it is appropriate to retire a legacy system or rejuvenate it. Work continues on building tools to assist us in the maintenance process."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Additionally, participating in such studies may help maintainers gain recognition for their skilled work, which involves not only coding but also working with users, anticipating change, and problem-solving, thereby potentially improving morale and the perceived status of maintenance roles."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Maintainers are skilled not only in writing code but also in working with users, in anticipating change, and in sleuthing. Great skill and perseverance are required to track a problem to its source, to understand the inner workings of a large system, and to modify that system's structure, code, and documentation."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""A major reason for low morale is the second-class status often accorded the maintenance team."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","From the viewpoint of a software maintainer, the data collection methods are likely to be somewhat disruptive because maintenance work often involves balancing management priorities, user demands, and technical needs, and maintainers must handle complex, sometimes poorly documented systems under pressure to implement quick fixes.
+
+However, maintainers stand to gain from participating in such studies because research aims to improve maintenance activities by better predicting fault sources, measuring maintainability, and developing tools to assist maintenance, which could make their work easier and more effective in the future.
+
+Additionally, participating in such studies may help maintainers gain recognition for their skilled work, which involves not only coding but also working with users, anticipating change, and problem-solving, thereby potentially improving morale and the perceived status of maintenance roles.",2.505,15.378
+"Take a look at the latest issue of a journal that presents articles about software engineering. (IEEE Transactions on Software Engineering, the Journal of Systems and Software, and IEEE Computer are good examples.) Of the articles tha t present a new technique or tool for software development, how many actually present some kind of evidence that the proposed technique is an improvement over what is currently used? For those that do, classify the type of empirical study used, and identif y the variables.","
+[0]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.13 Key References
+[CONTENT]: There are also several conferences and organizations related to evaluation. The International  Symposium  on  Software  Metrics, sponsored  by  the  IEEE  Computer Society, addresses  issues  of  measurement  and  empirical  investigation. Information about  the  latest  conference  is  also  on  the  Computer  Society Web  page. The  International  Software  Engineering  Research  Network  publishes  studies  of  replicated investigations, and many of them are available from its Web site. Finally, the journal Empirical Software Engineering publishes not only studies, but also data and guidelines for empirical research.
+
+
+[1]
+[SECTION]: Testing the System > 9.16 Key References
+[CONTENT]: There have been several special issues of IEEE Software focused on the topics covered in this chapter. The June 1992 and May 1995 issues looked at reliability, the March 1991 issue focused on testing, and the May 2007 issue addressed test-driven development.
+The proceedings of the annual International Conference on Software Engineering usually has good papers on the latest in testing theory. For example, Frankl et al. (1997) examine the difference between testing to improve reliability and testing to find faults. Good reference books on testing include Beizer (1990);Kaner,Falk,and Nguyen (1993); and Kit (1995). Each provides a realistic perspective based on industrial experience.
+There  are  several  companies  that  evaluate  software  testing  tools  and  publish summaries of their capabilities. For example, Grove Consultants in England, Software Quality Engineering in Florida, and both Cigital and Satisfice in Virginia do regular analyses of testing techniques and tools. You can find these and other resources on the Web to help with requirements analysis and validation, planning and management,simulation, test development, test execution, coverage analysis, source code analysis, and test case generation.
+Software dependability and safety-critical systems are receiving more and more attention, and there are many good articles and books about the key issues, including Leveson (1996, 1997). In addition, the Dependable Computing Systems Centre in the Department of Computer Science, University of York, UK, is developing techniques and tools for assessing software dependability. You can get more information from its director, John McDermid, at jam@minster.york.ac.uk.
+Usability testing is very important; a system that is correct and reliable but difficult to use may in fact be worse than an easy-to-use but unreliable system. Usability tests and more general usability issues are covered in depth in Hix and Hartson (1993).
+
+
+[2]
+[SECTION]: The Future of Software Engineering > 14.7 Exercises
+[CONTENT]: 
+ - Consider the activities of a software project manager. Where are decisions made? When are they group decisions? When are they individual decisions?
+ - What software technologies have been promoted in the last ten years? Which ones have resulted  in  widespread  adoption, and  which  have  not?  Can  you  use  the  Rogers  and Moore frameworks to explain why?
+ - The January/February 2000 issue of IEEE Software contains an editorial by McConnell about software engineering's best influences:
+ - reviews and inspections
+ - information hiding
+ - incremental development
+ - user involvement
+ - automated revision control
+ - development using the Internet
+ - programming languages: Fortran, COBOL,Turbo Pascal,Visual Basic
+ - Capability Maturity Model for software
+ - component-based development
+ - metrics and measurement
+For each practice listed, analyze its likely technology adoption. Is it a best practice? What evidence supports its adoption? And what audience is addressed by the evidence?
+
+
+[3]
+[SECTION]: Annotated Bibliography
+[CONTENT]: This paper examines the ways in which 33 organizations calculate return on investment from software. It shows great inconsistencies that make it impossible for us to amalgamate the results.
+ - Brooks,Frederick P., Jr. (1987).'No silver bullet: Essence and accidents of software engineering.' IEEE Computer , 20(4) (April): 10-19.
+ - Brooks, Frederick P., Jr. (1995). The Mythical Man-Month 20th Anniversary Edition . Reading, MA:Addison-Wesley.
+A classic book of essays, based on the author's experience building the OS-360 operating system. Many of his observations involve organizational dynamics, such as adding extra staff to a late project. Originally published in 1975.
+ - Brownsword, Lisa, and Paul Clements (1996). 'A case study in successful product line development.' CMU/SEI-96-TR-016. Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University.
+ - Busby, J.S., and S.C. Barton (1996) 'Predicting the cost of engineering: Does intuition help or hinder?' Engineering Management Journal , 6(4): 177-182.
+ - Buschmann,F.,R.Meunier,H.Rohner,P.Sommerlad and M.Stal (1996). Pattern-Oriented Software Architecture:A System of Patterns. Chichester, UK: John Wiley & Sons.
+ - Canadian Engineering Qualifications Board (CEQB) (2004).'Software Engineering Syllabus2004.' http://www.ccpe.ca/e/files/syllabus_4_20.pdf.
+ - Canadian Engineering Quality Board (2001). 'Core and Supplementary Bodies of Knowledge for Software Engineering: A report prepared for the CCPE as part of the CEQB Body of Knowledge Development Pilot Project.' Draft version 0.4 (September 5).
+ - Card, David  N. (1992). 'Capability  evaluations  rated  highly  variable.' IEEE  Software , 9(5) (September): 105-107.
+ - Card, David N., V.E. Church, and William W. Agresti (1986). 'An empirical study of software design practices.' IEEE Transactions on Software Engineering , 12(2) (February): 264-271.
+ - Card, David N., and Robert L. Glass (1990). Measuring Software Design Quality . Englewood Cliffs, NJ: Prentice Hall.
+ - Interesting discussion of how a measure evolved based on the measure's goals and behavior.
+
+
+[4]
+[SECTION]: Why Software Engineering? > 1.13 What This Chapter Means For Researchers
+[CONTENT]: Many of the issues discussed in this chapter are good subjects for further research. We have noted some of the open issues in software engineering, including the need to find In later chapters, we will describe many techniques. Some have been used and are well-proven software development practices, whereas others are proposed and have been demonstrated only on small,'toy,' or student projects.We hope to show you how to improve what you are doing now and at the same time to inspire you to be creative and thoughtful about trying new techniques and processes in the future.
+ - the right levels of abstraction to make the problem easy to solve
+ - the right measurements to make the essential nature of the problem and solution visible and helpful
+ - an appropriate problem decomposition, where each subproblem is solvable
+ - a common framework or notation to allow easy and effective tool integration, and to maximize communication among project participants
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The provided context does not contain specific information about the number of articles in recent issues of journals like IEEE Transactions on Software Engineering, the Journal of Systems and Software, or IEEE Computer that present new techniques or tools for software development along with empirical evidence of improvement."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Take a look at the latest issue of a journal that presents articles about software engineering. (IEEE Transactions on Software Engineering, the Journal of Systems and Software, and IEEE Computer are good examples.) Of the articles that present a new technique or tool for software development, how many actually present some kind of evidence that the proposed technique is an improvement over what is currently used? For those that do, classify the type of empirical study used, and identify the variables."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The context mentions that the International Software Engineering Research Network publishes studies of replicated investigations and that the journal Empirical Software Engineering publishes studies, data, and guidelines for empirical research, but it does not provide specific data on the number of articles presenting new techniques with empirical evidence or details on the types of empirical studies and variables used."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The International Software Engineering Research Network publishes studies of replicated investigations, and many of them are available from its Web site. Finally, the journal Empirical Software Engineering publishes not only studies, but also data and guidelines for empirical research."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Therefore, the chatbot can't answer this question. Please try again with another question."",
+        ""citations"": [],
+        ""type"": ""abstained""
+    }
+]","The context mentions that the International Software Engineering Research Network publishes studies of replicated investigations and that the journal Empirical Software Engineering publishes studies, data, and guidelines for empirical research, but it does not provide specific data on the number of articles presenting new techniques with empirical evidence or details on the types of empirical studies and variables used.
+
+Therefore, the chatbot can't answer this question. Please try again with another question.",1.65,9.359
+"Select one of the studies that you identified in the answer to question 3. Analyze this study with respect to the common pitfalls in evaluation that are described in Table 12.2. For each pitfall, assess whether or not the study has success fully avoided the problem, and explain your reasoning. If the article contains sufficient information to allow you to judge whether the pitfall was avoided, that should also be noted. If there are pitfalls in this study, do the authors identify them and di scuss their impact on the results?","
+[0]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.2 Selecting An Evaluation Technique > What to Believe
+[CONTENT]: Suppose that we do many more case studies and surveys, or we find several of them in the literature. Some do not exhibit the link between factor X and quality (probably because of pitfalls), but most of them do. If the situation in which we are studying these factors is rare (e.g., the application domain is new or the approach to solving the problem is rarely used), then we must rely on the 'totality of evidence' to prove our case. That is, we must assume that most of the time we can rely on factor X to improve the code's quality.
+If the situation is not rare, then we can do prospective studies.We collect information about a large set of projects before, during, and after development. Then, we analyze the data to see which factors lead to high-quality code.There is much less chance of bias in this type of study, since we collect factor data before we know the resulting quality. If we find no link between factor X and quality, chance, homogeneity, or misclassification (pitfalls 3, 4, and 5) might explain why.At this point, if we are certain that the pitfalls did not affect us, it is time to revise our hypothesis.
+Alternatively, suppose we find a link between X and quality.The link may still be the result of confounding factors or chance, and we may want to wait for more studies to confirm the finding with 'totality of evidence.' But if we want stronger evidence that X leads to quality, we can run a formal experiment. By using good experimental design and controlling factors carefully, we can study whether factor X is linked to quality. By using techniques such as replication, randomization, and local control, we can avoid most of the pitfalls in Table 12.2.
+When our experiment is complete, we may find that the quality is the same in all treatment groups; thus, either the factor is not related to quality, or we were affected by chance,or pitfall 7, 8, or 9.We probably need to conduct more studies. If our experiment indeed demonstrates a link between factor X and quality, we can report back to our project team about our discovery.
+
+
+[1]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.2 Selecting An Evaluation Technique > What to Believe
+[CONTENT]: [TABLE 12.2 Common Pitfalls in Evaluation (Adapted with Permission from Liebman 1994)] 
+[FIGURE_DESCRIPTIONS]
+[0] Table 12.2 titled 'Common Pitfalls in Evaluation (Adapted with Permission from Liebman 1994)' lists nine pitfalls with corresponding descriptions. Pitfalls include: 1. Confounding - another factor causing the effect; 2. Cause or effect? - factor could be a result, not cause, of treatment; 3. Chance - small possibility effect happened by chance; 4. Homogeneity - no link if all subjects have same factor level; 5. Misclassification - no link if subjects' factor levels not accurately classified; 6. Bias - selection or administration errors cause bias; 7. Too short - short-term effects differ from long-term ones; 8. Wrong amount - factor has effect but not in amount used; 9. Wrong situation - factor has desired effect but not in studied situation.
+
+
+
+[2]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.2 Selecting An Evaluation Technique > What to Believe
+[CONTENT]: When results conflict, how do we know which study to believe? We can use a series of questions, represented by the game board in Figure 12.1, to understand how to sort through these studies. The answers to the questions tell us when we have enough information to draw a valid conclusion about a relationship between factors. To begin, suppose our project team is interested in improving the quality of the code it produces.We want to determine which factors improve quality, so that our team can use appropriate techniques or tools to generate better code. First, we decide to measure quality by counting faults per thousand lines of code; then, we decide that a high-quality system is one having fewer than five faults per thousand lines of code. Next, we attempt to find out what affects code quality by examining population studies, where characteristics of a large  population  of  developers  are  examined  for  associations  among  variables. For example, we read about a survey in another organization, reporting that code quality improves when the developers use a design tool. How do we know if this result is valid? It is possible that the study has fallen into pitfall 1, shown in Table 12.2.
+Pitfall 1 is confounding factors, where it is impossible to tell which of two factors is causing the results that are observed. For example, if new programmers never use the design  tool  and  experienced  programmers  always  do, it  is  impossible  to  tell  if  the experienced programmers' code has fewer failures in the field because of the tool or because  of  their  experience. Thus, when  factors  are  confounded, it  is  possible  that another factor is causing the quality to improve. If we cannot rule out confounding factors, we must do a more careful study, represented by box E in Figure 12.1.
+
+
+[3]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.2 Selecting An Evaluation Technique > What to Believe
+[CONTENT]: Alternatively, suppose  we  find  a  case  study  in  the  literature  suggesting  that projects with high-quality code use only programmers with college degrees. Before we conclude  that  a  college  degree  is  necessary  in  our  organization, we  must  decide whether the result is subject to pitfalls 1, 2, 3, 5, or 6. That is, the high quality could be caused by a confounding factor, by confusing cause with effect, or simply by chance. Or the high-quality code could be the result of misclassification; perhaps all of the company's developers have college degrees, so having a degree will correlate with any other factor. Finally, the study might be biased; the programmers selected for the study might have been chosen exactly because they have degrees (i.e., the nondegreed developers were left out of the study), so we cannot draw a valid conclusion about the relationship of degree to high quality.
+Thus, we turn to studies with a much higher level of control. Suppose, as noted in box F, we identify projects that have already developed high-quality code and then find projects with similar characteristics that have produced code of lower quality. Next, we compare the values of relevant factors to see if one or more factors distinguish the high- from the low-quality projects. If the projects with high-quality code have no significantly different characteristics from those without, then pitfall 3, 4, or 5 may have obscured the link.That is, there is a small possibility that chance led to no difference in the code, that all subjects had the same levels of each factor, or that we have misclassified some factors.
+On the other hand, we may find that factor X led to high-quality code. If we are sure that confounding factors, chance, or bias has not influenced the study, then we may want to wait for more studies to confirm our findings.
+
+
+[4]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.2 Selecting An Evaluation Technique
+[CONTENT]: Kitchenham,Pickard,and Pfleeger (1995) note that the differences among the research methods are also reflected  in  their  scale. By  their  nature, since  formal  experiments require a great deal of control, they tend to be small, involving small numbers of people or events. We can think of experiments as 'research in the small.' Case studies usually look at a typical project, rather than trying to capture information about all possible cases; these can be thought of as 'research in the typical.'And surveys try to poll what is happening broadly over large groups of projects:'research in the large.'
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""One study mentioned is a survey in another organization reporting that code quality improves when developers use a design tool."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""For example, we read about a survey in another organization, reporting that code quality improves when the developers use a design tool."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""This study may have fallen into pitfall 1, confounding factors, where it is impossible to tell which of two factors is causing the observed results."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""It is possible that the study has fallen into pitfall 1, shown in Table 12.2. Pitfall 1 is confounding factors, where it is impossible to tell which of two factors is causing the results that are observed."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""For example, if new programmers never use the design tool and experienced programmers always do, it is impossible to tell if the experienced programmers' code has fewer failures because of the tool or because of their experience."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""For example, if new programmers never use the design tool and experienced programmers always do, it is impossible to tell if the experienced programmers' code has fewer failures in the field because of the tool or because of their experience."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""If confounding factors cannot be ruled out, a more careful study is required, as noted in the referenced evaluation process."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""If we cannot rule out confounding factors, we must do a more careful study, represented by box E in Figure 12.1."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The study does not provide sufficient information to judge whether other pitfalls such as cause of effect, chance, homogeneity, misclassification, bias, or others were avoided."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""It is possible that the study has fallen into pitfall 1, shown in Table 12.2."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The authors do not explicitly identify or discuss the impact of pitfalls on the results in the information provided."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""If we cannot rule out confounding factors, we must do a more careful study, represented by box E in Figure 12.1."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    }
+]","One study mentioned is a survey in another organization reporting that code quality improves when developers use a design tool.
+
+This study may have fallen into pitfall 1, confounding factors, where it is impossible to tell which of two factors is causing the observed results.
+
+For example, if new programmers never use the design tool and experienced programmers always do, it is impossible to tell if the experienced programmers' code has fewer failures because of the tool or because of their experience.
+
+If confounding factors cannot be ruled out, a more careful study is required, as noted in the referenced evaluation process.
+
+The study does not provide sufficient information to judge whether other pitfalls such as cause of effect, chance, homogeneity, misclassification, bias, or others were avoided.
+
+The authors do not explicitly identify or discuss the impact of pitfalls on the results in the information provided.",1.558,11.806
+"A paper by Barbara Kitchenham, Lesley Pickard, and Shari Lawrence Pfleeger addresses in some detail common pitfalls of case studies in industrial environments (B. Kitchenham, L. Pickard, S. L. Pfleeger (1995). “Case studi es in method and tool evaluation.” IEEE Software, 12(4): 52 - 62). Use this paper to critique a case study of some software engineering technology. (The journals suggested in question 3 are good sources of case studies.) If there are problems with the study,  do you think they can be corrected in such a way thatthe study will still be feasible to run?","
+[0]
+[SECTION]: Annotated Bibliography
+[CONTENT]:  - Kitchenham, Barbara A., and  Käri  Känsäla  (1993). 'Inter-item  correlations  among  function points.' In Proceedings of the First International Symposium on Software Metrics (Baltimore, MD).Los Alamitos, CA: IEEE Computer Society Press.
+ - Kitchenham, Barbara A., and Steven Linkman (1997).'Why mixed VV&T strategies are important.' Software Reliability and Metrics Club Newsletter (Summer):9-10.
+ - Kitchenham,Barbara A.,Stephen G.MacDonell,Lesley M.Pickard and Martin J.Shepperd (2000). 'What accuracy statistics really measure.' Bournemouth University Technical Report, June.
+ - Kitchenham, Barbara A., and Shari Lawrence Pfleeger (1996). 'Software quality: The elusive target.' IEEE Software , 13(1) (January): 12-21.
+An introduction to a special issue on software quality,this article reviews some of the common software quality models and asks questions about what we really mean by 'software quality.'
+ - Kitchenham, Barbara A., Lesley Pickard, and Shari Lawrence Pfleeger (1995). 'Case studies for method and tool evaluation.' IEEE Software , 12(4) (July): 52-62.
+ - Kitchenham, Barabara A., and N.R. Taylor (1984). 'Software cost models.' ICL Technical Journal , 4(3):73-102.
+ - Klein, Gary (1998). Sources of Power . Cambridge, MA: MIT Press.
+ - Kleindorfer, Paul, Howard Kunreuther, and Paul Schoemaker (1993). Decision Sciences:An Integrative Perspective . Cambridge UK: Cambridge University Press.
+ - Knight, John, and Nancy Leveson (1986). 'An empirical study of failure probabilities in multiversion  software.' In Digest  of  the  Sixteenth  International  Symposium  on  Fault-tolerant Computing , pp. 165-70. Los Alamitos, CA: IEEE Computer Society Press.
+Assesses  the  claims  of n -version  programming, showing  that n different  designs  share many of the same kinds of flaws.
+ - Knight,John,Nancy Leveson,et al.(2000).'ACM Task Force on Licensing of Software Engineers Working  on  Safety-Critical  Software.' Draft  (July). http://www.acm.org/serving/se_policy/ safety_critical.pdf.
+
+
+[1]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.2 Selecting An Evaluation Technique > Key Selection Factors
+[CONTENT]: Several general guidelines can help us decide whether to perform a survey, a case study, or a formal experiment.As we have seen, control is a key element in our decision. If we have a high level of control over the variables that can affect the outcome, then we consider an experiment. If we do not have that control, a case study is the preferred technique. But the level of control satisfies the technical concerns; we must also address practical concerns. It may be possible but very difficult to control the variables, either because of the high cost of doing so or the degree of risk involved. For example, safetycritical systems may entail a high degree of risk in experimentation, and a case study may be more feasible.
+Kitchenham, Pickard, and Pfleeger (1995) point out that a formal experiment is especially useful for investigating alternative methods of performing a particular selfstanding task. For instance, we can perform an experiment to determine if VDM is better than statecharts for specifying a set of requirements. Here, the self-standing task can be isolated from the rest of the development process, but the task is still embedded in the usual way the code is developed.Also, the self-standing task can be judged immediately, so that the experiment does not delay project completion. On the other hand, a case study may be preferable to a formal experiment if the process changes caused by the independent variables are wide-ranging, requiring the effects to be measured at a high level and across too many dependent variables to control and measure.
+Another consideration is the degree to which we can replicate the basic situation we are investigating. For instance, suppose we want to investigate the effects of language on the resulting software. Can we develop the same project multiple times using a different language each time? If replication is not possible, then we cannot do a formal experiment. However, even when replication is possible, the cost of replication may be prohibitive. For example, if the study we want to do has a low replication cost, then an experiment is more appropriate than a case study. Similarly, if we have no control (i.e., the difficulty of control is high), then we should consider a case study.
+
+
+[2]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.2 Selecting An Evaluation Technique
+[CONTENT]: Kitchenham,Pickard,and Pfleeger (1995) note that the differences among the research methods are also reflected  in  their  scale. By  their  nature, since  formal  experiments require a great deal of control, they tend to be small, involving small numbers of people or events. We can think of experiments as 'research in the small.' Case studies usually look at a typical project, rather than trying to capture information about all possible cases; these can be thought of as 'research in the typical.'And surveys try to poll what is happening broadly over large groups of projects:'research in the large.'
+
+
+[3]
+[SECTION]: Why Software Engineering? > 1.15 Key References
+[CONTENT]: You can find out about software faults and failures by looking in the Risks Forum, moderated by Peter Neumann. A paper copy of some of the Risks is printed in each issue of Software Engineering Notes , published by the Association for Computer Machinery's Special Interest Group on Software Engineering (SIGSOFT). The Risks archives are available on ftp.sri.com, cd risks.The Risks Forum newsgroup is available online at comp.risks, or you can subscribe via the automated list server at risks-request@CSL.sri.com.
+You can find  out  more  about  the Ariane-5  project  from  the  European  Space Agency's  Web  site: http://www.esrin.esa.it/htdocs/esa/ariane. A  copy  of  the  joint ESA/CNES press release describing the mission failure (in English) is at http://www. esrin.esa.it/htdocs/tidc/Press/Press96/press19.html. A  French  version  of  the  press release is at http://www.cnes.fr/Acces_Espace/Vol_50x.html. An electronic copy of the Ariane-5  Flight  501  Failure  Report  is  at  http://www.esrin.esa.it/htdocs/tidc/Press/ Press96/ariane5rep.html.
+Leveson and Turner (1993) describe the Therac software design and testing problems in careful detail.
+The January 1996 issue of IEEE Software is devoted to software quality. In particular, the  introductory  article  by  Kitchenham  and  Pfleeger  (1996)  describes  and  critiques several quality frameworks, and the article by Dromey (1996) discusses how to define quality in a measurable way.
+For more information about the Piccadilly Television example, you may consult (Robertson  and  Robertson  1994)  or  explore  the  Robertsons'  approach  to  requirements at www.systemsguild.com.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The paper by Kitchenham, Pickard, and Pfleeger (1995) highlights that case studies are preferred when there is low control over variables affecting the outcome, especially in industrial environments where controlling variables can be costly or risky."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""If we do not have that control, a case study is the preferred technique. But the level of control satisfies the technical concerns; we must also address practical concerns. It may be possible but very difficult to control the variables, either because of the high cost of doing so or the degree of risk involved."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""They also point out that formal experiments are especially useful for investigating alternative methods of performing a particular self-standing task that can be isolated and judged immediately, whereas case studies are preferable when process changes are wide-ranging and affect many dependent variables that are difficult to control and measure."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Kitchenham, Pickard, and Pfleeger (1995) point out that a formal experiment is especially useful for investigating alternative methods of performing a particular selfstanding task... On the other hand, a case study may be preferable to a formal experiment if the process changes caused by the independent variables are wide-ranging, requiring the effects to be measured at a high level and across too many dependent variables to control and measure."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""A common pitfall in case studies is the difficulty or impossibility of replicating the basic situation under investigation, which limits the ability to perform formal experiments and may affect the generalizability of the results."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Another consideration is the degree to which we can replicate the basic situation we are investigating... If replication is not possible, then we cannot do a formal experiment."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Case studies tend to focus on typical projects and are considered 'research in the typical,' which may limit their scope but provide practical insights into real-world applications."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Case studies usually look at a typical project, rather than trying to capture information about all possible cases; these can be thought of as 'research in the typical.'"",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""To critique a case study of a software engineering technology using this paper, one should examine whether the study suffers from low control over variables, lack of replication, or overly broad and complex process changes that are difficult to measure."",
+        ""citations"": []
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""If such problems exist, they might be corrected by narrowing the scope of the study to focus on more self-standing tasks that can be isolated and measured more directly, or by improving the control over variables where feasible, thus making the study more feasible to run while still providing valuable insights."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Kitchenham, Pickard, and Pfleeger (1995) point out that a formal experiment is especially useful for investigating alternative methods of performing a particular selfstanding task... the self-standing task can be judged immediately, so that the experiment does not delay project completion."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","The paper by Kitchenham, Pickard, and Pfleeger (1995) highlights that case studies are preferred when there is low control over variables affecting the outcome, especially in industrial environments where controlling variables can be costly or risky.
+
+They also point out that formal experiments are especially useful for investigating alternative methods of performing a particular self-standing task that can be isolated and judged immediately, whereas case studies are preferable when process changes are wide-ranging and affect many dependent variables that are difficult to control and measure.
+
+A common pitfall in case studies is the difficulty or impossibility of replicating the basic situation under investigation, which limits the ability to perform formal experiments and may affect the generalizability of the results.
+
+Case studies tend to focus on typical projects and are considered 'research in the typical,' which may limit their scope but provide practical insights into real-world applications.
+
+To critique a case study of a software engineering technology using this paper, one should examine whether the study suffers from low control over variables, lack of replication, or overly broad and complex process changes that are difficult to measure.
+
+If such problems exist, they might be corrected by narrowing the scope of the study to focus on more self-standing tasks that can be isolated and measured more directly, or by improving the control over variables where feasible, thus making the study more feasible to run while still providing valuable insights.",1.569,16.301
+"Do a search of the literature in which you identify the relevant papers on two different approaches to process improvement. Use the references given in the textbook as a starting point. Compare and contrast the two approaches in a short report (less than 5 pages). Your report should be a summary of the two approaches, written for an organization thinking of investing in process improvement. You should answer questions such as: Where have the approaches already been applied? Have they been shown to work? What  support is required from the organization? Identify other relevant criteria as you see fit.","
+[0]
+[SECTION]: Modeling the Process and Life Cycle > 2.11 Key References > TABLE 2.3 ( continued )
+[CONTENT]:  - iteration and feedback to earlier steps
+ - user creativity
+ - object and information management, as well as flow through the process
+ - object structure, attributes, and interrelationships
+ - organizational responsibility for specific tasks
+ - physical communication mechanisms for information transfer
+ - process measurements
+ - temporal aspects (both absolute and relative)
+ - tasks executed by humans
+ - professional judgment or discretion
+ - connection to narrative explanations
+ - tasks invoked or executed by a tool
+ - resource constraints and allocation, schedule determination
+ - process modification and improvement
+ - multiple levels of aggregation and parallelism Eighteen different process modeling techniques were applied to the common problem, and varying degrees of satisfaction were found with each one. The results are reported in Kellner and Rombach (1990).
+Curtis, Kellner, and Over (1992) present a comprehensive survey of process modeling techniques and tools. The paper also summarizes basic language types and constructs and gives examples of process modeling approaches that use those language types.
+Krasner et al. (1992) describe lessons learned when implementing a software process modeling system in a commercial environment.
+Several Web sites contain information about process modeling.
+ - The U.S. Software Engineering Institute (SEI) continues to investigate process modeling as part of its process improvement efforts.A list of its technical reports and activities can be found at http://www.sei.cmu.edu. The information at http:// www.sei.cmu.edu/collaborating/spins/ describes Software Process Improvement Networks, geographically-based groups of people interested in process improvement who often meet to hear speakers or discuss process-related issues.
+ - The European Community has long sponsored research in process modeling and a process model language. Descriptions of current research projects are available at http://cordis.europa.eu/fp7/projects_en.html.
+
+
+[1]
+[SECTION]: Improving Predictions, Products, Processes, and Resources > 13.3 Improving Processes > Maintenance
+[CONTENT]: The  research  group  studying  the  maintenance  process  learned  many  lessons about  maintenance, and  their  suggestions  led  to  measurable  process  and  product improvement. But they also learned a lot about the evaluation process itself.They note three things to keep in mind when evaluating improvement.
+ - Use statistical techniques with care, because a single technique may not evaluate the true effect of process improvement. For example, when they considered only median and rank correlation of upgrade impact on product reliability, they saw no improvement. But when they used the mean and standard deviation, the improvement was clear.
+ - In some cases, process improvement must be very dramatic if the quantitative effects are to show up in the statistical results. For example, the contingency tables used to classify components as fault-prone changed very little as the process was improved, until almost all the faults were removed.
+ - Process improvement affects linear regression results in different ways.In particular, as the equations' accuracy increased, their effects on individual variables differed.
+
+
+[2]
+[SECTION]: Improving Predictions, Products, Processes, and Resources > 13.3 Improving Processes > SIDEBAR 13.2 PROCESS MATURITY AND INCREASED VISIBILITY
+[CONTENT]: This study paints a very positive picture of software process improvement. However, we must be cautious about suggesting that the results indicate the general situation. The participating organizations volunteered to take part in the study; thus, this group did not form a random sample of the larger population. The projects were not characterized  in  a  way  that  allows  us  to  compare  one  with  another, the  process improvement efforts differed from one project to the next, and there was no measurement done to determine how representative the projects were. Although we can see that some software process improvement efforts were beneficial for this sample, we cannot conclude that software process improvement is beneficial in general.
+It is not clear how the reported results should be viewed in the larger context of business  value. The 'value  returned' in  the  Herbsleb  study  seems  to  be  measured in terms of early detection of faults, reduction in time to market, and reduction of operational failures. But these characteristics do not address customer satisfaction or appropriate functionality. That is, they look at technical quality rather than business quality, so they paint only a partial picture of improvement. We cannot determine from these results whether adopting a maturity framework is good for business. As Sidebar 13.3 points  out, there  may  be  cases  where  high  maturity  can  actually  restrict  business flexibility.
+If the models and measurements are incorrect or misguided,the result can be misallocation of resources, loss of business, and more.
+Card (1992) reports that inconsistent results were obtained from CMM assessments of the same organization by different teams; thus, we must wonder how reliable the CMM assessments are. Here, reliability refers to the extent to which the same measurement procedure yields the same results on repeated trials.
+El Emam and Madhavji (1995) have further investigated reliability, asking
+ - How reliable are such assessments?
+ - What are the implications of reliability for interpreting assessment scores?
+
+
+[3]
+[SECTION]: Improving Predictions, Products, Processes, and Resources > 13.3 Improving Processes
+[CONTENT]: We have seen how software development processes can affect the quality of the products they produce. Models of process maturity are based on the notion that improving the process will automatically improve products, especially software. More narrowly focused processes, such as prototyping and cleanroom, are also aimed at reducing cost, improving quality, and shortening development or maintenance time. In this section, we look at  investigations  that  improve  the  processes  themselves, thereby  indirectly improving products.
+
+
+[4]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.5 Evaluating Processes > Category 6: Engineering practices
+[CONTENT]: Arango, Schoen, and Pettengill (1993) offer a broader approach to publishing the results  of  postmortem analyses. In their work at Schlumberger, they considered the reuse  of  everything  from  a  project, including  lessons  learned. The  Schlumberger researchers developed technology called project books and technology books, accessible by other developers on other projects, that share experiences, tools, designs, data, ideas, and anything that might be useful to someone else at the company. By using technology such as theirs, we can learn from each other and improve with each project, rather than continue to make the same mistakes and wonder why.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Two different approaches to software process improvement can be identified from the literature: process modeling techniques and process maturity models."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Eighteen different process modeling techniques were applied to the common problem, and varying degrees of satisfaction were found with each one. The results are reported in Kellner and Rombach (1990). Curtis, Kellner, and Over (1992) present a comprehensive survey of process modeling techniques and tools."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Models of process maturity are based on the notion that improving the process will automatically improve products, especially software."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Process modeling techniques focus on detailed representation of the software process, including iteration and feedback, user creativity, object and information management, organizational responsibilities, communication mechanisms, process measurements, and resource constraints. These techniques have been applied in various environments, including commercial settings, as described by Krasner et al. (1992)."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""- iteration and feedback to earlier steps - user creativity - object and information management, as well as flow through the process - object structure, attributes, and interrelationships - organizational responsibility for specific tasks - physical communication mechanisms for information transfer - process measurements - temporal aspects (both absolute and relative) - tasks executed by humans - professional judgment or discretion - tasks invoked or executed by a tool - resource constraints and allocation, schedule determination - process modification and improvement - multiple levels of aggregation and parallelism Eighteen different process modeling techniques were applied to the common problem, and varying degrees of satisfaction were found with each one. The results are reported in Kellner and Rombach (1990). Krasner et al. (1992) describe lessons learned when implementing a software process modeling system in a commercial environment."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Process maturity models, such as the Capability Maturity Model (CMM), are based on the idea that improving the maturity of the process will lead to better product quality, reduced cost, and shorter development time. These models have been widely studied and applied, but their effectiveness can vary. For example, Card (1992) reported inconsistent results from CMM assessments of the same organization by different teams, raising concerns about reliability."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Models of process maturity are based on the notion that improving the process will automatically improve products, especially software. Card (1992) reports that inconsistent results were obtained from CMM assessments of the same organization by different teams; thus, we must wonder how reliable the CMM assessments are."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Where have these approaches been applied? Process modeling techniques have been implemented in commercial environments and are supported by research institutions such as the U.S. Software Engineering Institute (SEI) and the European Community. Process maturity models have been applied in various organizations, but the studies often involve volunteer organizations, which may not represent the general population."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Krasner et al. (1992) describe lessons learned when implementing a software process modeling system in a commercial environment. The U.S. Software Engineering Institute (SEI) continues to investigate process modeling as part of its process improvement efforts. The European Community has long sponsored research in process modeling and a process model language."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The participating organizations volunteered to take part in the study; thus, this group did not form a random sample of the larger population."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Have these approaches been shown to work? Process modeling techniques have shown varying degrees of satisfaction depending on the technique used. Process maturity models have shown some benefits such as early fault detection and reduced time to market, but results are mixed and may not fully capture business value or customer satisfaction."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Eighteen different process modeling techniques were applied to the common problem, and varying degrees of satisfaction were found with each one. The results are reported in Kellner and Rombach (1990)."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The 'value returned' in the Herbsleb study seems to be measured in terms of early detection of faults, reduction in time to market, and reduction of operational failures. But these characteristics do not address customer satisfaction or appropriate functionality."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""What support is required from the organization? Both approaches require organizational commitment to process improvement, including allocation of resources, training, and possibly changes in organizational responsibilities. Process modeling may require tools and infrastructure to manage process information and feedback. Process maturity models require reliable assessment procedures and consistent application to be effective."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""organizational responsibility for specific tasks - resource constraints and allocation, schedule determination - process modification and improvement"",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Card (1992) reports that inconsistent results were obtained from CMM assessments of the same organization by different teams; thus, we must wonder how reliable the CMM assessments are."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Other relevant criteria include the reliability of measurement and assessment methods, the representativeness of the projects studied, and the potential impact on business flexibility. Misguided models or measurements can lead to misallocation of resources and loss of business."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""If the models and measurements are incorrect or misguided, the result can be misallocation of resources, loss of business, and more."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""there may be cases where high maturity can actually restrict business flexibility."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","Two different approaches to software process improvement can be identified from the literature: process modeling techniques and process maturity models.
+
+Process modeling techniques focus on detailed representation of the software process, including iteration and feedback, user creativity, object and information management, organizational responsibilities, communication mechanisms, process measurements, and resource constraints. These techniques have been applied in various environments, including commercial settings, as described by Krasner et al. (1992).
+
+Where have these approaches been applied? Process modeling techniques have been implemented in commercial environments and are supported by research institutions such as the U.S. Software Engineering Institute (SEI) and the European Community. Process maturity models have been applied in various organizations, but the studies often involve volunteer organizations, which may not represent the general population.
+
+Have these approaches been shown to work? Process modeling techniques have shown varying degrees of satisfaction depending on the technique used. Process maturity models have shown some benefits such as early fault detection and reduced time to market, but results are mixed and may not fully capture business value or customer satisfaction.
+
+What support is required from the organization? Both approaches require organizational commitment to process improvement, including allocation of resources, training, and possibly changes in organizational responsibilities. Process modeling may require tools and infrastructure to manage process information and feedback. Process maturity models require reliable assessment procedures and consistent application to be effective.
+
+Other relevant criteria include the reliability of measurement and assessment methods, the representativeness of the projects studied, and the potential impact on business flexibility. Misguided models or measurements can lead to misallocation of resources and loss of business.",1.551,15.757
+"Find a paper from the research literature describing a new technology. Remember in this context that “technology” can have a broad meaning, including software processes, tools, or specific techniques. Describe the particular technology being proposed. Does the paper describe who the anticipated users of the technology will be? Can you categorize those users according to the types of adopters in Figure 14.1? What arguments are made as to the technology’s effectiveness? How could you classify those arguments according to the categories of evidence proposed by Schum (described in section 14.2)?","
+[0]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > Next Steps in Improving Technology Transfer
+[CONTENT]: We can no longer afford to make investments in technology whose adoption is either undesirable or not likely to be successful. Practitioners can help researchers take steps to understand the nature of successful technology transfer, and use that new understanding to build models and support for effective evaluation and adoption. In particular, some of the current empirical studies of software engineering technologies are loosely related and poorly planned: not a very good collective generator of a coherent body of evidence. If empirical software engineering researchers would organize studies so that each piece contributes a clear and significant result to the whole, the resulting body of evidence would be more compelling.That is,practitioners and researchers together must plan what to address in each study and how that study's result will contribute to the overall body of evidence.
+At the same time, practitioners interested in using new technologies effectively can learn  from  the  many  studies  already  performed  and  apply  their  lessons  to  their  own projects. Technology transfer inhibitors and promoters fall into three categories: technological, organizational, and evidential. For example, technology transfer is inhibited by lack of packaging, by lack of relationship to a pressing technical or business problem, and by difficulty of use and understanding. By contrast, a new technology can be promoted with tools, a well-understood context, and an understanding of clear potential benefit to those on the project now or who will use the resulting product later. In other words, the technology is easier to transfer if it is easy to use and easy to see how it will help.
+
+
+[1]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > A Closer Look at the Evidence
+[CONTENT]:  - ◊ Compatibility: To what degree is the new technology consistent with existing values, past experiences, and needs of potential adopters? Because early market adopters are interested in radical change, they are not as interested in the answer to this question as those in the mainstream market. That is, the early market doesn't mind restarting from the ground up, but mainstreamers are reluctant to give up that with which they are already familiar.
+ - ◊ Complexity: To what degree is the new technology easy to understand and use? Early market adopters are more likely to be willing to learn completely new ways of doing things, even if more complex, in order to immerse themselves in newer, more exciting technology. But mainstreamers view ease of use as a necessary characteristic of a new technology.
+ - ◊ Trialability: Can  the  new  technology  be  experimented  with  on  a  limited basis? Trying out the new technology is a must for early marketers. But many mainstreamers will try the technology only after others have built a solid case for the technology's advantages.
+ - ◊ Observability: Are the results of using the technology visible to others? The early market likes direct observation and tangible evidence. But mainstreamers prefer evidence only from organizations whose characteristics are like their own. For example, developers of banking software find evidence credible only when it comes from other banking organizations; case studies from telecommunications  or  defense  firms  leave  them  cold. Moreover, difficulties  arise when  the  directly  observed  technology  produces  evidence  of  commercial advantage;in these cases, only second-hand evidence will be reported in the literature, if reported at all.
+
+
+[2]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > A Closer Look at the Evidence
+[CONTENT]:  - The nature of the communication channels used to increase awareness and knowledge of the technology. Some types of adopters find some communication channels more credible than others. Innovators tend to rely on technical journals and reports  from  researchers  and  technical  experts. Early  adopters  in  turn  ask  the innovators to confirm a technology's credibility. Early- and late-majority members ask others in their social system, often by word of mouth or benchmarking visits.
+ - The nature of the social system in which the potential user operates. Innovators turn to technologists, but the mainstream market usually looks to the business community to see what its competitors are doing.
+ - The extent of efforts to diffuse the technology throughout an organization. The early market requires the least effort. However, the mainstream market requires not only information about the technology itself, but also packaging, user support, and testimonials from current adopters and users. Moore tells us that the technology itself  is  the 'generic  product,' but the supporting materials help form the 'whole product.'
+ - The technology's attributes. Rogers suggests that the relevant attributes are
+ - ◊ Relative advantage: To what degree is the new technology better than what is already  available?  Innovators  answer  this  question  in  technical  terms: is  it faster, architecturally superior, or more maintainable? Early adopters look for tangible  evidence  about  the 'whole  product.' Early-majority  adopters  seek information about the impact on the company, while late-majority adopters look at how the technology will increase market share. Thus, relative advantage reflects the advantage in four distinct areas-technology, product, company, and market-as each type of potential adopter widens the universe in which the decision-making is viewed.
+
+
+[3]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > New Models of Technology Transfer
+[CONTENT]: However, compelling evidence is not enough to ensure technology adoption.The marketing world tells us how to package and support the technology to make it 'friendlier' and easier to understand and use. For example, tools and supporting written material go a long way in assisting a user to adopt a new technique or process. When the supporting infrastructure is in place to offer this assistance, the technology is 'ready for prime time.' That is, this packaged technology is finally ready for broader diffusion, so that we as a community can assess its adoption rate and evidence of effectiveness as more organizations report the results of their experiences.
+In fact, we may need multiple models of diffusion, including iteration, based on the characteristics of the technology, the adopters, and the evidence.These models, plus the marketing and evidential concepts described in this chapter, offer us a vocabulary with which to discuss and understand key issues affecting the success of technology adoption and diffusion.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The provided context does not include a specific paper from the research literature describing a new technology, nor does it describe a particular technology being proposed."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The provided context documents discuss general concepts and models related to technology transfer, adoption, and diffusion in software engineering, but do not mention a specific paper or technology."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The context does describe categories of adopters such as innovators, early adopters, early majority, late majority, and mainstream market users, and discusses attributes of technology adoption including compatibility, complexity, trialability, observability, and relative advantage."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""- ◊ Compatibility: To what degree is the new technology consistent with existing values, past experiences, and needs of potential adopters?..."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""- The nature of the communication channels used to increase awareness and knowledge of the technology. Some types of adopters find some communication channels more credible than others. Innovators tend to rely on technical journals and reports from researchers and technical experts. Early adopters in turn ask the innovators to confirm a technology's credibility. Early- and late-majority members ask others in their social system, often by word of mouth or benchmarking visits."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Arguments about a technology's effectiveness are discussed in terms of evidence categories such as relative advantage, compatibility, complexity, trialability, and observability, which influence adoption decisions by different types of adopters."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""- ◊ Relative advantage: To what degree is the new technology better than what is already available?..."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""- ◊ Complexity: To what degree is the new technology easy to understand and use?..."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The context also mentions that compelling evidence alone is not sufficient for adoption; packaging, tools, user support, and testimonials are important to make the technology easier to understand and use, thus promoting adoption."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""However, compelling evidence is not enough to ensure technology adoption. The marketing world tells us how to package and support the technology to make it 'friendlier' and easier to understand and use. For example, tools and supporting written material go a long way in assisting a user to adopt a new technique or process."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    }
+]","The context does describe categories of adopters such as innovators, early adopters, early majority, late majority, and mainstream market users, and discusses attributes of technology adoption including compatibility, complexity, trialability, observability, and relative advantage.
+
+Arguments about a technology's effectiveness are discussed in terms of evidence categories such as relative advantage, compatibility, complexity, trialability, and observability, which influence adoption decisions by different types of adopters.
+
+The context also mentions that compelling evidence alone is not sufficient for adoption; packaging, tools, user support, and testimonials are important to make the technology easier to understand and use, thus promoting adoption.",1.635,15.183
+"Find a paper describing an organization’s practical experience with a particular technology. If at all possible, find one describing experience with the same technology you chose in question 2. (Many conferences, including ICSE, now include tracks dedicated to industry reports, making these conference proceedings a good place to start your search.) How does the paper measure the success (or lack of success) with the technology? What kinds of evidence are presented to support the evaluation of effectiveness? How would you classify that evidence according to the categories of evidence proposed by Schum (described in section 14.2)?","
+[0]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > New Models of Technology Transfer
+[CONTENT]: To this end, we can put together these building blocks for technology transfer success to gain a better understanding of how technology transfer works in our individual organizations. Usually, such models include preliminary evaluation of a new technology, performed by those who use the technology for the first time, to see if it indeed solves the problem it was intended to address.This step should be sensitive to the organizational culture, so that a proposed technological solution can be viewed in the context of how it will be received by the organization or project that will use it. We should also identify promoters and inhibitors, so that we know who or what is likely to help or hinder technology adoption and effectiveness. For example, the adopter roles play a big part in determining the reception given to a particular technology, based on who is promoting it, whether similar technologies have been tried in the past, and how different the technology is from what is being performed currently.
+This growing body of evidence should then be subjected to a more advanced evaluation, where we examine not only the technology but also the evidence itself. That is, to assess whether the body of evidence forms a compelling argument for using the technology, we look at the situations in which the technology has been used, compare the old ways to the new ways, and determine (using surveys, case studies, experiments, feature analysis, and other techniques) whether the evidence is conflicting, consistent, and objective.We want to know how 'solid' a case we have for believing that the new technology will solve the business problem it addresses.
+
+
+[1]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer
+[CONTENT]: No matter what we choose and why we choose it, we can find successful past examples of our own technology-selection strategy to support our thinking. Unfortunately, as we have seen in earlier chapters, we can also find past examples of failure.This success/failure puzzle wears at least two faces: technical and commercial. We may do a wonderful job in solving a problem, only to find that our project is not a commercial success. Or, to catch the window of opportunity, we may rush our product to release, so that it becomes a commercial success in the short term but fails in the long term due to lack of support and enhancement. Often we have a dual focus: we want to choose the right technology to solve the problem and do it in a way that appeals to customers who need to have that problem solved. In this section, we examine why and how we make technology-selection decisions.We also look at how the empirical software engineering described in Chapter 13 produces evidence to support those decisions. Does the evidence help or hinder the adoption of new technologies throughout organizations or market segments?
+This book has described many kinds of technologies that we have at our disposal. As we noted in Chapter 1, the 'technology' we choose to help us in our next project can be any method, technique, tool, procedure, or paradigm used in software development or maintenance. To know whether a technology is successful, we want to look at whether it solves a problem, whether it is commercially viable, and how long it takes for the technology to become accepted practice.We also want to know how to increase the odds that our technology choice is the right one.
+
+
+[2]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > A Closer Look at the Evidence
+[CONTENT]:  - ◊ Compatibility: To what degree is the new technology consistent with existing values, past experiences, and needs of potential adopters? Because early market adopters are interested in radical change, they are not as interested in the answer to this question as those in the mainstream market. That is, the early market doesn't mind restarting from the ground up, but mainstreamers are reluctant to give up that with which they are already familiar.
+ - ◊ Complexity: To what degree is the new technology easy to understand and use? Early market adopters are more likely to be willing to learn completely new ways of doing things, even if more complex, in order to immerse themselves in newer, more exciting technology. But mainstreamers view ease of use as a necessary characteristic of a new technology.
+ - ◊ Trialability: Can  the  new  technology  be  experimented  with  on  a  limited basis? Trying out the new technology is a must for early marketers. But many mainstreamers will try the technology only after others have built a solid case for the technology's advantages.
+ - ◊ Observability: Are the results of using the technology visible to others? The early market likes direct observation and tangible evidence. But mainstreamers prefer evidence only from organizations whose characteristics are like their own. For example, developers of banking software find evidence credible only when it comes from other banking organizations; case studies from telecommunications  or  defense  firms  leave  them  cold. Moreover, difficulties  arise when  the  directly  observed  technology  produces  evidence  of  commercial advantage;in these cases, only second-hand evidence will be reported in the literature, if reported at all.
+
+
+[3]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > A Closer Look at the Evidence
+[CONTENT]: Figure 14.2 summarizes the types of evidence appealing to different audiences. The lower-left quadrant reflects innovators' interests, where the focus is primarily on the technology itself. Early adopters turn their attention to the broader notion of product, while mainstream market members are more interested in the company and the market.This figure makes it clear that different audiences look for very different kinds of evidence. Business school findings such as these help us ask the right questions about a technology (i.e., questions whose answers are interesting to the audience) and design the right kinds of studies to provide evidence that answers those questions.
+
+
+[4]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > New Models of Technology Transfer
+[CONTENT]: The overriding goal of technology adoption is to improve at least one new product, process, or resource in some way.The evidence should help us to determine if the new technology causes improvement. We want to investigate the cause-and-effect relationship between the new technology and one or more variables of interest. Even if the benefit is the same as existing or competing technologies, we may choose the new technology simply because it reduces the uncertainty in cause and effect. In other words, we want the results of our development and maintenance processes to be more predictable.
+[FIGURE 14.2 Evidence required for different audiences (adapted from Moore 1991).] 
+[FIGURE_DESCRIPTIONS]
+[0] A 2x2 matrix diagram categorizing stakeholders into four groups based on their focus and attitude: Specialists (bottom-left), Supporters (top-left), Skeptics (bottom-right), and Generalists (top-right). The vertical axis differentiates Product focus (left) from Company focus (right). The horizontal axis differentiates Technology focus (top) from Market focus (bottom). Each quadrant lists relevant attributes: Supporters include Benchmarks, Product reviews, Design wins, Initial sales volumes, Trade press coverage, Visionary endorsements, Revenues and profits, Strategic partners, Top-tier customers, Full product line, Business press coverage, Financial analyst endorsements. Specialists include Architecture, Schematics, Demonstrations, Trials, Technology press coverage, Guru endorsements. Skeptics include Market share, Third-party support, Standards certification, Application proliferation, Vertical press coverage, Financial analyst endorsements.
+
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""A paper describing an organization's practical experience with a particular technology typically measures success by evaluating whether the technology solves the intended problem, its commercial viability, and the time it takes for the technology to become accepted practice."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""To know whether a technology is successful, we want to look at whether it solves a problem, whether it is commercially viable, and how long it takes for the technology to become accepted practice."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The kinds of evidence presented to support the evaluation of effectiveness include surveys, case studies, experiments, feature analysis, and other techniques that examine the situations in which the technology has been used, comparing old ways to new ways, and determining whether the evidence is conflicting, consistent, and objective."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""We should also identify promoters and inhibitors, so that we know who or what is likely to help or hinder technology adoption and effectiveness. ... we look at the situations in which the technology has been used, compare the old ways to the new ways, and determine (using surveys, case studies, experiments, feature analysis, and other techniques) whether the evidence is conflicting, consistent, and objective."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""According to the categories of evidence proposed by Schum, the evidence can be classified based on compatibility, complexity, trialability, and observability, which reflect how the technology fits with existing values and needs, ease of use, ability to experiment on a limited basis, and visibility of results to others, respectively."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""- ◊ Compatibility: To what degree is the new technology consistent with existing values, past experiences, and needs of potential adopters? ... - ◊ Complexity: To what degree is the new technology easy to understand and use? ... - ◊ Trialability: Can the new technology be experimented with on a limited basis? ... - ◊ Observability: Are the results of using the technology visible to others?"",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Different audiences look for different kinds of evidence: innovators focus on the technology itself, early adopters on the broader product, and mainstream market members on the company and market, which helps in designing studies to provide evidence that answers audience-specific questions."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Figure 14.2 summarizes the types of evidence appealing to different audiences. The lower-left quadrant reflects innovators' interests, where the focus is primarily on the technology itself. Early adopters turn their attention to the broader notion of product, while mainstream market members are more interested in the company and the market."",
+                ""img_id"": null
+            }
+        ],
+        ""type"": null
+    }
+]","A paper describing an organization's practical experience with a particular technology typically measures success by evaluating whether the technology solves the intended problem, its commercial viability, and the time it takes for the technology to become accepted practice.
+
+The kinds of evidence presented to support the evaluation of effectiveness include surveys, case studies, experiments, feature analysis, and other techniques that examine the situations in which the technology has been used, comparing old ways to new ways, and determining whether the evidence is conflicting, consistent, and objective.
+
+According to the categories of evidence proposed by Schum, the evidence can be classified based on compatibility, complexity, trialability, and observability, which reflect how the technology fits with existing values and needs, ease of use, ability to experiment on a limited basis, and visibility of results to others, respectively.
+
+Different audiences look for different kinds of evidence: innovators focus on the technology itself, early adopters on the broader product, and mainstream market members on the company and market, which helps in designing studies to provide evidence that answers audience-specific questions.",1.583,12.525

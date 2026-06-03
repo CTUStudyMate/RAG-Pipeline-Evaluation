@@ -16,22 +16,10 @@ def calculate_average_metrics(directory_path):
         return
 
     # Danh sách các cột cần tính điểm
-    metrics = ['precision', 'recall', 'f1', 'correctness', 'retrieve_time_sec' ,'generate_time_sec']
+    metrics = ['precision', 'recall', 'f1', 'correctness', 'faithfulness', 'retrieve_time_sec' ,'generate_time_sec']
+    abstention_field = 'true_abstention'
     # retrieve_time_sec,generate_time_sec,precision,recall,f1,correctness   
     
-    # Hàm phụ để xử lý cột correctness (pass -> 1.0, fail -> 0.0)
-    def parse_correctness(val):
-        if pd.isna(val): 
-            return np.nan
-        val_str = str(val).strip().lower()
-        if val_str == 'pass': 
-            return 1.0
-        if val_str == 'fail': 
-            return 0.0
-        try:
-            return float(val) # Đề phòng trường hợp đã là số sẵn
-        except ValueError:
-            return np.nan
 
     print(f"Đã tìm thấy {len(csv_files)} file CSV. Bắt đầu phân tích...\n")
 
@@ -51,9 +39,6 @@ def calculate_average_metrics(directory_path):
             # 2. Xử lý riêng cột correctness
             cols_to_average = [m for m in metrics if m in df.columns]
             
-            # if 'correctness' in df.columns:
-            #     df['correctness_score'] = df['correctness'].apply(parse_correctness)
-            #     cols_to_average.append('correctness_score')
             
             # 3. Tính điểm trung bình (hàm mean() của pandas tự động bỏ qua giá trị NaN)
             mean_values = df[cols_to_average].mean()
@@ -61,9 +46,17 @@ def calculate_average_metrics(directory_path):
             # In kết quả
             for index, value in mean_values.items():
                 print(f"  - {index:<18}: {value:.4f}")
-                
-            print(f"  * Tổng số câu đã đánh giá: {len(df)}\n")
             
+            #  Xử lý true_abstention riêng
+            if abstention_field in df.columns:
+                df[abstention_field] = pd.to_numeric(df[abstention_field], errors='coerce')
+
+                total = len(df)
+                abstention_score = df[abstention_field].fillna(0).sum() / total
+
+                print(f"  - {abstention_field:<18}: {abstention_score:.4f}")
+                print(f"    (correct={df[abstention_field].fillna(0).sum():.0f} / total={total})")
+                        
         except Exception as e:
             print(f" Lỗi khi xử lý file {file_name}: {e}\n")
 
@@ -72,4 +65,4 @@ def calculate_average_metrics(directory_path):
 # Dùng dấu chấm '.' nếu file code và file csv nằm chung một thư mục.
 thu_muc_chua_csv = "." 
 
-calculate_average_metrics("./calculate/budget2000")
+calculate_average_metrics("./calculate/test2")
