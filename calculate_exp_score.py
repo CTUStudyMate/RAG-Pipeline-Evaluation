@@ -18,37 +18,46 @@ def _slugify(name: str) -> str:
 
 
 def _plot_global_comparison(all_data: dict[str, pd.Series], output_dir: str) -> str | None:
-    """
-    One unified chart:
-    - Quality metrics
-    - True abstention
-    """
+    quality_metrics = QUALITY_METRICS + [ABSTENTION_FIELD]
+    time_metrics = TIME_METRICS
 
-    metrics = QUALITY_METRICS + [ABSTENTION_FIELD]
-
-    available_metrics = [
-        m for m in metrics
+    available_quality = [
+        m for m in quality_metrics
         if any(m in v.index for v in all_data.values())
     ]
 
-    if len(all_data) < 2 or not available_metrics:
+    available_time = [
+        m for m in time_metrics
+        if any(m in v.index for v in all_data.values())
+    ]
+
+    if len(all_data) < 2 or (not available_quality and not available_time):
         return None
 
     exp_names = list(all_data.keys())
     n_exp = len(exp_names)
-    n_metrics = len(available_metrics)
-
-    x = np.arange(n_metrics)
+    cmap = plt.get_cmap("tab10")
     width = 0.8 / n_exp
 
-    fig, ax = plt.subplots(figsize=(max(10, n_metrics * 1.5), 5))
-    cmap = plt.get_cmap("tab10")
+    # =========================
+    # GRID LAYOUT (KEY PART)
+    # =========================
+    fig = plt.figure(figsize=(14, 7))
+    gs = fig.add_gridspec(2, 3)  # 3 columns to control width
+
+    ax1 = fig.add_subplot(gs[0, :])     # QUALITY full width
+    ax2 = fig.add_subplot(gs[1, 1])     # TIME narrow (center column)
+
+    # =========================
+    # QUALITY METRICS
+    # =========================
+    x = np.arange(len(available_quality))
 
     for i, (exp, means) in enumerate(all_data.items()):
-        vals = [means.get(m, 0) for m in available_metrics]
+        vals = [means.get(m, 0) for m in available_quality]
         offset = (i - n_exp / 2 + 0.5) * width
 
-        bars = ax.bar(
+        bars = ax1.bar(
             x + offset,
             vals,
             width=width * 0.9,
@@ -58,23 +67,57 @@ def _plot_global_comparison(all_data: dict[str, pd.Series], output_dir: str) -> 
         )
 
         for bar, val in zip(bars, vals):
-            ax.text(
+            ax1.text(
                 bar.get_x() + bar.get_width() / 2,
                 val + 0.01,
                 f"{val:.2f}",
                 ha='center',
-                va='bottom',
                 fontsize=7
             )
 
-    ax.set_xticks(x)
-    ax.set_xticklabels(available_metrics)
-    ax.set_ylim(0, 1.2)
-    ax.set_ylabel("Score")
-    ax.set_title("RAG Evaluation Comparison (Quality + Abstention)")
-    ax.legend(fontsize=8)
-    ax.grid(axis='y', linestyle='--', alpha=0.5, zorder=0)
-    ax.spines[['top', 'right']].set_visible(False)
+    ax1.set_xticks(x)
+    ax1.set_xticklabels(available_quality, rotation=30, ha='right')
+    ax1.set_ylim(0, 1.2)
+    ax1.set_title("Quality Metrics")
+    ax1.set_ylabel("Score")
+    ax1.grid(axis='y', linestyle='--', alpha=0.4)
+    ax1.spines[['top', 'right']].set_visible(False)
+
+    # =========================
+    # TIME METRICS (NARROW)
+    # =========================
+    x = np.arange(len(available_time))
+
+    for i, (exp, means) in enumerate(all_data.items()):
+        vals = [means.get(m, 0) for m in available_time]
+        offset = (i - n_exp / 2 + 0.5) * width
+
+        bars = ax2.bar(
+            x + offset,
+            vals,
+            width=width * 0.9,
+            label=exp,
+            color=cmap(i),
+            zorder=3
+        )
+
+        for bar, val in zip(bars, vals):
+            ax2.text(
+                bar.get_x() + bar.get_width() / 2,
+                val,
+                f"{val:.2f}s",
+                ha='center',
+                fontsize=7
+            )
+
+    ax2.set_xticks(x)
+    ax2.set_xticklabels(available_time, rotation=30, ha='right')
+    ax2.set_title("Latency Metrics")
+    ax2.set_ylabel("Seconds")
+    ax2.grid(axis='y', linestyle='--', alpha=0.4)
+    ax2.spines[['top', 'right']].set_visible(False)
+
+    ax1.legend(fontsize=8)
 
     plt.tight_layout()
 

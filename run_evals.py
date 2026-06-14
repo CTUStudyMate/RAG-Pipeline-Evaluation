@@ -16,7 +16,7 @@ from difflib import get_close_matches, SequenceMatcher
 
 load_dotenv()
 
-INPUT_DATAJSON = "dataset_v2.json"
+INPUT_DATAJSON = "new_dataset_final.json"
 INPUT_DATASET = "EXPs/v1/hsf_multi_80_20_nocite_with_dataset_v2.csv"
 OUTPUT_FILE = "hsf_multi_80_20_nocite_with_dataset_v2.csv"
 DATASET_NAME = "hsf_multi_80_20_nocite_with_dataset_v2"
