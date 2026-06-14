@@ -1,0 +1,62 @@
+question,response,retrieved_context,retrieve_time_sec,generate_time_sec,true_abstention
+"Take a look at the latest issue of a journal that presents articles about software engineering. (IEEE Transactions on Software Engineering, the Journal of Systems and Software, and IEEE Computer are good examples.) Of the articles tha t present a new technique or tool for software development, how many actually present some kind of evidence that the proposed technique is an improvement over what is currently used? For those that do, classify the type of empirical study used, and identif y the variables.","The context mentions that the International Software Engineering Research Network publishes studies of replicated investigations and that the journal Empirical Software Engineering publishes studies, data, and guidelines for empirical research, but it does not provide specific data on the number of articles presenting new techniques with empirical evidence or details on the types of empirical studies and variables used.
+
+Therefore, the chatbot can't answer this question. Please try again with another question.","
+[0]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.13 Key References
+[CONTENT]: There are also several conferences and organizations related to evaluation. The International  Symposium  on  Software  Metrics, sponsored  by  the  IEEE  Computer Society, addresses  issues  of  measurement  and  empirical  investigation. Information about  the  latest  conference  is  also  on  the  Computer  Society Web  page. The  International  Software  Engineering  Research  Network  publishes  studies  of  replicated investigations, and many of them are available from its Web site. Finally, the journal Empirical Software Engineering publishes not only studies, but also data and guidelines for empirical research.
+
+
+[1]
+[SECTION]: Testing the System > 9.16 Key References
+[CONTENT]: There have been several special issues of IEEE Software focused on the topics covered in this chapter. The June 1992 and May 1995 issues looked at reliability, the March 1991 issue focused on testing, and the May 2007 issue addressed test-driven development.
+The proceedings of the annual International Conference on Software Engineering usually has good papers on the latest in testing theory. For example, Frankl et al. (1997) examine the difference between testing to improve reliability and testing to find faults. Good reference books on testing include Beizer (1990);Kaner,Falk,and Nguyen (1993); and Kit (1995). Each provides a realistic perspective based on industrial experience.
+There  are  several  companies  that  evaluate  software  testing  tools  and  publish summaries of their capabilities. For example, Grove Consultants in England, Software Quality Engineering in Florida, and both Cigital and Satisfice in Virginia do regular analyses of testing techniques and tools. You can find these and other resources on the Web to help with requirements analysis and validation, planning and management,simulation, test development, test execution, coverage analysis, source code analysis, and test case generation.
+Software dependability and safety-critical systems are receiving more and more attention, and there are many good articles and books about the key issues, including Leveson (1996, 1997). In addition, the Dependable Computing Systems Centre in the Department of Computer Science, University of York, UK, is developing techniques and tools for assessing software dependability. You can get more information from its director, John McDermid, at jam@minster.york.ac.uk.
+Usability testing is very important; a system that is correct and reliable but difficult to use may in fact be worse than an easy-to-use but unreliable system. Usability tests and more general usability issues are covered in depth in Hix and Hartson (1993).
+
+
+[2]
+[SECTION]: The Future of Software Engineering > 14.7 Exercises
+[CONTENT]: 
+ - Consider the activities of a software project manager. Where are decisions made? When are they group decisions? When are they individual decisions?
+ - What software technologies have been promoted in the last ten years? Which ones have resulted  in  widespread  adoption, and  which  have  not?  Can  you  use  the  Rogers  and Moore frameworks to explain why?
+ - The January/February 2000 issue of IEEE Software contains an editorial by McConnell about software engineering's best influences:
+ - reviews and inspections
+ - information hiding
+ - incremental development
+ - user involvement
+ - automated revision control
+ - development using the Internet
+ - programming languages: Fortran, COBOL,Turbo Pascal,Visual Basic
+ - Capability Maturity Model for software
+ - component-based development
+ - metrics and measurement
+For each practice listed, analyze its likely technology adoption. Is it a best practice? What evidence supports its adoption? And what audience is addressed by the evidence?
+
+
+[3]
+[SECTION]: Annotated Bibliography
+[CONTENT]: This paper examines the ways in which 33 organizations calculate return on investment from software. It shows great inconsistencies that make it impossible for us to amalgamate the results.
+ - Brooks,Frederick P., Jr. (1987).'No silver bullet: Essence and accidents of software engineering.' IEEE Computer , 20(4) (April): 10-19.
+ - Brooks, Frederick P., Jr. (1995). The Mythical Man-Month 20th Anniversary Edition . Reading, MA:Addison-Wesley.
+A classic book of essays, based on the author's experience building the OS-360 operating system. Many of his observations involve organizational dynamics, such as adding extra staff to a late project. Originally published in 1975.
+ - Brownsword, Lisa, and Paul Clements (1996). 'A case study in successful product line development.' CMU/SEI-96-TR-016. Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University.
+ - Busby, J.S., and S.C. Barton (1996) 'Predicting the cost of engineering: Does intuition help or hinder?' Engineering Management Journal , 6(4): 177-182.
+ - Buschmann,F.,R.Meunier,H.Rohner,P.Sommerlad and M.Stal (1996). Pattern-Oriented Software Architecture:A System of Patterns. Chichester, UK: John Wiley & Sons.
+ - Canadian Engineering Qualifications Board (CEQB) (2004).'Software Engineering Syllabus2004.' http://www.ccpe.ca/e/files/syllabus_4_20.pdf.
+ - Canadian Engineering Quality Board (2001). 'Core and Supplementary Bodies of Knowledge for Software Engineering: A report prepared for the CCPE as part of the CEQB Body of Knowledge Development Pilot Project.' Draft version 0.4 (September 5).
+ - Card, David  N. (1992). 'Capability  evaluations  rated  highly  variable.' IEEE  Software , 9(5) (September): 105-107.
+ - Card, David N., V.E. Church, and William W. Agresti (1986). 'An empirical study of software design practices.' IEEE Transactions on Software Engineering , 12(2) (February): 264-271.
+ - Card, David N., and Robert L. Glass (1990). Measuring Software Design Quality . Englewood Cliffs, NJ: Prentice Hall.
+ - Interesting discussion of how a measure evolved based on the measure's goals and behavior.
+
+
+[4]
+[SECTION]: Why Software Engineering? > 1.13 What This Chapter Means For Researchers
+[CONTENT]: Many of the issues discussed in this chapter are good subjects for further research. We have noted some of the open issues in software engineering, including the need to find In later chapters, we will describe many techniques. Some have been used and are well-proven software development practices, whereas others are proposed and have been demonstrated only on small,'toy,' or student projects.We hope to show you how to improve what you are doing now and at the same time to inspire you to be creative and thoughtful about trying new techniques and processes in the future.
+ - the right levels of abstraction to make the problem easy to solve
+ - the right measurements to make the essential nature of the problem and solution visible and helpful
+ - an appropriate problem decomposition, where each subproblem is solvable
+ - a common framework or notation to allow easy and effective tool integration, and to maximize communication among project participants
+",1.65,9.359,1

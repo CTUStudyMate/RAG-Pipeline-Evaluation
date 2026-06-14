@@ -1,0 +1,49 @@
+question,response,retrieved_context,retrieve_time_sec,generate_time_sec
+"Suppose a library system is being developed. The system has three major subsystems: one that handles the check-out/check-in transactions; one that handles inventories; and one that handles reports. During the development of the system, several problems occur. Identify the problems as errors, faults or failures. In the requirements document, a late fee is specified as $0.25 per day with a maximum of $15. The code for calculating the late fee does not check for the maximum fee.","The code for calculating the late fee does not check for the maximum fee, which is a fault because it is a defect in the system as seen by the developers.
+
+This fault likely originated from an error, which is a human mistake in performing some software activity, such as misunderstanding or overlooking the requirement for the maximum fee.
+
+If the system calculates late fees exceeding the maximum $15, this would be a failure, which is a departure from the system's required behavior as specified in the requirements document.","
+[0]
+re is a departure from the system's required behavior. It can be discovered before or after system delivery, during testing, or during operation and maintenance. As we will see in Chapter 4, the requirements documents can contain faults. So a failure may indicate that the system is not performing as required, even though it may be performing as specified.
+
+Thus, a  fault  is  an  inside  view  of  the  system, as  seen  by  the  eyes  of  the  developers, whereas a failure is an outside view: a problem that the user sees. Not every fault corresponds to a failure; for example, if faulty code is never executed or a particular state is never entered, then the fault will never cause the code to fail. Figure 1.4 shows the genesis of a failure.
+
+FIGURE 1.4 How human error causes a failure.
+
+In the early 1980s, the United States Internal Revenue Service (IRS) hired Sperry Corporation to build an automated federal income tax form processing system.According to the Washington Post, the 'system . . . proved inadequate to the workload, cost nearly twice what was expected and must be replaced soon' (Sawyer 1985). In 1985, an extra $90 million was needed to enhance the original $103 million worth of Sperry equipment.In addition, because the problem prevented the IRS from returning refunds to taxpayers by the deadline, the IRS was forced to pay $40.2 million in interest and $22.3 million in overtime wages for its employees who were trying to catch up. In 1996, the situation had not improved.The Los Angeles Times reported on March 29 that there was still no master plan for the modernization of IRS computers,only a 6000-page technical document. Congressman Jim Lightfoot called the project 'a $4-billion fiasco that is floundering because of inadequate planning' (Vartabedian 1996).
+
+Situations such as these still occur. In the United States, the Federal Bureau of Investigation's (FBI's) Trilogy project attempted to upgrade the FBI's computer systems. The results were devastating:'After more than four years of hard work and half a billion dollars spent, however, Trilogy has had little impact on the FBI's antiquated ca
+
+
+[1]
+function, but not exactly as expected.We all have heard stories of systems that just barely work.And we all have written faulty programs: code that contains mistakes, but is good enough for a passing grade or for demonstrating the feasibility of an approach. Clearly, such behavior is not acceptable when developing a system for delivery to a customer.
+
+There is an enormous difference between an error in a class project and one in a large software system. In fact, software faults and the difficulty in producing fault-free software are frequently discussed in the literature  and  in  the  hallways. Some  faults are merely annoying; others cost a great deal of time and money. Still others are lifethreatening. Sidebar 1.1 explains the relationships among faults, errors, and failures. Let us look at a few examples of failures to see what is going wrong and why.
+
+## SIDEBAR 1.1 TERMINOLOGY FOR DESCRIBING BUGS
+
+O ften, we talk about 'bugs'in software,meaning many things that depend on the context.A 'bug' can be a mistake in interpreting a requirement, a syntax error in a piece of code, or the (as-yet-unknown) cause of a system crash. The Institute of Electrical and Electronics Engineers (IEEE) has suggested a standard terminology (in IEEE Standard 729) for describing 'bugs' in our software products (IEEE 1983).
+
+A fault occurs when a human makes a mistake, called an error , in performing some software activity. For example, a designer may misunderstand a requirement and create a design that does not match the actual intent of the requirements analyst and the user.This design fault is an encoding of the error, and it can lead to other faults, such as incorrect code and an incorrect description in a user manual.Thus, a single error can generate many faults, and a fault can reside in any development or maintenance product.
+
+A failure is a departure from the system's required behavior. It can be discovered before or after system delivery, during testing, or during operation and maintenance. As we will see in Chapter 4, the requirements documents can contain faults. So a failure may indicate that the system is n
+
+
+[2]
+ffective. In this chapter, we look at testing components individually and then integrating them to check the interfaces.Then, in Chapter 9, we concentrate on techniques for assessing the system as a whole.
+
+## 8.1 SOFTWARE FAULTS AND FAILURES
+
+In an ideal situation, we as programmers become so good at our craft that every program we produce works properly every time it is run. Unfortunately, this ideal is not reality. The difference between the two is the result of several things. First, many software systems deal with large numbers of states and with complex formulas, activities, and algorithms. In addition to that, we use the tools at our disposal to implement a customer's conception of a system when the customer is sometimes uncertain of exactly what is needed. Finally, the size of a project and the number of people involved can add complexity.Thus, the presence of faults is a function not just of the software, but also of user and customer expectations.
+
+What do we mean when we say that our software has failed? Usually,we mean that the software does not do what the requirements describe. For example, the specification
+
+may state that the system must respond to a particular query only when the user is authorized to see the data. If the program responds to an unauthorized user, we say that the system has failed.The failure may be the result of any of several reasons:
+
+- The specification may be wrong or have a missing requirement. The specification may not state exactly what the customer wants or needs. In our example, the customer may actually want to have several categories of authorization, with each category having a different kind of access, but has never stated that need explicitly.
+- The specification  may  contain  a  requirement  that  is  impossible  to  implement, given the prescribed hardware and software.
+- The system design may contain a fault. Perhaps the database and query-language designs make it impossible to authorize users.
+- The program design may contain a fault. The component descriptions may contain an access control algorithm that does not handle this case correctly.
+- The
+",0.29,4.262

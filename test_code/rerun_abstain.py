@@ -5,21 +5,20 @@ from dotenv import load_dotenv
 import csv
 import json
 import asyncio
-from rapidfuzz import fuzz
+
 from openai import AsyncOpenAI  # Use AsyncOpenAI for async compatibility
 from ragas import experiment, Dataset  # Corrected Dataset import
 from ragas.embeddings import embedding_factory
 from ragas.llms import llm_factory
-from ragas.metrics import DiscreteMetric
-from ragas.metrics.collections import ContextRecall, ContextPrecision, Faithfulness, AnswerCorrectness
-from difflib import get_close_matches, SequenceMatcher
+from difflib import get_close_matches
+from rapidfuzz import fuzz, process
 
 load_dotenv()
 
 INPUT_DATAJSON = "dataset_v2.json"
-INPUT_DATASET = "EXPs/v1/hsf_multi_80_20_nocite_with_dataset_v2.csv"
-OUTPUT_FILE = "hsf_multi_80_20_nocite_with_dataset_v2.csv"
-DATASET_NAME = "hsf_multi_80_20_nocite_with_dataset_v2"
+INPUT_DATASET = "EXPs/v1/hsf_normal_cite_with_dataset_v2.csv"
+OUTPUT_FILE = f"{"rerun"}hsf_normal_cite_with_dataset_v2.csv"
+DATASET_NAME = f"{"rerun"}hsf_normal_cite_with_dataset_v2"
 
 def fuzzy_lookup(question, source_dict, cutoff=0.9):
     """
@@ -96,10 +95,6 @@ def load_rag_csv_as_dataset(csv_path="rag_output.csv"):
     dataset.save()  # Ragas datasets generally need to be saved before execution
     return dataset
 
-ctx_rec_scorer = ContextRecall(llm=llm)
-ctx_prec_scorer = ContextPrecision(llm=llm)
-cr_scorer = AnswerCorrectness(llm=llm, embeddings=embeddings)
-faithfulness_scorer = Faithfulness(llm=llm)
 
 # ---------- Experiment ----------
 
@@ -125,72 +120,31 @@ async def run_experiment(row):
             n=1,
             cutoff=0.8
         ))
+        
         abstain_score = fuzz.partial_ratio_alignment("The chatbot can't answer this question. Please try again with another question.", response)
         if abstain_score.score > 85:
             is_abstain_response = True
         else:
-            is_abstain_response = False
+            is_abstain_response = False    
         
+        print("Ground truth is abstain: ", is_abstain_groundtruth)
+        print("Respons is abstain: ", is_abstain_response)
         
         # correctness & true abstention
         true_abstention_val = None
         if ground_truth:
             if is_abstain_groundtruth:
-                correct_val = 1 if is_abstain_response else 0
                 true_abstention_val = int(is_abstain_response)
             else:
-                correct = await cr_scorer.ascore(
-                    user_input=question,
-                    response=response,
-                    reference=ground_truth
-                )
-                correct_val = correct.value
                 true_abstention_val = int(not is_abstain_response)
         else:
-            correct_val = "N/A"
+            print("Question has no ground truth: ", question[:120])
 
-        # precision, recall, f1
-        if reference:
-            precision = await ctx_prec_scorer.ascore(
-                user_input=question,
-                reference=reference,
-                retrieved_contexts=[retrieved_context]
-            )
-            recall = await ctx_rec_scorer.ascore(
-                user_input=question,
-                retrieved_contexts=[retrieved_context],
-                reference=reference
-            )
-            prec = precision.value
-            rec = recall.value
-            f1 = (2 * prec * rec) / (prec + rec) if (prec + rec) else 0
-        else:
-            prec = rec = f1 = "N/A"
-        
-        # faithfulness    
-        if retrieved_context:
-            if is_abstain_response:
-                faithfulness_score = "N/A"
-                    
-            else:
-                faithfulness = await faithfulness_scorer.ascore(
-                    user_input=question,
-                    response=response,
-                    retrieved_contexts=[retrieved_context]
-                )
-                faithfulness_score = faithfulness.value
-        else: 
-            faithfulness_score = "N/A"        
 
         await asyncio.sleep(0.1) 
         
         return {
             **row,
-            "precision": prec,
-            "recall": rec,
-            "f1": f1,
-            "correctness": correct_val,
-            "faithfulness": faithfulness_score,
             "true_abstention": true_abstention_val
         }
 
@@ -211,7 +165,7 @@ async def main():
     # Save results to CSV
     output_dir = Path(f"EXPs/v1/run_result")
     output_dir.mkdir(exist_ok=True)
-    output_file = output_dir / f"{OUTPUT_FILE}"
+    output_file = output_dir / f"_rerun_abstain_{OUTPUT_FILE}"
     
     if results:
         with open(output_file, "w", newline="", encoding="utf-8") as f:
