@@ -1,6 +1,6 @@
 # Experiment Results Summary
 
-![Comparison](comparison_quality.png)
+Comparison chart: comparison_all_metrics.png
 
 ## fixed_normal_cite_with_dataset_v2_updated.csv
 
@@ -13,13 +13,9 @@
 | faithfulness | 0.4792 |
 | retrieve_time_sec | 0.3871 |
 | generate_time_sec | 7.9275 |
+| true_abstention | 0.8000 |
 
-- true_abstention: 0.8000
-- correct / total: 212 / 265
-
-![Quality](fixed_normal_cite_with_dataset_v2_updated_quality.png)
-
-![Timing](fixed_normal_cite_with_dataset_v2_updated_timing.png)
+true_abstention: 0.8000
 
 ---
 
@@ -34,13 +30,9 @@
 | faithfulness | 0.3600 |
 | retrieve_time_sec | 2.3565 |
 | generate_time_sec | 6.0359 |
+| true_abstention | 0.8377 |
 
-- true_abstention: 0.8377
-- correct / total: 222 / 265
-
-![Quality](hsf_multi_50_50_cite_with_dataset_v2_quality.png)
-
-![Timing](hsf_multi_50_50_cite_with_dataset_v2_timing.png)
+true_abstention: 0.8377
 
 ---
 
@@ -55,13 +47,9 @@
 | faithfulness | 0.3861 |
 | retrieve_time_sec | 2.2752 |
 | generate_time_sec | 7.7702 |
+| true_abstention | 0.8830 |
 
-- true_abstention: 0.8830
-- correct / total: 234 / 265
-
-![Quality](hsf_multi_80_20_cite_with_dataset_v2_updated_quality.png)
-
-![Timing](hsf_multi_80_20_cite_with_dataset_v2_updated_timing.png)
+true_abstention: 0.8830
 
 ---
 
@@ -76,13 +64,9 @@
 | faithfulness | 0.3927 |
 | retrieve_time_sec | 2.2319 |
 | generate_time_sec | 5.4869 |
+| true_abstention | 0.8674 |
 
-- true_abstention: 0.8674
-- correct / total: 229 / 264
-
-![Quality](hsf_multi_80_20_nocite_with_dataset_v2_quality.png)
-
-![Timing](hsf_multi_80_20_nocite_with_dataset_v2_timing.png)
+true_abstention: 0.8674
 
 ---
 
@@ -97,13 +81,9 @@
 | faithfulness | 0.4167 |
 | retrieve_time_sec | 0.6830 |
 | generate_time_sec | 8.5322 |
+| true_abstention | 0.8679 |
 
-- true_abstention: 0.8679
-- correct / total: 230 / 265
-
-![Quality](hsf_normal_cite_with_dataset_v2_updated_quality.png)
-
-![Timing](hsf_normal_cite_with_dataset_v2_updated_timing.png)
+true_abstention: 0.8679
 
 ---
 

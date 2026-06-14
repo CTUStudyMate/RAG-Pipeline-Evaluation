@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import matplotlib.ticker as mticker
 import numpy as np
 
 matplotlib.rcParams['font.family'] = 'DejaVu Sans'
@@ -18,90 +17,32 @@ def _slugify(name: str) -> str:
     return name.replace(" ", "_").replace(".", "_").replace("/", "_")
 
 
-def _plot_quality_bar(experiment_name: str, mean_values: pd.Series, output_dir: str) -> str | None:
-    cols = [m for m in QUALITY_METRICS if m in mean_values.index]
-    if not cols:
-        return None
+def _plot_global_comparison(all_data: dict[str, pd.Series], output_dir: str) -> str | None:
+    """
+    One unified chart:
+    - Quality metrics
+    - True abstention
+    """
 
-    values = mean_values[cols].values
-    fig, ax = plt.subplots(figsize=(8, 4))
+    metrics = QUALITY_METRICS + [ABSTENTION_FIELD]
 
-    colors = ['#4C72B0', '#55A868', '#C44E52', '#8172B2', '#CCB974']
-    bars = ax.bar(cols, values, color=colors[:len(cols)], width=0.5, zorder=3)
-
-    ax.set_ylim(0, 1.1)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter('%.2f'))
-    ax.set_ylabel("Score")
-    ax.set_title(f"Quality Metrics - {experiment_name}", fontsize=12, pad=10)
-    ax.grid(axis='y', linestyle='--', alpha=0.6, zorder=0)
-    ax.spines[['top', 'right']].set_visible(False)
-
-    for bar, val in zip(bars, values):
-        ax.text(
-            bar.get_x() + bar.get_width() / 2,
-            val + 0.02,
-            f"{val:.4f}",
-            ha='center',
-            va='bottom',
-            fontsize=9
-        )
-
-    plt.tight_layout()
-    out_path = os.path.join(output_dir, f"{_slugify(experiment_name)}_quality.png")
-    fig.savefig(out_path, dpi=150)
-    plt.close(fig)
-    return out_path
-
-
-def _plot_time_bar(experiment_name: str, mean_values: pd.Series, output_dir: str) -> str | None:
-    cols = [m for m in TIME_METRICS if m in mean_values.index]
-    if not cols:
-        return None
-
-    values = mean_values[cols].values
-    fig, ax = plt.subplots(figsize=(7, 3))
-
-    colors = ['#4C72B0', '#DD8452']
-    bars = ax.barh(cols, values, color=colors[:len(cols)], height=0.4, zorder=3)
-
-    ax.set_xlabel("Seconds")
-    ax.set_title(f"Timing Metrics - {experiment_name}", fontsize=12, pad=10)
-    ax.grid(axis='x', linestyle='--', alpha=0.6, zorder=0)
-    ax.spines[['top', 'right']].set_visible(False)
-
-    for bar, val in zip(bars, values):
-        ax.text(
-            val + 0.01,
-            bar.get_y() + bar.get_height() / 2,
-            f"{val:.4f}s",
-            va='center',
-            fontsize=9
-        )
-
-    plt.tight_layout()
-    out_path = os.path.join(output_dir, f"{_slugify(experiment_name)}_timing.png")
-    fig.savefig(out_path, dpi=150)
-    plt.close(fig)
-    return out_path
-
-
-def _plot_comparison(all_data: dict[str, pd.Series], output_dir: str) -> str | None:
     available_metrics = [
-        m for m in QUALITY_METRICS
+        m for m in metrics
         if any(m in v.index for v in all_data.values())
     ]
 
-    if not available_metrics or len(all_data) < 2:
+    if len(all_data) < 2 or not available_metrics:
         return None
 
     exp_names = list(all_data.keys())
     n_exp = len(exp_names)
     n_metrics = len(available_metrics)
+
     x = np.arange(n_metrics)
     width = 0.8 / n_exp
 
-    fig, ax = plt.subplots(figsize=(max(9, n_metrics * 1.5), 5))
-    cmap = plt.get_cmap('tab10')
+    fig, ax = plt.subplots(figsize=(max(10, n_metrics * 1.5), 5))
+    cmap = plt.get_cmap("tab10")
 
     for i, (exp, means) in enumerate(all_data.items()):
         vals = [means.get(m, 0) for m in available_metrics]
@@ -119,7 +60,7 @@ def _plot_comparison(all_data: dict[str, pd.Series], output_dir: str) -> str | N
         for bar, val in zip(bars, vals):
             ax.text(
                 bar.get_x() + bar.get_width() / 2,
-                val + 0.015,
+                val + 0.01,
                 f"{val:.2f}",
                 ha='center',
                 va='bottom',
@@ -128,17 +69,19 @@ def _plot_comparison(all_data: dict[str, pd.Series], output_dir: str) -> str | N
 
     ax.set_xticks(x)
     ax.set_xticklabels(available_metrics)
-    ax.set_ylim(0, 1.18)
+    ax.set_ylim(0, 1.2)
     ax.set_ylabel("Score")
-    ax.set_title("Quality Metrics - All Experiments Comparison", fontsize=13, pad=12)
-    ax.legend(fontsize=8, loc='upper right')
+    ax.set_title("RAG Evaluation Comparison (Quality + Abstention)")
+    ax.legend(fontsize=8)
     ax.grid(axis='y', linestyle='--', alpha=0.5, zorder=0)
     ax.spines[['top', 'right']].set_visible(False)
 
     plt.tight_layout()
-    out_path = os.path.join(output_dir, "comparison_quality.png")
+
+    out_path = os.path.join(output_dir, "comparison_all_metrics.png")
     fig.savefig(out_path, dpi=150)
     plt.close(fig)
+
     return out_path
 
 
@@ -165,17 +108,18 @@ def calculate_average_metrics(directory_path: str, output_file: str = "experimen
         try:
             df = pd.read_csv(file_path)
 
-            all_numeric = QUALITY_METRICS + TIME_METRICS
+            all_cols = QUALITY_METRICS + TIME_METRICS + [ABSTENTION_FIELD]
 
-            for m in all_numeric:
+            for m in all_cols:
                 if m in df.columns:
                     df[m] = pd.to_numeric(df[m], errors='coerce')
 
-            cols_to_avg = [m for m in all_numeric if m in df.columns]
+            cols_to_avg = [m for m in all_cols if m in df.columns]
             mean_values = df[cols_to_avg].mean()
 
             all_metrics[experiment_name] = mean_values
 
+            # TABLE ONLY (clean)
             report_lines.append("| Metric | Value |\n")
             report_lines.append("|--------|-------|\n")
 
@@ -184,39 +128,28 @@ def calculate_average_metrics(directory_path: str, output_file: str = "experimen
 
             report_lines.append("\n")
 
+            # abstention summary (kept simple)
             if ABSTENTION_FIELD in df.columns:
-                df[ABSTENTION_FIELD] = pd.to_numeric(df[ABSTENTION_FIELD], errors='coerce')
                 total = len(df)
-                total_correct = df[ABSTENTION_FIELD].fillna(0).sum()
-                score = total_correct / total
+                score = df[ABSTENTION_FIELD].fillna(0).sum() / total
 
-                report_lines.append(f"- true_abstention: {score:.4f}\n")
-                report_lines.append(f"- correct / total: {total_correct:.0f} / {total}\n\n")
-
-            quality_path = _plot_quality_bar(experiment_name, mean_values, directory_path)
-            if quality_path:
-                report_lines.append(f"![Quality]({os.path.basename(quality_path)})\n\n")
-                print(f"Saved: {quality_path}")
-
-            time_path = _plot_time_bar(experiment_name, mean_values, directory_path)
-            if time_path:
-                report_lines.append(f"![Timing]({os.path.basename(time_path)})\n\n")
-                print(f"Saved: {time_path}")
+                report_lines.append(f"true_abstention: {score:.4f}\n\n")
 
             report_lines.append("---\n\n")
 
         except Exception as e:
             print(f"[ERROR] {file_name}: {e}")
-            report_lines.append(f"Error processing {file_name}: {e}\n\n---\n\n")
+            report_lines.append(f"Error: {file_name} -> {e}\n\n---\n\n")
 
-    comparison_path = _plot_comparison(all_metrics, directory_path)
+    # ONE GLOBAL COMPARISON CHART ONLY
+    comparison_path = _plot_global_comparison(all_metrics, directory_path)
 
     if comparison_path:
         report_lines.insert(
             1,
-            f"![Comparison]({os.path.basename(comparison_path)})\n\n"
+            f"Comparison chart: {os.path.basename(comparison_path)}\n\n"
         )
-        print(f"Saved comparison: {comparison_path}")
+        print(f"Saved comparison chart: {comparison_path}")
 
     output_path = os.path.join(directory_path, output_file)
 
