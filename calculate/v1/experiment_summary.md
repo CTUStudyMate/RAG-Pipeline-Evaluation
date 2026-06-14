@@ -53,23 +53,6 @@ true_abstention: 0.8830
 
 ---
 
-## hsf_multi_80_20_nocite_with_dataset_v2.csv
-
-| Metric | Value |
-|--------|-------|
-| precision | 0.9470 |
-| recall | 0.6675 |
-| f1 | 0.6981 |
-| correctness | 0.4887 |
-| faithfulness | 0.3927 |
-| retrieve_time_sec | 2.2319 |
-| generate_time_sec | 5.4869 |
-| true_abstention | 0.8674 |
-
-true_abstention: 0.8674
-
----
-
 ## hsf_normal_cite_with_dataset_v2_updated.csv
 
 | Metric | Value |
