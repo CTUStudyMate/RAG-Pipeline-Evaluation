@@ -1,7 +1,11 @@
-# 📊 Experiment Results Summary
+# Experiment Results Summary
+
+![Comparison](comparison_quality.png)
+
 ## fixed_normal_cite_with_dataset_v2_updated.csv
+
 | Metric | Value |
-|--------|------|
+|--------|-------|
 | precision | 0.9283 |
 | recall | 0.6483 |
 | f1 | 0.6826 |
@@ -10,13 +14,19 @@
 | retrieve_time_sec | 0.3871 |
 | generate_time_sec | 7.9275 |
 
-- **true_abstention**: 0.8000  
-- correct/total: 212 / 265
+- true_abstention: 0.8000
+- correct / total: 212 / 265
+
+![Quality](fixed_normal_cite_with_dataset_v2_updated_quality.png)
+
+![Timing](fixed_normal_cite_with_dataset_v2_updated_timing.png)
 
 ---
+
 ## hsf_multi_50_50_cite_with_dataset_v2.csv
+
 | Metric | Value |
-|--------|------|
+|--------|-------|
 | precision | 0.9434 |
 | recall | 0.6368 |
 | f1 | 0.6776 |
@@ -25,13 +35,19 @@
 | retrieve_time_sec | 2.3565 |
 | generate_time_sec | 6.0359 |
 
-- **true_abstention**: 0.8377  
-- correct/total: 222 / 265
+- true_abstention: 0.8377
+- correct / total: 222 / 265
+
+![Quality](hsf_multi_50_50_cite_with_dataset_v2_quality.png)
+
+![Timing](hsf_multi_50_50_cite_with_dataset_v2_timing.png)
 
 ---
+
 ## hsf_multi_80_20_cite_with_dataset_v2_updated.csv
+
 | Metric | Value |
-|--------|------|
+|--------|-------|
 | precision | 0.9396 |
 | recall | 0.6534 |
 | f1 | 0.6872 |
@@ -40,13 +56,19 @@
 | retrieve_time_sec | 2.2752 |
 | generate_time_sec | 7.7702 |
 
-- **true_abstention**: 0.8830  
-- correct/total: 234 / 265
+- true_abstention: 0.8830
+- correct / total: 234 / 265
+
+![Quality](hsf_multi_80_20_cite_with_dataset_v2_updated_quality.png)
+
+![Timing](hsf_multi_80_20_cite_with_dataset_v2_updated_timing.png)
 
 ---
+
 ## hsf_multi_80_20_nocite_with_dataset_v2.csv
+
 | Metric | Value |
-|--------|------|
+|--------|-------|
 | precision | 0.9470 |
 | recall | 0.6675 |
 | f1 | 0.6981 |
@@ -55,13 +77,19 @@
 | retrieve_time_sec | 2.2319 |
 | generate_time_sec | 5.4869 |
 
-- **true_abstention**: 0.8674  
-- correct/total: 229 / 264
+- true_abstention: 0.8674
+- correct / total: 229 / 264
+
+![Quality](hsf_multi_80_20_nocite_with_dataset_v2_quality.png)
+
+![Timing](hsf_multi_80_20_nocite_with_dataset_v2_timing.png)
 
 ---
+
 ## hsf_normal_cite_with_dataset_v2_updated.csv
+
 | Metric | Value |
-|--------|------|
+|--------|-------|
 | precision | 0.9472 |
 | recall | 0.7211 |
 | f1 | 0.7560 |
@@ -70,7 +98,12 @@
 | retrieve_time_sec | 0.6830 |
 | generate_time_sec | 8.5322 |
 
-- **true_abstention**: 0.8679  
-- correct/total: 230 / 265
+- true_abstention: 0.8679
+- correct / total: 230 / 265
+
+![Quality](hsf_normal_cite_with_dataset_v2_updated_quality.png)
+
+![Timing](hsf_normal_cite_with_dataset_v2_updated_timing.png)
 
 ---
+
