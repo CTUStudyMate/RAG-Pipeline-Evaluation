@@ -1,0 +1,107 @@
+[
+    {
+        "question": "How does iterative development deliver functionality?",
+        "ground_truth": "However, iterative development delivers a full system at the very beginning and then changes the functionality of each subsystem with each new release.",
+        "source_text": "However, iterative development delivers a full system at the very beginning and then changes the functionality of each subsystem with each new release."
+    },
+    {
+        "question": "How does the Scrum framework define the role of a Product Owner, and how does this differ from the role of a Scrum Master?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "* **Scrum** was created at Object Technology in 1994 and was subsequently commer-cialized by Schwaber and Beedle (2002). It uses iterative development, where each 30-day iteration is called a “sprint,” to implement the product’s backlog of prioritized requirements. Multiple self-organizing and autonomous teams imple-ment product increments in parallel. Coordination is done at a brief daily status meeting called a “scrum” (as in rugby)."
+    },
+    {
+        "question": "What are the core principles of DevOps, and how do CI/CD pipelines support continuous delivery in modern software teams?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "* *Continuous integration:* Delivering functionality quickly means that working sys-tems can be promised to the customer daily and sometimes even hourly. The emphasis is on small increments or improvements rather than on grand leaps from one revision to the next."
+    },
+    {
+        "question": "According to the COCOMO II model, what is the exact numeric value of the Scale Factor (SF) for \"Precedentedness\" when rated as \"Nominal\"?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "TABLE 3.16 Scale Factors for COCOMO II Early Design and Postarchitecture Models\n\nScale Factors Very Low Low Nominal High Very High Extra High\n\nPrecedentedness Thoroughly unprecedented\n\nLargely unprecedented\n\nSomewhat unprecedented\n\nGenerally familiar\n\nLargely familiar\n\nThoroughly familiar [...] “Extra high” is equivalent to a rating of zero, “very high” to 1, “high” to 2, “nominal” to 3, “low” to 4, and “very low” to 5. Each of the scale factors is rated, and the sum of all ratings is used to weight the initial effort estimate."
+    },
+    {
+        "question": "How does microservices architecture differ from a service-oriented architecture (SOA), and what are the tradeoffs when migrating from a monolith to microservices?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": ""
+    },
+    {
+        "question": "What branching strategy does Git Flow recommend, and how does it compare to trunk-based development for large software teams?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": ""
+    },
+    {
+        "question": "In Test-Driven Development (TDD), what is the exact sequence of the Red-Green-Refactor cycle, and how many test iterations are recommended before committing code?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "*    *Writing tests first:* To ensure that the customer’s needs are the driving force behind development, test cases are written first, as a way of forcing customers to specify requirements that can be tested and verified once the software is built. Two kinds of tests are used in XP: functional tests that are specified by the customer and executed by both developers and users, and unit tests that are written and run by developers. In XP, functional tests are automated and, ideally, run daily.The func-tional tests are considered to be part of the system specification. Unit tests are writ-ten both before and after coding, to verify that each modular portion of the implementation works as designed. Both functional and unit testing are described in more detail in Chapter 8.\n*    *Refactoring:* As the system is built, it is likely that requirements will change. Because a major characteristic of XP philosophy is to design only to current requirements, it is often the case that new requirements force the developers to reconsider their existing design. **Refactoring** refers to revisiting the requirements and design, reformulating them to match new and existing needs."
+    },
+    {
+        "question": "What ISO/IEC 25010 quality characteristics replace the older McCall quality factors, and how do the two models map to each other?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "Figure 1.5 is an example of an early quality model built by McCall and his colleagues to show how external quality factors (on the left-hand side) relate to product quality criteria (on the right-hand side). McCall associ-ated each right-hand criterion with a measurement to indicate the degree to which an element of quality was addressed (McCall, Richards, and Walters 1977)."
+    },
+    {
+        "question": "How does the CAP theorem constrain the design of distributed systems, and what does it imply for consistency guarantees in a microservices-based architecture?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": ""
+    },
+    {
+        "question": "What were the specific findings of the Standish Group's CHAOS Report regarding software project success rates in 2020?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "In 1994, the Standish Group surveyed over 350 companies about their over 8000 software projects to find out how well they were faring.The results are sobering.Thirty-one percent of the software projects were canceled before they were completed. Moreover, in large compa-nies, only 9% of the projects were delivered on time and within budget; 16% met those criteria in small companies (Standish 1994). Similar results have been reported since then; the bottom line is that developers have trouble delivering the right system on time and within budget."
+    },
+    {
+        "question": "How do container orchestration platforms like Kubernetes manage the deployment and scaling of software components compared to traditional virtual machine deployments?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": ""
+    },
+    {
+        "question": "In Figure 2.6, what is the exact label of the box that appears between the \"Original Specification\" and the \"Transformed Specification\" in the operational specification process flow?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "TEST\nDELIVERED SYSTEM\nExecute and Revise\nOPERATIONAL SPECIFICATION\n(problem-oriented)\nTRANSFORMED SPECIFICATION (implementation-\noriented)\nSYSTEM REQUIREMENTS\n(sometimes informal or incomplete)\nFIGURE 2.6 The operational specification model."
+    },
+    {
+        "question": "What specific programming language does the textbook recommend for implementing algebraic specifications in SDL Data, and what compiler is suggested?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "**Example: SDL Data**\n**SDL data** definitions are used to create user-defined data types and parameterized data  **types in the Specification and Description Language (SDL)** (ITU 2002). An SDL data type definition introduces the data type being specified, the signatures of all operations on that data type, and axioms that specify how pairs of operations interact."
+    },
+    {
+        "question": "How does the DORA (DevOps Research and Assessment) framework measure software delivery performance, and what are its four key metrics?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": ""
+    },
+    {
+        "question": "What are the SOLID principles of object-oriented design, and how does each principle help reduce coupling in a software system?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": ""
+    },
+    {
+        "question": "According to the textbook, in what specific year was the Extreme Programming (XP) methodology first formally introduced by Kent Beck, and how many projects did he validate it on before publication?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "There are many resources available for learning about agile methods. The Agile Manifesto is posted at http://www.agilealliance.org. Kent Beck’s (1999) is the seminal book on extreme programming, and Alistair Cockburn (2002) describes the Crystal family of methodologies. Martin Beck (1999) explains refactoring, which is one of the most difficult steps of XP. Two excellent references on agile methods are Robert C. Martin’s (2003) book on agile software development, and Daniel H. Steinberg and Daniel W. Palmer’s (2004) book on extreme software engineering. Two Web sites providing additional information about extreme programming are http://www. xprgramming.com and http://www.extremeprogramming.org."
+    },
+    {
+        "question": "How does static application security testing (SAST) differ from dynamic application security testing (DAST), and at which phase of the SDLC should each be applied?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": ""
+    },
+    {
+        "question": "What is the exact total number of communication paths required for a 10-person egoless team according to the formula given in the textbook?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "Figure 3.9 shows us how quickly the lines of communication can grow. Increasing a work team from two to three people triples the number of possible lines of communication. In gen-eral, *if a project has n* workers, then there are pairs of people who might need to communicate, and possible teams that can be created to work on smaller pieces of the project.Thus, a project involving only 10 people can use 45 lines of communication, and there are 1023 possible committees or teams that can be formed to handle subsystem development!"
+    },
+    {
+        "question": "How does the Domain-Driven Design (DDD) concept of a \"Bounded Context\" relate to the decomposition of a system into software units in a layered architecture?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": ""
+    },
+    {
+        "question": "What machine learning techniques are recommended in the textbook for automating effort estimation beyond the COCOMO II model?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": "In general, this “learning” approach has been tried in different ways by other researchers. Srinivasan and Fisher (1995) used Kemerer’s data (Kemerer 1989) with a statistical technique called a regression tree; they produced predictions more accurate than those of the original COCOMO model and SLIM, a proprietary commercial model. Briand, Basili, and Thomas (1992) obtained better results from using a tree induction technique, using the Kemerer and COCOMO datasets. Porter and Selby (1990) also used a tree-based approach; they constructed a decision tree that identifies which project, process, and product characteristics may be useful in predicting likely effort.They also used the technique to predict which modules are likely to be fault-prone.\n\n*A machine-learning technique called Case-Based Reasoning* (CBR) can be applied to analogy-based estimates."
+    },
+    {
+        "question": "In the context of agile software development, how does the SAFe (Scaled Agile Framework) handle dependencies between multiple XP or Scrum teams working on the same product?",
+        "ground_truth": "The system can't answer this question. Please try again with another question.",
+        "source_text": ""
+    }
+]

@@ -1,0 +1,845 @@
+question,response,retrieved_context,retrieve_time_sec,generate_time_sec,precision,recall,f1,correctness,faithfulness,true_abstention
+"How does the DORA (DevOps Research and Assessment) framework measure software delivery performance, and what are its four key metrics?",The chatbot can't answer this question. Please try again with another question.,"
+[0]
+st.gov/publications/ nistpubs/800-30/sp800-30.pdf.
+- Northrup, Linda, Peter H. Feiler, Richard P . Gabriel, John Goodenough, Richard Linger, Thomas Longstaff, Richard Kazman,Mark Klein,Douglas C.Schmidt,Kevin Sullivan,and Kurt Wallnau (2006). Ultra-Large-Scale Systems: The Software Challenge of the Future . Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon. http://www.sei.cmu.edu/uls/summary.html.
+- Nosek, J. (1998). 'The case for collaborative programming.' Communications of the ACM , 41(3) (March): 105-108.
+- Notkin, David (2000).'Software Engineering Licensing and Certification,' presentation at Computing  Research Association Conference at Snowbird, Utah. http://www.cra.org/Activities/ snowbird/00/notkin-crawk3-5.pdf.
+- Ntafos, S.C. (1984). 'On required element testing.' IEEE Transactions on Software Engineering , 10: 795-803.
+
+Compares relative fault discovery effectiveness for several different testing strategies.
+
+- Nuseibeh, Bashar (1997).'Ariane 5:Who dunnit?' IEEE Software , 14(3) (May): 15-16.
+
+Analyzes the cause of the Ariane-5 explosion from the point of view of different life-cycle activities. Concludes that risk management would have been the best approach to discovering the underlying problem early on.
+
+- Nuseibeh, Bashar, Joe Kramer, and Anthony Finkelstein (1994). 'A framework for expressing the relationships between multiple views in requirements specification.' IEEE Transactions on Software Engineering , 20(10) (October): 760-773.
+- Object Management Group (2003). 'OMG Unified Modeling Language Specification,' Version 1.5 (March).
+- Olsen, Neil (1993).'The software rush hour.' IEEE Software , 10(5) (September): 29-37. Interesting discussion of how metrics can be used to help manage the development process.
+- Oman, Paul, and J. Hagemeister (1992). 'Metrics for assessing software system maintainability.' In Proceedings of the International Conference on Software Maintenance , pp. 337-344. Los Alamitos, CA: IEEE Computer Society Press.
+
+Describes a hierarchical model of maintainability, separated into three dimensions.
+
+- Oppenheimer,Todd (1997).'The computer delusion.
+
+
+[1]
+hly  variable.' IEEE  Software , 9(5) (September): 105-107.
+- Card, David N., V.E. Church, and William W. Agresti (1986). 'An empirical study of software design practices.' IEEE Transactions on Software Engineering , 12(2) (February): 264-271.
+- Card, David N., and Robert L. Glass (1990). Measuring Software Design Quality . Englewood Cliffs, NJ: Prentice Hall.
+- Interesting discussion of how a measure evolved based on the measure's goals and behavior.
+- Cashman, P.M., and A.W. Holt (1980). 'A communication-oriented approach to structuring the software  maintenance  environment.' ACM  SIGSOFT  Software  Engineering  Notes , 5(1) (January): 4-17.
+- Cavano, Joseph P., and Frank S. LaMonica (1987). 'Quality assurance in future development environments.' IEEE Software , 7(5) (September): 26-34.
+- Chen, Peter (1976).'The entity-relationship model:Toward a unified view of data.' ACM Transactions on Database Systems , 1(1): 9-36.
+- Chen, Minder and Ronald J. Norman (1992). 'A Framework for Integrated CASE,' IEEE Software , 9(2): 18-22.
+- Chidamber, S.R., and C.F. Kemerer (1994). 'A metrics suite for object-oriented design.' IEEE Transactions on Software Engineering , 20(6): 476-493.
+- Chillarege,Ram,Inderpal S.Bhandari,Jarir K.Chaar,Michael J.Halliday,Diane S.Moebus,Bonnie K.Ray,and Man-Yuen Wong (1992).'Orthogonal defect classification:A concept for in-process measurements.' IEEE Transactions on Software Engineering , 18(11) (November): 943-956.
+- Clements, Paul, F. Bachmann, Len Bass, David Garlan, J. Ivers, R. Little, Robert L. Nord, and J. Stafford (2003). Documenting Software Architectures . Reading, MA:Addison-Wesley.
+- Clements, Paul, and  Linda  Northrop  (2002). Software  Product  Lines: Practices  and  Patterns . Boston, MA:Addison-Wesley.
+- Coad, Peter, and Edward Yourdon (1991). Object-Oriented Analysis . Englewood Cliffs, NJ: Prentice Hall.
+- Cobb, R.H., and  H.D. Mills  (1990). 'Engineering  software  under  statistical  quality  control.' IEEE Software , 7(6) (November): 44-54.
+- Cockburn,Alistair (2002). Agile Software Development . Reading, MA:Addison-Wesley.
+- Cockburn, Alistair, and Lauri
+
+
+[2]
+turity.A must read for anyone considering adopting a process improvement strategy.
+
+- Bollinger,Terry B., and Shari Lawrence Pfleeger (1990).'The economics of software reuse: issues and alternatives.' Information and Software Technology , 32(10) (December): 643-652.
+- Booch, Grady (1994). Object-Oriented Analysis and Design with Applications , 2nd ed. San Francisco, CA: Benjamin-Cummings.
+- Booch, Grady, James Rumbaugh, and Ivar Jacobson (2005). The Unified Modeling Language User Guide . Boston, MA:Addison-Wesley Professional.
+- Braun, Christine, and Rubén Prieto-Díaz (1990). Technology Assessment of Software Reuse, Technical Report CTC-TR-90-004P. Chantilly,VA: Contel Technology Center.
+- Brealey, R., and S. Myers (1991). Principles of Corporate Finance . New York: McGraw-Hill.
+- Brettschneider, Ralph (1989). 'Is your software ready for release?' IEEE Software , 6(4) (July): 100-108.
+
+Describes a simple model used at Motorola, called zero-failure testing.
+
+- Briand, Lionel  C., Victor  R. Basili, and  William  M. Thomas  (1992). 'A  pattern  recognition approach for software engineering data analysis.' IEEE Transactions on Software Engineering , 18(11): 931-942.
+
+Uses optimal set reduction for cost estimation.
+
+- Briand, Lionel C., Prem Devanbu, and Walcelio Melo (1997). 'An investigation into coupling measures for C++.' In Proceedings of the Nineteenth International Conference on Software Engineering pp. 412-421 (Boston, MA). May, 1997. Los Alamitos, CA: IEEE Computer Society Press.
+
+Proposes a suite of measures for object-oriented designs. Demonstrates that some of these measures may be useful for fault detection.
+
+- Briand, Lionel C., Sandro Morasca, and Victor R. Basili (1994). Defining and Validating HighLevel Design Metrics,Technical Report CS-TR-3301. College Park, MD: University of Maryland, Department of Computer Science.
+- Brodman, Judith G., and Donna L. Johnson (1995).'Return on investment (ROI) from software process  improvement as measured by U.S. industry.' Software Process-Improvement and Practice , 1(1): 35-47.
+
+This paper examines the ways in which 33 organizations calculate retur
+
+
+[3]
+dels and frameworks help us understand the relationships we are investigating. Researchers continue to propose new ways for us to view the various aspects of our products, processes, and resources; then, we evaluate the models and frameworks themselves to see how they match what we already know.
+
+## 12.12 TERM PROJECT
+
+Now that  you  have  finished  your  Loan Arranger  project, consider  how  you  would evaluate the software and the development process used to build it. How good is the software? What measures can you use to demonstrate its quality? How would you compare the quality of the Loan Arranger software with that of another project you have completed?
+",0.517,11.854,N/A,N/A,N/A,1,N/A,1
+"How does microservices architecture differ from a service-oriented architecture (SOA), and what are the tradeoffs when migrating from a monolith to microservices?","Microservices architecture differs from service-oriented architecture (SOA) primarily in scope and design principles.
+
+Key differences between microservices and SOA include
+- Microservices are fine-grained and focus on single business capabilities, whereas SOA typically involves coarser-grained services.
+- Microservices emphasize decentralized governance and data management, while SOA often relies on centralized governance and shared databases.
+- Microservices communicate typically via lightweight protocols such as HTTP/REST, whereas SOA may use more complex protocols like SOAP.
+When migrating from a monolithic architecture to microservices, there are several tradeoffs to consider.
+
+Tradeoffs include
+- Increased complexity in managing distributed systems, including challenges in deployment, monitoring, and debugging.
+- Improved scalability and flexibility, allowing independent deployment and scaling of services.
+- Potential for better fault isolation, as failures in one microservice do not necessarily impact others.
+- Higher operational overhead due to the need for automation, orchestration, and robust DevOps practices.",,0.647,11.174,N/A,N/A,N/A,0,N/A,0
+"What branching strategy does Git Flow recommend, and how does it compare to trunk-based development for large software teams?",The system can't answer this question. Please try again with another question.,"
+[0]
+formatting in Release 3. However, using iterative development, we would provide primitive forms of all three types of functionality in Release 1. For example, we can create text and then cut and paste it, but the cutting and pasting functions might be clumsy or slow. So  in  the  next  iteration, Release  2, we  have  the  same  functionality, but  have enhanced  the  quality; now  cutting  and  pasting  are  easy  and  quick. Each  release improves on the previous ones in some way.
+
+In  reality, many  organizations  use  a  combination  of  iterative  and  incremental development. A new release may include new functionality, but existing functionality from the current release may have been enhanced.These forms of phased development are desirable for several reasons:
+
+1. Training can begin on an early release, even if some functions are missing. The training process allows developers to observe how certain functions are executed, suggesting enhancements for later releases. In this way, the developers can be very responsive to the users.
+2. Markets can be created early for functionality that has never before been offered.
+3. Frequent releases allow developers to fix unanticipated problems globally and quickly, as they are reported from the operational system.
+4. The development team can focus on different areas of expertise with different releases. For instance, one release can change the system from a command-driven
+
+## Spiral Model
+
+Boehm (1988) viewed the software development process in light of the risks involved, suggesting that a spiral model could combine development activities with risk management to minimize and control risk. The spiral model, shown in Figure 2.10, is in some sense like the iterative development shown in Figure 2.9. Beginning with the requirements and an initial plan for development (including a budget, constraints, and alternatives for staffing, design, and development environment), the process inserts a step to evaluate risks and prototype alternatives before a 'concept of operations' document is produced to describe at a high level how the system should work. From that do
+",0.546,2.886,N/A,N/A,N/A,1,N/A,1
+"What specific programming language does the textbook recommend for implementing algebraic specifications in SDL Data, and what compiler is suggested?",The chatbot can't answer this question. Please try again with another question.,"
+[0]
+with each other via unbounded message queues. SDL comprises three graphical diagrams, plus algebraic specifications for defining complex data types:
+
+- SDL system diagram (a DFD): An SDL system diagram,shown in Figure 4.21(a), depicts the top-level blocks of the specification and the communication channels that connect the blocks. The channels are directional and are labeled with the types of signals that can flow in each direction. Message passing via channels is asynchronous , meaning that we cannot make any assumptions about when sent messages will be received; of course, messages sent along the same channel will be received in the order in which they were sent.
+- SDL block diagram (a DFD): Each SDL block may model a lower-level collection of blocks and the message-delaying channels that interconnect them. Alternatively, it can model a collection of lowest-level processes that communicate via signal routes, shown in Figure 4.21(b). Signal routes pass messages synchronously , so  messages  sent  between  processes  in  the  same  block  are  received  instantaneously. In fact, this difference in communication mechanisms is a factor when deciding how to decompose behavior: processes that need to synchronize with one another and that are highly coupled should reside in the same block.
+
+FIGURE 4.21 SDL graphical notations.
+
+- SDL process diagram (a state-machine model): An SDL process, shown in Figure 4.21(c), is a state machine, whose transitions are sequences of language constructs (input, decisions, tasks, outputs) that start and end at state constructs. In each execution step, the process removes a signal from the head of its input queue and compares the signal to the input constructs that follow the process's current state. If the signal matches one of the state's inputs, the process executes all of the constructs that follow the matching input, until the execution reaches the next state construct.
+- SDL data type (algebraic specification): An SDL process may declare local variables, and SDL data type definitions are used to declare complex, user-defined variable types.
+
+In addition, an SDL spec
+
+
+[1]
+at follow the matching input, until the execution reaches the next state construct.
+- SDL data type (algebraic specification): An SDL process may declare local variables, and SDL data type definitions are used to declare complex, user-defined variable types.
+
+In addition, an SDL specification is often accompanied by a set of Message Sequence Charts (MSC) (ITU 1996), each of which illustrates a single execution of the specification in terms of the messages passed between the specification's processes.
+
+## Software Cost Reduction (SCR)
+
+Software Cost Reduction (SCR) (Heitmeyer 2002) is a collection of techniques that were designed to encourage software developers to employ good software-engineering design principles.An SCR specification models software requirements as a mathematical function, REQ, that maps monitored variables , which are environmental variables that are sensed by the system, to controlled variables , which are environmental variables that are set by the system. The function REQ is decomposed into a collection of tabular functions, similar to Parnas tables. Each of these functions is responsible for setting the value of one controlled variable or the value of a term , which is a macro-like variable that is referred to in other functions' definitions.
+
+REQ is the result of composing these tabular functions into a network (a DFD, as shown in Figure 4.22), whose edges reflect the data dependencies among the functions. Every execution step starts with a change in the value of one monitored variable. This change is then propagated through the network, in a single, synchronized step. The specification's functions are applied in a topological sort that adheres to the functions' data dependencies:any function that refers to updated values of variables must execute after the functions that update those values. Thus, an execution step resembles a wave of  variable  updates  flowing  through  the  network, starting  with  newly  sensed  monitored-variable values, followed by updates to term variables, followed by updates to controlled-variable values.
+
+## Other Features of Requirements Notations
+
+
+[2]
+izes  a  scenario's  temporal  ordering  of  messages because it organizes messages along a timeline. On the other hand, the collaboration  diagram  emphasizes  the  classes'  relationships, and  treats  the  messages  as elaborations  of  those  relationships  in  the  way  that  it  represents  messages  as arrows between classes in the class diagram.
+- Statechart diagram (a state-machine model): A UML statechart diagram specifies how each instance of one class in the specification's class diagram behaves. Before writing a statechart for a class (more specifically, for a representative object of that class), we should identify the states in the object's life cyle, the events that this object sends to and receives from other objects, the order in which these states and events occur, and the operations that the object invokes. Because such information is fairly detailed, a statechart diagram should not be attempted until late in the requirements phase, when the problem's details are better understood.
+- OCL properties (logic): OCL expressions are properties about a model's elements (e.g., objects, attributes, events, states, messages). OCL properties can be used in any of the above models, to explicate the model's implicit behavior or to impose constraints on the model's specified behavior.
+
+Most of these notations were discussed in the preceding section, as examples of different notation paradigms. In Chapter 6, we will see more details about how UML works, by applying it to a real-world problem for both specification and design.
+
+## Specification and Description Language (SDL)
+
+The Specification and Description Language (SDL) (ITU 2002) is a language standardized  by  the  International  Telecommunications  Union  for  specifying  precisely  the behavior of real-time, concurrent, distributed processes that communicate with each other via unbounded message queues. SDL comprises three graphical diagrams, plus algebraic specifications for defining complex data types:
+
+- SDL system diagram (a DFD): An SDL system diagram,shown in Figure 4.21(a), depicts the top-level blocks of the specification and the
+",0.479,4.78,0.9999999999,1.0,0.99999999995,1,N/A,1
+"What are the core principles of DevOps, and how do CI/CD pipelines support continuous delivery in modern software teams?",The provided context does not contain explicit information about the core principles of DevOps or how CI/CD pipelines support continuous delivery in modern software teams.,"
+[0]
+n which software is conceived, documented, developed, and tested. In the late 1990s, some developers who had resisted this rigor formulated their own principles, trying to highlight the roles that flexibility  could  play  in  producing software quickly and capably. They codified their thinking in an 'agile manifesto' that focuses on four tenets of an alternative way of thinking about software development (Agile Alliance 2001):
+
+- They value individuals and interactions over processes and tools.This philosophy includes  supplying  developers  with  the  resources  they  need  and  then  trusting them to do their jobs well.Teams organize themselves and communicate through face-to-face interaction rather than through documentation.
+- They prefer to invest  time  in  producing  working  software  rather  than  in  producing comprehensive documentation.That is, the primary measure of success is the degree to which the software works properly.
+- They focus on customer collaboration rather than contract negotiation, thereby involving the customer in key aspects of the development process.
+- They concentrate on responding to change rather than on creating a plan and then  following  it, because  they  believe  that  it  is  impossible  to  anticipate  all requirements at the beginning of development.
+
+The overall goal of agile development is to satisfy the customer by 'early and continuous delivery  of  valuable  software' (Agile Alliance  2001). Many  customers  have  business needs that change over time,reflecting not only newly discovered needs but also the need to respond to changes in the marketplace. For example, as software is being designed and constructed, a competitor may release a new product that requires a change in the software's  planned  functionality. Similarly, a  government  agency  or  standards  body  may impose a regulation or standard that affects the software's design or requirements. It is thought  that  by  building  flexibility  into  the  development  process, agile  methods  can enable customers to add or change requirements late in the development cycle.
+
+There are  many  exam
+",0.377,3.104,0.0,1.0,0.0,0,1.0,0
+"According to the textbook, in what specific year was the Extreme Programming (XP) methodology first formally introduced by Kent Beck, and how many projects did he validate it on before publication?",The chatbot can't answer this question. Please try again with another question.,"
+[0]
+s to provide the features. Iteration is important, so redoing is as critical is doing; change is embraced, so that a change is viewed not as a correction but as an adjustment to the realities of software development. Fixed delivery times force developers to scope down the requirements essential for each version produced. At the same time, risk is embraced, so that the developers tackle the hardest problems first.
+
+Often, the phrase 'extreme programming' is used to describe the more general concept of agile methods. In fact, XP is a particular form of agile process, with guiding principles that reflect the more general tenets of the agile manifesto. Proponents of XP emphasize four characteristics of agility: communication, simplicity, courage, and feedback. Communication involves  the  continual  interchange  between  customers  and developers. Simplicity encourages developers to select the simplest design or implementation to address the needs of their customers. Courage is described by XP creators as commitment to delivering functionality early and often. Feedback loops are built into the various activities during the development process. For example, programmers work together to give each other feedback on the best way to implement a design, and customers work with developers to perform planning exercises.
+
+These characteristics are embedded in what are known as the twelve facets of XP .
+
+- The planning game: In this aspect of XP , the customer, who is on-site, defines what is meant by 'value,' so that each requirement can be assessed according to how much value is added by implementing it. The users write stories about how the system should work, and the developers then estimate the resources necessary to realize the stories. The stories describe the actors and actions involved, much like the use cases we define in more detail in Chapters 4 and 6. Each story relates one requirement; two or three sentences are all that is needed to explain the value of the requirement in sufficient detail for the developer to specify test cases and estimate resources for implementing the requirement. Once the stor
+
+
+[1]
+modules have been unit-tested.
+- Collective ownership: In XP, any developer can make a change to any part of the system as it is being developed. In Chapter 11, we will address the difficulties in managing change, including the errors introduced when two people try to change the same module simultaneously.
+- Continuous integration: Delivering functionality quickly means that working systems  can  be  promised  to  the  customer  daily  and  sometimes  even  hourly. The
+
+emphasis is on small increments or improvements rather than on grand leaps from one revision to the next.
+
+- Sustainable pace: XP's emphasis on people includes acknowledging that fatigue can produce errors. So proponents of XP suggest a goal of 40 hours for each work week; pushing developers to devote heroic amounts of time to meeting deadlines is  a  signal  that  the  deadlines  are  unreasonable  or  that  there  are  insufficient resources for meeting them.
+- On-site customer: Ideally, a customer should be present on-site, working with the developers to determine requirements and providing feedback about how to test them.
+- Coding standards: Many observers think of XP and other agile methods as providing an unconstrained environment where anything goes. But in fact XP advocates clear definition of coding standards, to encourage teams to be able to understand and change each other's work. These standards support other practices, such as testing and refactoring. The result should be a body of code that appears to have been written by one person, and is consistent in its approach and expression.
+
+Extreme programming and agile methods are relatively new.The body of evidence for its effectiveness is small but growing. We will revisit many agile methods and concepts, and their empirical evaluation, in later chapters, as we discuss their related activities.
+
+The process models presented in this chapter are only a few of those that are used or discussed. Other process models can be defined and tailored to the needs of the user, customer,and developer.As Sidebar 2.3 notes,we should really capture the development process as a collection o
+
+
+[2]
+and unit tests that are written and run by developers. In XP , functional tests are automated and, ideally, run daily.The functional tests are considered to be part of the system specification. Unit tests are written both before and after coding, to verify that each modular portion of the implementation works as designed.Both functional and unit testing are described in more detail in Chapter 8.
+- Refactoring: As  the  system  is  built, it  is  likely  that  requirements  will  change. Because  a  major  characteristic  of  XP  philosophy  is  to  design  only  to  current requirements, it is often the case that new requirements force the developers to reconsider their existing design. Refactoring refers to revisiting the requirements and  design, reformulating  them  to  match  new  and  existing  needs. Sometimes refactoring addresses ways to restructure design and code without perturbing the system's external behavior. The refactoring is done in small steps, supported by unit tests and pair programming, with simplicity guiding the effort.We will discuss the difficulties of refactoring in Chapter 5.
+- Pair programming: As noted in Chapter 1, there is a tension between viewing software engineering as an art and as a science. Pair programming attempts to address  the  artistic  side  of  software  development, acknowledging  that  the apprentice-master metaphor can be useful in teaching novice software developers how to develop the instincts of masters. Using one keyboard, two paired programmers develop a system from the specifications and design. One person has responsibility for finishing the code, but the pairing is flexible: a developer may have more than one partner on a given day.We will see in Chapter 7 how pair programming compares with the more traditional approach of individuals working separately until their modules have been unit-tested.
+- Collective ownership: In XP, any developer can make a change to any part of the system as it is being developed. In Chapter 11, we will address the difficulties in managing change, including the errors introduced when two people try to change the sam
+",0.548,3.583,0.0,0.0,0,1,N/A,1
+"What are the SOLID principles of object-oriented design, and how does each principle help reduce coupling in a software system?","The SOLID principles of object-oriented design are a set of design principles that help create more maintainable, understandable, and flexible software systems by reducing coupling and increasing cohesion.
+
+Although the provided context does not explicitly list the SOLID principles by name, it discusses key design principles that align with the goals of SOLID principles, particularly focusing on reducing coupling and increasing modularity.
+
+The principles that help reduce coupling in a software system include:
+- Modularity: By decomposing a system into modules that encapsulate unrelated concerns, each module has a single purpose and is relatively independent, which reduces coupling between modules.
+- Interfaces: Restricting modules to be responsible for only one function or activity minimizes the information passed between modules and simplifies interfaces, which reduces coupling.
+- Information Hiding: By encapsulating details within modules and exposing only necessary interfaces, modules become less dependent on each other's internal details, reducing coupling.
+- Abstraction: Using abstraction allows focusing on essential qualities rather than specific details, which helps in designing loosely coupled modules.
+Additionally, the context explains that coupling is measured by how modules depend on each other, and the goal is to achieve low coupling, such as data coupling, which is simpler and less likely to be affected by changes.
+
+In summary, the SOLID principles, through modularity, well-defined interfaces, information hiding, and abstraction, help reduce coupling by ensuring modules have single responsibilities, minimal and clear interfaces, and encapsulated internal details, leading to more maintainable and flexible software designs.","
+[0]
+, but they have other uses too, especially in forming the basis for the design advice that is packaged as design conventions, design patterns, and architectural styles.Thus, to use styles and patterns effectively, we must understand and  appreciate  their  underlying  principles. Otherwise, when  we  define, modify, and extend patterns and styles to fit our needs, we are likely to violate the very principles that the conventions and patterns engender and promote.
+
+The collection of software design principles grows as we 'encode' our collective experience and observations in new design advice. For example, Davis (1995) proposes 201 principles of software development, many of which are design related. In this book, we restrict our discussion to six dominant principles: modularity, interfaces, information hiding, incremental development, abstraction , and generality . Each seems to have stood the test of time and is independent of style and methodology. Collectively, they can assist us in building effective, robust designs.
+
+## Modularity
+
+Modularity , also called separation of concerns , is the principle of keeping separate the various unrelated aspects of a system, so that each aspect can be studied in isolation (Dijkstra 1982). Concerns can be functions, data, features, tasks, qualities, or any aspect of the requirements or design that we want to define or understand in more detail. To build a modular design, we decompose our system by identifying the system's unrelated concerns and encapsulating each in its own module. If the principle is applied well, each resulting module will have a single purpose and will be relatively independent of the others; in this way, each module will be easy to understand and develop. Module independence also makes it easier to locate faults (because there are fewer suspect modules per fault) and to change the system (because a change to one module affects relatively few other modules).
+
+To determine how well a design separates concerns, we use two concepts that measure module independence: coupling and cohesion (Yourdon and Constantine 1978).
+
+Coupling. We say that two
+
+
+[1]
+ch module to be  responsible  for  only  one  function  or  one  activity. This  restriction  minimizes  the amount of information that is passed to a controlled module, and it simplifies the module's interface to a fixed and recognizable set of parameters and return values.
+
+When complex data structures are passed between modules,we say there is stamp coupling between the modules; if only data values, and not structured data, are passed, then the modules are connected by data coupling . Stamp coupling represents a more complex interface between modules, because the modules have to agree on the data's format and organization.Thus, data coupling is simpler and less likely to be affected by changes in data representation. If coupling must exist between modules, data coupling
+
+FIGURE 6.4 Example of common coupling.
+
+is the most desirable; it is easiest to trace data through and to make changes to datacoupled modules.
+
+Objects in an OO design often have low coupling, since each object contains its own data and operations on those data. In fact, one of the objectives of the OO design methodology is to promote loosely coupled designs. However, basing our design on objects does not guarantee that all of the modules in the resulting design will have low coupling. For example, if we create an object that serves as a common data store that can be manipulated, via its methods, by several other objects, then these objects suffer from a form of common coupling.
+
+Cohesion. In contrast to measuring the interdependence among multiple modules, cohesion refers to the dependence within and among a module's internal elements (e.g., data, functions, internal modules). The more cohesive a module, the more closely related its pieces are, both to each other and to the module's singular purpose.A module that serves multiple purposes is at greater risk of its elements needing to evolve in different ways or at different rates. For example, a module that encompasses both data and routines for displaying those data may change frequently and may grow in different directions, as new uses of the data require both new functions to
+
+
+[2]
+ly  appealing  basis  for  such design, because it allows us to describe and reason about the system from its birth to its delivery in the same terms: classes, objects, and methods.This consistency of terminology enables you to anticipate the size and structure of a system well before the design is complete. It simplifies the traceability across artifacts; you can see how a domain object in the requirements becomes an object in the design and then an object in the code,for instance.
+
+A consistent notation makes it easier for your team to understand the implications of using a particular object or class-especially when you are constructing a system from someone  else's  OO  components. Moreover, consistency  assists  the  maintainers  and testers, enabling them to build test cases and monitor changes more easily. And because the requirements, design, and code are expressed in the same way, it is easier for you to evaluate the effects of proposed changes to the requirements or designs.
+
+## 6.13 WHAT THIS CHAPTER MEANS FOR RESEARCHERS
+
+Both program design and the OO approach have been fertile fields for software engineering research. Design principles are heuristics for improving designs, but relatively little research has been done to evaluate whether following the principles actually results in consistently high-quality code over the life of a system. Similarly, object orientation has been embraced but not often rigorously compared with other development paradigms in terms of quality (especially  security). Indeed, traditional  ways  of  evaluating  a  system have been inappropriate or inadequate for object orientation. Projections based on lines of code are being replaced by prediction methods that take advantage of the characteristics of classes and hierarchies. In particular, research on fault prediction has produced new, more OO ways of estimating the number of problems remaining in designs or code.
+
+Other researchers are evaluating the best ways to exploit the best characteristics of object orientation. How deep should the hierarchies be? When is composition better than inheritance for reuse? Wh
+",0.617,17.642,N/A,N/A,N/A,0,0.6,0
+"How does the Scrum framework define the role of a Product Owner, and how does this differ from the role of a Scrum Master?",The system can't answer this question. Please try again with another question.,"
+[0]
+s to provide the features. Iteration is important, so redoing is as critical is doing; change is embraced, so that a change is viewed not as a correction but as an adjustment to the realities of software development. Fixed delivery times force developers to scope down the requirements essential for each version produced. At the same time, risk is embraced, so that the developers tackle the hardest problems first.
+
+Often, the phrase 'extreme programming' is used to describe the more general concept of agile methods. In fact, XP is a particular form of agile process, with guiding principles that reflect the more general tenets of the agile manifesto. Proponents of XP emphasize four characteristics of agility: communication, simplicity, courage, and feedback. Communication involves  the  continual  interchange  between  customers  and developers. Simplicity encourages developers to select the simplest design or implementation to address the needs of their customers. Courage is described by XP creators as commitment to delivering functionality early and often. Feedback loops are built into the various activities during the development process. For example, programmers work together to give each other feedback on the best way to implement a design, and customers work with developers to perform planning exercises.
+
+These characteristics are embedded in what are known as the twelve facets of XP .
+
+- The planning game: In this aspect of XP , the customer, who is on-site, defines what is meant by 'value,' so that each requirement can be assessed according to how much value is added by implementing it. The users write stories about how the system should work, and the developers then estimate the resources necessary to realize the stories. The stories describe the actors and actions involved, much like the use cases we define in more detail in Chapters 4 and 6. Each story relates one requirement; two or three sentences are all that is needed to explain the value of the requirement in sufficient detail for the developer to specify test cases and estimate resources for implementing the requirement. Once the stor
+",0.505,3.023,0.0,0.0,0,1,N/A,1
+"In Test-Driven Development (TDD), what is the exact sequence of the Red-Green-Refactor cycle, and how many test iterations are recommended before committing code?","The exact sequence of the Red-Green-Refactor cycle in Test-Driven Development (TDD) is: first, write a failing test (Red), then write just enough code to make the test pass (Green), and finally refactor the code to improve its structure without changing its behavior (Refactor).
+
+Regarding the number of test iterations recommended before committing code, the context does not provide explicit information on this aspect of TDD.","
+[0]
+re detail in Chapters 4 and 6. Each story relates one requirement; two or three sentences are all that is needed to explain the value of the requirement in sufficient detail for the developer to specify test cases and estimate resources for implementing the requirement. Once the stories are written, the prospective users prioritize requirements, splitting and merging them until consensus is reached on what is needed, what is testable, and what can be done with the resources available. The planners then generate a map of each release, documenting what the release includes and when it will be delivered.
+- Small releases: The system is designed so that functionality can be delivered as soon as possible. Functions are decomposed into small parts, so that some functionality
+
+- can be delivered early and then improved or expanded on in later releases. The small releases require a phased-development approach, with incremental or iterative cycles.
+- Metaphor: The development team agrees on a common vision of how the system will operate. To support its vision, the team chooses common names and agrees on a common way of addressing key issues.
+- Simple design: Design is kept simple by addressing only current needs.This approach reflects the philosophy that anticipating future needs can lead to unnecessary functionality. If a particular portion of a system is very complex, the team may build a spike-a quick and narrow implementation-to help it decide how to proceed.
+- Writing tests first: To ensure that the customer's needs are the driving force behind development, test cases are written first, as a way of forcing customers to specify requirements that can be tested and verified once the software is built.Two kinds of tests are used in XP: functional tests that are specified by the customer and executed by both developers and users, and unit tests that are written and run by developers. In XP , functional tests are automated and, ideally, run daily.The functional tests are considered to be part of the system specification. Unit tests are written both before and after coding, to verify that each modular portion
+
+
+[1]
+ch testing is equivalent to finding the set of paths whose union covers the edges. Finally, prove that path testing is equivalent to finding all possible paths through the graph.
+6. Programmable problem:Write a program that accepts as input the nodes and edges of a directed graph and prints as output all possible paths through the graph. What are the major design considerations for your program? How does the complexity of the graph (in terms of number of branches and cycles) affect the algorithm you use?
+7. Figure  8.22 illustrates  the  component  hierarchy  in  a  software  system. Describe  the sequence of tests for integrating the components using a bottom-up approach, a top-down
+
+- approach,a modified top-down approach, a big-bang approach, a sandwich approach, and a modified sandwich approach.
+8. Explain why the graph of Figure 8.19 can be interpreted to mean that if you find many faults in your code at compile time, you should throw away your code and write it again.
+9. What are some possible explanations for the behavior of the graph in Figure 8.19?
+10. A program is seeded with 25 faults. During testing, 18 faults are detected, 13 of which are seeded faults and 5 of which are indigenous faults.What is Mills's estimate of the number of indigenous faults remaining undetected in the program?
+11. You claim that your program is fault-free at a 95% confidence level. Your test plan calls for you to test until you find all seeded faults. With how many faults must you seed the program before testing in order to substantiate your claim? If for some reason you do not intend to find all seeded faults, how may seeded faults does the Richards formula require?
+12. Discuss the differences in testing a business-critical system, a safety-critical system, and a system whose failure would not seriously affect lives, health, or business.
+13. Give an example of an object-oriented system where synchronization problems require careful testing.
+14. If an independent test team does integration testing and a critical fault remains in the code after testing is complete, who is legally and ethically responsible for the
+
+
+[2]
+ample, if a user on the production system reports a problem, we must know what version and release of the code are being used.The code may differ dramatically from one version to another. If we work with the wrong listing, we may never locate the problem's cause. Worse yet, we may think we have found the cause, making a change that introduces a new fault while not really fixing the old one!
+
+Regression Testing. As we saw in Chapter 8, the purpose of testing is to identify faults, not to correct them. However, it is natural to want to find the cause of a problem and  then  correct  it  as  soon  as  possible  after  discovery. Otherwise, the  test  team  is unable to judge whether the system is functioning properly, and the continued presence of some faults may halt further testing. Thus, any test plan must contain a set of guidelines for fault correction as well as discovery. However, correcting faults during the testing process can introduce new faults while fixing old ones, as mentioned earlier.
+
+Regression testing identifies new faults that may have been introduced as current ones are being corrected. A regression test is a test applied to a new version or release to verify that it still performs the same functions in the same manner as an older version or release.
+
+For example, suppose that the functional test for version m was successful and testing is proceeding on version where has all the functionality of m plus some new functions. As a result, you request that several lines of code be changed in version to repair a fault located in an earlier test; the code must be changed now so that the testing of can continue. If the team is following a policy of strict regression testing, the testing involves these steps: m + 1 m + 1 m + 1 m + 1,
+
+1. Inserting your new code
+2. Testing functions known to be affected by the new code
+3. Testing essential functions of m to verify that they still work properly (the actual regression testing)
+4. Continuing function testing of m + 1
+
+These steps ensure that adding new code has not negated the effects of previous tests. Sidebar 9.1 illustrates the dangers of no
+",0.356,4.663,0.9999999999,0.8,0.8888888888493828,0,0.2,0
+"How does static application security testing (SAST) differ from dynamic application security testing (DAST), and at which phase of the SDLC should each be applied?","Static application security testing (SAST) involves analyzing the source code or components of a program before it is run, using tools such as code analyzers, structure checkers, data analyzers, and sequence checkers to detect syntax errors, structural flaws, data issues, and event sequence problems.
+
+Dynamic application security testing (DAST), on the other hand, involves monitoring the program's behavior during execution, especially useful for systems with concurrent operations or real-time systems, by capturing snapshots of the program state and reporting on coverage of statements, paths, and branches.
+
+SAST should be applied early in the software development life cycle (SDLC), during the coding or implementation phase, to detect issues before the program runs, while DAST is applied during or after the program execution phase, such as during testing, to observe the program's runtime behavior and identify security vulnerabilities.","
+[0]
+Static Analysis. Several  tools  can  analyze  a  source  program  before  it  is  run. Tools that investigate the correctness of a program or set of components can be grouped into four types:
+
+1. Code analyzer: The components are evaluated automatically for proper syntax. Statements can be highlighted if the syntax is wrong, if a construction is faultprone, or if an item has not been defined.
+2. Structure checker: This tool generates a graph from the components submitted as input.The graph depicts the logic flow, and the tool checks for structural flaws.
+3. Data analyzer: The tool reviews the data structures, data declarations, and component interfaces, and then notes improper linkage among components, conflicting data definitions, and illegal data usage.
+4. Sequence checker: The tool checks sequences of events; if coded in the wrong sequence, the events are highlighted.
+
+For example, a code analyzer can generate a symbol table to record where a variable is first defined and when it is used, supporting test strategies such as definition-use testing. Similarly, a structure checker can read a program and determine the location of all loops, mark statements that are never executed, note the presence of branches from the middle of a loop, and so on.A data analyzer can notify us when a denominator may be set to zero; it can also check to see whether subroutine arguments are passed properly.
+
+
+[1]
+e architectural design and helps to communicate this vision to the various members of the development team.
+
+The SAD's contents depend heavily on how it will be used.That is, we try to anticipate what information will be sought by different types of SAD readers.Customers will be looking for a natural-language description of what the system will do. Designers will be looking for precise specifications of the software units to be developed. A performance analyst will want enough information about the software design, the computing platform, and the system's environment to carry out analyses of likely speed and load. Different
+
+
+[2]
+The input and output components of a system may be submitted to a sequence checker to determine if the events are coded in the proper sequence. For example, a sequence checker can ensure that all files are opened before they are modified.
+
+Measurements and structural characteristics are included in the output from many static analysis tools, so that we have a better understanding of the program's attributes. For example, flow graphs are often supplemented with a listing of all possible paths through the program, allowing us to plan test cases for path testing.We are also supplied with information about fan-in and fan-out, the number of operators and operands in a program, the number of decision points, and several measures of the code's structural complexity. In Figure 8.18, we see an example of output from a static analysis program, comparing the findings for a particular piece of code with a large database of historical information.The comparison involves not only measurements such as depth of nesting, coupling, and number of decisions but also information about potential faults and uninitiated variables. Depictions like this one tell us how easy testing is likely to be and warn us about possible faults that we may want to fix before formal tests are run.
+
+Dynamic Analysis. Many times, systems are difficult to test because several parallel operations are being performed concurrently. This situation is especially true for real-time systems. In these cases, it is difficult to anticipate conditions and generate representative test  cases. Automated tools enable the test team to capture the state of events during the execution of a program by preserving a 'snapshot' of conditions. These tools are sometimes called program monitors because they watch and report the program's behavior.
+
+A monitor can list the number of times a component is called or a line of code is executed.These statistics tell testers about the statement or path coverage of their test cases. Similarly, a monitor can report on whether a decision point has branched in all directions, thus providing information about branch coverage. S
+
+
+[3]
+e the vulnerabilities.We have several choices when we find a fault in a design:
+
+- Correct the fault.
+- Add components or conditions to prevent the conditions that cause the fault.
+- Add components that detect the fault or failure and recover from the damage.
+
+Although the first option is preferable, it is not always possible.
+
+We can also use fault trees to calculate the probability that a given failure will occur by estimating the probability of the basic events and propagating these computations up through the tree. But there are some drawbacks to fault-tree analysis. First, constructing the graphs can be time consuming. Second, many systems involve many dependencies, which means that analysis of the design's data-flow and control-flow graphs yields a large number of suspect software units to explore; it is difficult to focus only on the most critical parts of the design unless we have very low coupling. Moreover, the number and kinds of preconditions that are necessary for each failure are daunting and not always easy to spot, and there is no measurement to help us sort them out. However, researchers continue to seek ways to automate the tree building and analysis. In the United States and Canada, fault-tree analysis is used for critical aviation and nuclear applications, where the risk of failure is worth the intense and substantial effort to build and evaluate the fault trees.
+
+## Security Analysis
+
+In  Chapter 3, we saw how risk analysis is used to determine the likely threats to a project's cost and schedule. When designing the system's architecture, we must carry out a similar analysis, this time to address security risks.Allen et al. (2008) describe the six steps in performing a security analysis:
+
+1. Software characterization. In the first step, we review the software requirements, business case, use cases, SAD, test plans, and other available documents to give us a complete understanding of what the system is supposed to do and why.
+2. Threat analysis. Next, we look for threats to the system: Who might be interested in attacking the system, and when might those attacks occur? NIST (2002)
+
+
+[4]
+sts are written, conducted, and evaluated by the customers, with assistance from the developers only when the  customer  requests  an  answer  to  a  technical  question. Usually, those  customer employees who were involved in requirements definition play a large part in acceptance testing, because they understand what kind of system the customer intended to have built.
+",0.365,7.333,N/A,N/A,N/A,0,0.7857142857142857,0
+What is the exact total number of communication paths required for a 10-person egoless team according to the formula given in the textbook?,The exact total number of communication paths required for a 10-person egoless team is 45.,"
+[0]
+e  failures  can  result  from  a breakdown in communication and understanding, so the number of people who need to communicate with one another can affect the quality of the resulting product. Figure 3.9 shows us how quickly the lines of communication can grow. Increasing a work team from two to three people triples the number of possible lines of communication. In general, if a project has n workers, then there are pairs of people who might need  to  communicate, and possible  teams  that  can  be  created  to  work  on smaller pieces of the project.Thus, a project involving only 10 people can use 45 lines of communication,and there are 1023 possible committees or teams that can be formed to handle subsystem development! 2 n -1 n 1 n -1 2> 2
+
+Many projects involve several people who must share responsibility for completing one or more activities. Those working on one aspect of project development must trust other team members to do their parts. In classes, you are usually in total control of the  projects  you  do. You  begin  with  the  requirements  (usually  prescribed  by  your instructor), design a solution to the problem, outline the code, write the actual lines of code, and  test  the  resulting  programs. However, when  working  in  a  team, either  in school or for an employer or customer, you must be able to share the workload. Not only does this require verbal communication of ideas and results, but it also requires written  documentation of what you plan to do and what you have done. You must
+
+accept the results of others without redoing their work. Many people have difficulty in sharing control in this way.
+
+Control is an issue in managing the project, too. Some people are good at directing the work of others. This aspect of personnel interaction is also related to the comfort people feel with the jobs they have.Those who feel uncomfortable with the idea of pushing their colleagues to stay on schedule, to document their code, or to meet with the customer are not good candidates for development jobs involving the management of other workers.
+
+Thus, several  aspects  of  a  worker's  ba
+",0.621,2.107,0.9999999999,1.0,0.99999999995,0,1.0,0
+"How does the CAP theorem constrain the design of distributed systems, and what does it imply for consistency guarantees in a microservices-based architecture?","The provided context documents do not contain explicit information about the CAP theorem, its constraints on the design of distributed systems, or its implications for consistency guarantees in a microservices-based architecture.","
+[0]
+ntations to prove mathematically that the two are consistent. In addition, the contract's assertions provide a basis for testing. Class by class, the testers can determine the effects of each operation on each assertion. Moreover, when the design is changed in some way, each assertion can be checked to see if it is weakened or strengthened by the change.
+
+## 6.9 INFORMATION SYSTEMS EXAMPLE
+
+We saw in Chapter 5 how to structure the architecture of the Piccadilly system as a client-server system. But that design considered only the initial decomposition of the system into its major components. Now we need more detail about the individual components, so that programmers can implement the elements of the architecture as code. For example, the design needs more information about how to handle situations in which programs are on at similar but not identical times. For instance, a Piccadilly program that is televised from 9 PM to 10:30 PM may overlap with programs that air from 8 PM to 10 PM and from 10 PM to 11 PM. We must also decide how to handle faults; in this case, the Opposition schedule may contain an invalid date, such as February 31, or an invalid time, such as 2900 hours. Our lowest level of detail should include module interface specifications, so that programmers can be assigned to code and test individual modules. Nevertheless, this example shows that we must consider and combine a variety of complementary design techniques to formulate a solution that meets all of the customer's needs.
+
+As we decompose our design into modules, we may need to reorganize which data and operations we combine into modules, to improve cohesion and coupling in the overall design. For example, at the end of Chapter 5, we identified a number of domain elements and relationships that the Piccadilly database will need to maintain, including the concept of Opposition Program shown in Figure 6.45. However, if we look at the models carefully, we see that there is considerable commonality in what we originally thought were disjoint concepts. In particular, the information and operations that we associate with Piccadilly t
+
+
+[1]
+DeLine (2001) and others are examining ways to translate a collection of different pieces into a more coherent whole.
+
+Finally, researchers are continually challenged by systems that are 'network centric,' having little or no centralized control, conforming to few standards, and varying widely in hardware and applications from one user to another. 'Pervasive computing' adds complications, as users are employing diverse devices that were not designed to interoperate, and  even  moving  around  geographically  as  they  use  them. As  Garlan (2000) points out, this situation presents the following four problems:
+
+- Architectures must scale to the size and variability of the Internet. Traditionally, one 'assumes that event delivery is reliable, that centralized routing of messages will  be  sufficient, and  that  it  makes  sense  to  define  a  common  vocabulary  of events that are understood by all of the components. In an Internet-based setting, all of these assumptions are questionable.'
+- Software must operate over 'dynamically formed, task-specific coalitions of distributed autonomous resources.' Many of the Internet's resources are 'independently developed and independently supported; they may even be transient,' but the  coalitions  may  have  no  control  over  these  independent  resources. Indeed, 'selection and composition of resources [are] likely to be done afresh for each task, as resources appear, change, and disappear.' We will need new techniques for managing architectural models at runtime, and for evaluating the properties of the systems they describe.
+- We will need flexible architectures that accommodate services provided by private industry, such as billing, security, and communications.These applications are likely to be composed from both local and remote computing capabilities and offered at each user's desktop, which in turn can be built from a wide variety of hardware and software.
+- End users may want to compose systems themselves, tailoring available applications  to  their  particular  needs. These  users  may  have  very  little  experience  in building systems, but th
+
+
+[2]
+omposition of an element from a more abstract model, then this relationship is straightforward. If, instead, two models show different views of the system, and if there is no obvious mapping between the two views' software units,then documenting the views' correspondence is all the more important. Section 5.8 describes how to record the correspondences among views.
+
+FIGURE 5.10 Combination of publish-subscribe, client-server, and repository architecture styles.
+
+## 5.5 ACHIEVING QUALITY ATTRIBUTES
+
+In Chapter 4, we saw that software requirements are about more than the proposed system's functionality. Other attributes, such as performance, reliability, and usability, are carefully specified, reflecting the characteristics that users want to see in the products  we  build. As  we  design  our  system, we  want  to  select  architectural  styles  that promote  the  required  quality  attributes. However, architectural  style  offers  only  a coarse-grained solution with generally beneficial properties; there is no assurance that a specific quality attribute is optimized. To assure the support of particular attributes, we use tactics (Bass, Clements, and Kazman 2003): more fine-grained design decisions that can improve how well our design achieves specific quality goals.
+
+## Modifiability
+
+Modifiability is the basis of most of the architectural styles presented in this chapter. Because more than half of the full life-cycle cost of a system-including development, problem fixing, enhancement, and evolution-is spent after the first version of the software is developed and released, modifiability is essential.That is, above all, we want our design to be easy to change. Different architectural styles address different aspects of modifiability, so we must know how to select the styles that address our specific modifiability goals.
+
+Given a particular change to a system, Bass, Clements, and Kazman (2003) distinguish between the software units that are directly affected by the change and those that are indirectly affected.The directly affected units are those whose responsibilities change to accommodate a syst
+",0.685,3.267,N/A,N/A,N/A,0,1.0,0
+"What ISO/IEC 25010 quality characteristics replace the older McCall quality factors, and how do the two models map to each other?","The ISO/IEC 25010 quality characteristics replace the older McCall quality factors by providing a more modern and structured model for software quality assessment.
+
+The ISO 9126 model, which evolved into ISO/IEC 25010, defines six major quality attributes that are strictly hierarchical and relate to the user view of software, unlike McCall's model which relates external quality factors to product quality criteria.
+
+McCall's quality model associates external quality factors with product quality criteria and measurements, focusing on both user and developer perspectives, while ISO/IEC 25010 focuses more on user-related characteristics.
+
+The two models map to each other in that both attempt to relate external quality factors to measurable product attributes, but ISO/IEC 25010 provides a more structured and strict hierarchy, focusing on user-centric quality characteristics.","
+[0]
+- uses computer resources correctly and efficiently
+
+- is easy for the user to learn and use
+- is well-designed, well-coded, and easily tested and maintained
+
+ISO 9126. In the early 1990s, the software engineering community attempted to consolidate the many views of quality into one model that could act as a worldwide standard for measuring software quality.The result was ISO 9126, a hierarchical model with six major attributes contributing to quality (International Standardization Organization 1991). Figure 12.3 illustrates the hierarchy, and Table 12.4 defines the major attributes.
+
+The standard recommends measuring the right-hand characteristics directly, but it does not give details about how the measurement is to be done.
+
+One major difference between the ISO model and those of McCall and Boehm is that the ISO hierarchy is strict: each right-hand characteristic is related only to exactly one left-hand attribute. Moreover, the right-hand characteristics are related to the user view of the software, rather than to an internal, developer view.
+
+These models, and many others, are helpful in articulating just what it is that we value in the software we build and use. But none of the models includes a rationale for why some characteristics are included and others left out, and for where in the hierarchy a particular attribute appears. For example, why do none of the models include safety? And why is portability a top-level characteristic in the ISO 9126 model, rather than a subcharacteristic? In addition, there is no guidance about how to compose lower-level characteristics into higher-level ones, to produce an overall assessment of quality.These problems make it difficult for us to determine if a given model is complete or consistent.
+
+FIGURE 12.3 ISO 9126 quality model.
+
+TABLE 12.4, 1 = ISO 9126 Quality Characteristics. Quality Characteristic Definition, 1 = Quality Characteristic Definition. Functionality, 1 = Aset of attributes that bear on the existence of a set of functions and their specified properties.The functions are those that satisfy stated or implied needs.. Reliability, 1 = Aset of at
+
+
+[1]
+an
+
+FIGURE 1.5 McCall's quality model.
+
+element of quality was addressed (McCall, Richards, and Walters 1977).We will examine several product quality models in Chapter 12.
+
+## The Quality of the Process
+
+There are many activities that affect the ultimate product quality; if any of the activities go awry, the product quality may suffer. For this reason, many software engineers feel that the quality of the development and maintenance process is as important as product quality. One of the advantages of modeling the process is that we can examine it and look for ways to improve it. For example, we can ask questions such as:
+
+- Where and when are we likely to find a particular kind of fault?
+- How can we find faults earlier in the development process?
+- How can we build in fault tolerance so that we minimize the likelihood that a fault will become a failure?
+- How can we design secure, high-quality systems?
+- Are there alternative activities that can make our process more effective or efficient at ensuring quality?
+
+These questions can be applied to the whole development process or to a subprocess, such as configuration management, reuse, or testing; we will investigate these processes in later chapters.
+
+In the 1990s, there was a well-publicized focus on process modeling and process improvement  in  software  engineering. Inspired  by  the  work  of  Deming  and  Juran, and implemented by companies such as IBM, process guidelines such as the Capability
+
+Maturity Model (CMM), ISO 9000, and Software Process Improvement and Capability dEtermination (SPICE) suggested that by improving the software development process, we can improve the quality of the resulting products.In Chapter 2,we will see how to identify relevant process activities and model their effects on intermediate and final products. Chapters 12 and 13 will examine process models and improvement frameworks in depth.
+
+## Quality in the Context of the Business Environment
+
+When the focus of quality assessment is on products and processes, we usually measure quality with mathematical expressions involving faults, failures, and timing. Rarely is t
+
+
+[2]
+use the importance of the characteristics depends on who is analyzing the software. Users judge software to be of high quality if it does what they want in a way that is easy to learn and easy to use. However, sometimes quality and functionality are intertwined; if something is hard to learn or use but its functionality is worth the trouble, then it is still considered to have high quality.
+
+We try  to  measure  software  quality  so  that  we  can  compare  one  product  with another. To do so, we identify those aspects of the system that contribute to its overall quality. Thus, when measuring software quality, users assess such external characteristics as the number of failures and type of failures. For example, they may define failures as minor,major,and catastrophic,and hope that any failures that occur are only minor ones.
+
+The software must also be judged by those who are designing and writing the code and by those who must maintain the programs after they are written.These practitioners tend to look at internal characteristics of the products, sometimes even before the product is delivered to the user. In particular, practitioners often look at numbers and types of faults for evidence of a product's quality (or lack of it). For example, developers track the number of faults found in requirements, design, and code inspections and use them as indicators of the likely quality of the final product.
+
+For this reason, we often build models to relate the user's external view to the developer's internal view of the software. Figure 1.5 is an example of an early quality model built by McCall and his colleagues to show how external quality factors (on the left-hand side) relate to product quality criteria (on the right-hand side). McCall associated each right-hand criterion with a measurement to indicate the degree to which an
+
+FIGURE 1.5 McCall's quality model.
+
+element of quality was addressed (McCall, Richards, and Walters 1977).We will examine several product quality models in Chapter 12.
+
+## The Quality of the Process
+
+There are many activities that affect the ultimate product quality; if any of t
+",0.409,10.954,0.9999999999,1.0,0.99999999995,0,0.46153846153846156,0
+"How does the Domain-Driven Design (DDD) concept of a ""Bounded Context"" relate to the decomposition of a system into software units in a layered architecture?","The concept of a ""Bounded Context"" in Domain-Driven Design (DDD) relates to the decomposition of a system into software units by defining clear boundaries within which a particular model applies, similar to how a system is decomposed into distinct software units or modules with well-defined interfaces in a layered architecture.
+
+In layered architecture, the system is decomposed into layers and units that have clear responsibilities and interfaces, which aligns with the idea of bounded contexts that encapsulate specific domain models and their logic, preventing ambiguity and overlap between different parts of the system.","
+[0]
+the new units has no dependencies (e.g., unit B2 in Figure 6.9(b)) and the other has no dependents (e.g., unit B1 in Figure 6.9(b)). Sandwiching can be applied more than once, to  break  either  mutual  dependencies  in  tightly  coupled  units  or  long  dependency chains. Figure 6.9(c) shows the results of applying sandwiching twice, once to unit A and  once  to  unit  B, to  transform  a  dependency  loop  into  two  shorter  dependency chains. Of  course, sandwiching  works  only  if  a  unit's  data  and  functionality  can  be cleanly partitioned, which is not always the case. In the next section, we explore a more sophisticated  technique, called dependency inversion , that  uses  OO  technologies  to reverse the direction of dependency between two units, thereby breaking the cycle.
+
+The best uses graph has a tree structure or is a forest of tree structures. In such a structure, every subtree is a subset of our system, so we can incrementally develop our system one software unit at a time. Each completed unit is a correct implementation of part of our system. Each increment is easier to test and correct because faults are more likely to be found in the new code, not in the called units that have already been tested and deemed correct. In addition, we always have a working version of a system subset to demonstrate to our customer. Moreover, morale among developers is high, because they  frequently  make  visible  progress  on  the  system  (Brooks  1995). Contrast  these advantages of incremental development to its alternative, in which nothing works until everything works.
+
+## Abstraction
+
+An abstraction is a model or representation that omits some details so that it can focus on other details. The definition is vague about which details are left out of a model,
+
+because  different  abstractions, built  for  different  purposes, omit  different  kinds  of details. For this reason, it may be easier to understand the general notion of abstraction by reviewing the types of abstractions we have encountered already.
+
+We  discussed  decomposition  in  Chapter  5. Figure  5.5  was  an  example  of
+
+
+[1]
+ff the shelf and which we should build ourselves. But there is still considerable research being done on figuring out how to
+
+- specify components, so that buyers can determine whether a particular component fits their needs
+- certify that a component performs as claimed
+- reason  about  the  properties  of  a  system  (e.g., reliability)  from  the  properties  of  its components
+
+We say that a design is modular when each activity of the system is performed by exactly one software unit, and when the inputs and outputs of each software unit are well-defined. A software unit is well-defined if  its  interface  accurately  and  precisely specifies the unit's externally visible behavior: each specified input is essential to the unit's function, and each specified output is a possible result of the unit's actions. In addition, 'well-defined' means that the interface says nothing about any property or design detail that cannot be discerned outside the software unit. Chapter 6 includes a section on design principles that describes in more detail how to make design decisions that result in modular designs.
+
+## Architectural Views
+
+We want to decompose the system's design into its constituent programmable units, such as modules, objects, or procedures. However, this set of elements may not be the only decomposition we consider. If the proposed system is to be distributed over several computers, we may want a view of the design that shows the distribution of the system's  components as well as how those components communicate with each other. Alternatively, we may want a view of the design that shows the various services that the system is to offer and how the services operate together, regardless of how the services are mapped to code modules.
+
+Common types of architectural views include the following:
+
+- Decomposition view: This traditional view of a system's decomposition portrays the system as programmable units.As depicted in Figure 5.5, this view is likely to be
+
+- hierarchical and may be represented by multiple models. For example, a software unit in one model may be expanded in another model to show
+
+
+[2]
+the system's object types and explains how objects are related to one another. Lower-level designs detail the objects' attributes and operations.
+
+How we choose which design method to use depends on the system we are developing: Which aspects of the system's specification are most prominent (e.g., functions, objects, features)? How is the system's interface described (e.g., input events, data streams)? For many systems, it may be appropriate to view several decompositions, or to use different design methods at different levels of abstraction. Sometimes, the choice of design method is not so important and may be based on the designer's preferences.
+
+To  see  how  decomposition  works, suppose  we  want  to  follow  a  data-oriented design method. We start with the conceptual data stores that were identified during requirements  analysis. This  analysis  included  externally  visible  operations  on  these data, such as creation, queries, modifications, and deletion. We design the system by clustering the conceptual data into data objects and operations on those objects. We further decompose complex data objects into aggregations of simpler objects, with the simplest objects storing one type of data. Each object type provides access operations for querying and manipulating its data. This way, other parts of the system can use the object's stored information without accessing the data directly.The resulting design is a hierarchical decomposition of objects.The design differs from the requirements specification because it includes information about how system data are to be distributed into objects and how objects manipulate data values, and not just information about what data will be manipulated by the system.
+
+No matter which design approach we use, the resulting design is likely to refer to several  types  of  software  units, such  as component, subsystem, runtime  process, module, class, package, library , or procedure . The different terms describe different aspects of a design. For example, we use the term module to refer to a structural unit of the software's code; a module could be an atomic
+",0.71,12.62,N/A,N/A,N/A,0,0.3333333333333333,0
+How do container orchestration platforms like Kubernetes manage the deployment and scaling of software components compared to traditional virtual machine deployments?,"Container orchestration platforms like Kubernetes manage the deployment and scaling of software components by automating the scheduling, deployment, and scaling of containerized applications across a cluster of machines.
+
+Unlike traditional virtual machine deployments, which involve managing entire operating systems and virtual hardware, Kubernetes focuses on managing lightweight containers that package only the application and its dependencies.
+
+Kubernetes provides features such as automatic load balancing, self-healing by restarting failed containers, and declarative configuration for desired state management, enabling more efficient resource utilization and faster deployment cycles compared to traditional VM-based approaches.",,0.631,3.135,N/A,N/A,N/A,0,N/A,0
+What were the specific findings of the Standish Group's CHAOS Report regarding software project success rates in 2020?,The provided context does not contain any information about the Standish Group's CHAOS Report findings regarding software project success rates in 2020.,"
+[0]
+r.
+
+(Brooks 1987)
+
+I n 1994, the Standish Group surveyed over 350 companies about their over 8000 software projects to find out how well they were faring.The results are sobering.Thirty-one percent of the software projects were canceled before they were completed. Moreover, in large companies, only 9% of the projects were delivered on time and within budget; 16% met those criteria in small companies (Standish 1994). Similar results have been reported since then; the bottom line is that developers have trouble delivering the right system on time and within budget.
+
+To understand why, Standish (1995) asked the survey respondents to explain the causes of the failed projects.The top factors were reported to be
+
+1. Incomplete requirements (13.1%)
+2. Lack of user involvement (12.4%)
+3. Lack of resources (10.6%)
+4. Unrealistic expectations (9.9%)
+5. Lack of executive support (9.3%)
+6. Changing requirements and specifications (8.7%)
+7. Lack of planning (8.1%)
+8. System no longer needed (7.5%)
+
+Notice that some part of the requirements elicitation, definition, and management process is involved in almost all of these causes.Lack of care in understanding,documenting,and managing requirements can lead to a myriad of problems:building a system that solves the wrong problem,that doesn't function as expected, or that is difficult for the users to understand and use.
+
+Furthermore, requirements errors can be expensive if they are not detected and fixed early in the development process. Boehm and Papaccio (1988) report that if it costs $1 to find and fix a requirements-based problem during the requirements definition process, it can cost $5 to repair it during design, $10 during coding, $20 during unit testing, and as much as $200 after delivery of the system! So it pays to take time to understand the problem and its context, and to get the requirements right the first time.
+
+## 4.1 THE REQUIREMENTS PROCESS
+
+A customer who asks us to build a new system has some notion of what the system should do. Often, the customer wants to automate a manual task, such as paying bills electronically rather than with handwritten ch
+
+
+[1]
+ost models.' ICL Technical Journal , 4(3):73-102.
+- Klein, Gary (1998). Sources of Power . Cambridge, MA: MIT Press.
+- Kleindorfer, Paul, Howard Kunreuther, and Paul Schoemaker (1993). Decision Sciences:An Integrative Perspective . Cambridge UK: Cambridge University Press.
+- Knight, John, and Nancy Leveson (1986). 'An empirical study of failure probabilities in multiversion  software.' In Digest  of  the  Sixteenth  International  Symposium  on  Fault-tolerant Computing , pp. 165-70. Los Alamitos, CA: IEEE Computer Society Press.
+
+Assesses  the  claims  of n -version  programming, showing  that n different  designs  share many of the same kinds of flaws.
+
+- Knight,John,Nancy Leveson,et al.(2000).'ACM Task Force on Licensing of Software Engineers Working  on  Safety-Critical  Software.' Draft  (July). http://www.acm.org/serving/se_policy/ safety_critical.pdf.
+- Knorr, Eric (2005). 'Anatomy of an IT disaster: How the FBI blew it.' InfoWorld (March 21). http://www.infoworld.com/article/05/03/21/12FEfbi_1.html.
+
+- Krasner,H.,B.Curtis,and N.Iscoe (1987).'Communication breakdowns and boundary-spanning activities  on  large  programming  projects.' In Empirical  Studies  of  Programmers : Second Workshop,pp.47-64. New York:Ablex Publishing.
+
+Results from interviews conducted on 19 large software development projects to understand team- and project-level problems at MCC.Describes typical communications breakdowns in large programming projects, the cultural and environmental differences that create barriers to effective intergroup communications, and the boundary-spanning activities that coordinate five crucial topical networks of communication. Suggests more effective project coordination, including the use of tools for computer-supported collaborative software design.
+
+- Krasner, Herb, Jim Terrel, Adam Linehan, Paul Arnold, and William H. Ett (1992). 'Lessons learned  from  a  software  process  modeling  system.' Communications  of  the  ACM , 35(9) (September): 91-100.
+
+Describes experiences with SPMS, a software process modeling system.
+
+- Krauss, R.M., and S.R. Fussell (1991). 'Constructing shared comm
+
+
+[2]
+' IEEE Software , 13(4) (July): 65-72.
+- Compton,B.T., and C.Withrow (1990).'Prediction and control of Ada software defects.' Journal of Systems and Software , 12: 199-207.
+
+Report on software fault behavior at Unisys.
+
+- Computer Weekly Report (1994).'Sources of errors.'August 12.
+- Conklin, Peter F. (1996). 'Enrollment management: Managing the Alpha AXP program.' IEEE Software 13(4) (July): 53-64.
+
+Describes a project management approach that was very successful in developing Digital's Alpha chip.
+
+- Conte, S., H. Dunsmore, and V. Shen (1986). Software Engineering Metrics and Models . Menlo Park, CA: Benjamin-Cummings.
+
+A nice survey and history of software metrics. Especially good section comparing cost estimation models.
+
+- Courtney, R.E., and  D.A. Gustafson  (1993). 'Shotgun  correlations  in  software  measures.' Software Engineering Journal , 8(1): 5-13.
+- Curtis, Bill, W.E. Hefley, and  S. Miller  (1995). People  Capability  Maturity  Model, Technical Reports SEI-CMU-TR-95-MM-001 and -002. Pittsburgh, PA: Software Engineering Institute.
+- Curtis, Bill, Marc I. Kellner, and Jim Over (1992). 'Process modeling.' Communications of the ACM , 35(9) (September): 75-90.
+
+A nice survey paper about different ways to model processes.
+
+- Curtis, Bill, Herb Krasner, and Neil Iscoe (1988).'A field study of the software design process for large systems.' Communications of the ACM , 31(11) (November): 1268-1287.
+- Curtis, Bill, Herb Krasner, Vincent Shen, and Neil Iscoe (1987). 'On building software process models under the lamppost.' In Proceedings of the 9th International Conference on Software Engineering , pp. 96-103. Monterey, CA: IEEE Computer Society Press.
+
+Important paper that suggests that we often model what is easy to model rather than what we need.
+
+An evaluation of the significant activities on 17 software development projects.
+
+- Cusumano, Michael, and Richard W. Selby (1995). Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages People . New York: Free Press/Simon and Schuster.
+- --- (1997). 'How Microsoft builds software.' Communic
+",0.368,5.595,0.9999999999,0.8,0.8888888888493828,0,0.5,0
+"In the context of agile software development, how does the SAFe (Scaled Agile Framework) handle dependencies between multiple XP or Scrum teams working on the same product?",The system can't answer this question. Please try again with another question.,"
+[0]
+s to provide the features. Iteration is important, so redoing is as critical is doing; change is embraced, so that a change is viewed not as a correction but as an adjustment to the realities of software development. Fixed delivery times force developers to scope down the requirements essential for each version produced. At the same time, risk is embraced, so that the developers tackle the hardest problems first.
+
+Often, the phrase 'extreme programming' is used to describe the more general concept of agile methods. In fact, XP is a particular form of agile process, with guiding principles that reflect the more general tenets of the agile manifesto. Proponents of XP emphasize four characteristics of agility: communication, simplicity, courage, and feedback. Communication involves  the  continual  interchange  between  customers  and developers. Simplicity encourages developers to select the simplest design or implementation to address the needs of their customers. Courage is described by XP creators as commitment to delivering functionality early and often. Feedback loops are built into the various activities during the development process. For example, programmers work together to give each other feedback on the best way to implement a design, and customers work with developers to perform planning exercises.
+
+These characteristics are embedded in what are known as the twelve facets of XP .
+
+- The planning game: In this aspect of XP , the customer, who is on-site, defines what is meant by 'value,' so that each requirement can be assessed according to how much value is added by implementing it. The users write stories about how the system should work, and the developers then estimate the resources necessary to realize the stories. The stories describe the actors and actions involved, much like the use cases we define in more detail in Chapters 4 and 6. Each story relates one requirement; two or three sentences are all that is needed to explain the value of the requirement in sufficient detail for the developer to specify test cases and estimate resources for implementing the requirement. Once the stor
+
+
+[1]
+mpose a regulation or standard that affects the software's design or requirements. It is thought  that  by  building  flexibility  into  the  development  process, agile  methods  can enable customers to add or change requirements late in the development cycle.
+
+There are  many  examples  of  agile  processes  in  the  current  literature. Each  is based on a set of principles that implement the tenets of the agile manifesto. Examples include the following.
+
+- Extreme programming (XP), described in detail below, is a set of techniques for leveraging the creativity of developers and minimizing the amount of administrative overhead.
+- Crystal is a collection of approaches based on the notion that every project needs a different set of policies, conventions, and methodologies. Cockburn (2002), the creator of Crystal, believes that people have a major influence on software quality, and thus the quality of projects and processes improves as the quality of the
+
+- people involved improves. Productivity increases through better communication and frequent delivery, because there is less need for intermediate work products.
+- Scrum was created at Object Technology in 1994 and was subsequently commercialized  by  Schwaber  and  Beedle  (2002). It  uses  iterative  development, where each 30-day iteration is called a 'sprint,' to implement the product's backlog of prioritized requirements. Multiple self-organizing and autonomous teams implement product increments in parallel. Coordination is done at a brief daily status meeting called a 'scrum' (as in rugby).
+- Adaptive software development (ASD) has six basic principles.There is a mission that acts as a guideline, setting out the destination but not prescribing how to get there. Features are viewed as the crux of customer value, so the project is organized around building components to provide the features. Iteration is important, so redoing is as critical is doing; change is embraced, so that a change is viewed not as a correction but as an adjustment to the realities of software development. Fixed delivery times force developers to scope down the requirement
+
+
+[2]
+ical systems, where a system's correctness and safety are more important than its release date.
+
+However, for problems where the requirements are uncertain, it can be cumbersome to employ a heavy process and have to update the models with every change to the requirements.As an alternative approach, agile methods gather and implement the requirements in increments.The initial release implements the most essential requirements, as defined by the stakeholders' business goals.As new requirements emerge with use of the system or with better understanding of the problem, they are implemented in subsequent releases of the system. This incremental development allows for 'early and continuous delivery of valuable software' (Beck et al. 2004) and accommodates emergent and late-breaking requirements.
+
+Extreme programming (XP) takes agile requirements processes to the extreme, in that the system is built to the requirements that happen to be defined at the time, with no planning or designing for possible future requirements. Moreover, XP forgoes traditional requirements documentation, and instead encodes the requirements as test cases that the eventual implementation must pass.Berry (2002a) points out that the trade-off for agile methods' flexibility is the difficulty of making changes to the system as requirements are added, deleted, or changed. But there can be additional problems: XP uses test cases to specify requirements, so a poorly written test case can lead to the kinds of misunderstandings described in this chapter.
+
+assumptions  with  which  we  may  not  be  familiar. Likewise, we  as  developers  know about computer solutions, but not always about how possible solutions will affect our customers' business activities.We, too, have our jargon and assumptions, and sometimes we think everyone is speaking the same language, when in fact people have different meanings for the same words. It is only by discussing the requirements with everyone who has a stake in the system, coalescing these different views into a coherent set of requirements, and reviewing these documents with the stakeholders that we all
+",0.425,2.739,N/A,N/A,N/A,1,N/A,1
+"According to the COCOMO II model, what is the exact numeric value of the Scale Factor (SF) for ""Precedentedness"" when rated as ""Nominal""?","The exact numeric value of the Scale Factor (SF) for ""Precedentedness"" when rated as ""Nominal"" is not explicitly stated in the provided context.","
+[0]
+dilly system is NOP divided by the productivity rate, or 1.29 person-months.
+
+As we understand more about the requirements for Piccadilly, we can use the other  parts  of  COCOMO: the  early  design  model  and  the  postarchitecture  model, based  on  nominal  effort  estimates  derived  from  lines  of  code  or  function  points. These models use a scale exponent computed from the project's scale factors, listed in Table 3.16.
+
+TABLE 3.16 Scale Factors for COCOMO II Early Design and Postarchitecture Models
+
+Precedentedness, Very Low = Thoroughly unprecedented. Precedentedness, Low = Largely unprecedented. Precedentedness, Nominal = Somewhat unprecedented. Precedentedness, High = Generally familiar. Precedentedness, Very High = Largely familiar. Precedentedness, Extra High = Thoroughly familiar. Flexibility, Very Low = Rigorous. Flexibility, Low = Occasional relaxation. Flexibility, Nominal = Some relaxation. Flexibility, High = General conformity. Flexibility, Very High = Some conformity. Flexibility, Extra High = General goals. Significant risks eliminated, Very Low = Little (20%). Significant risks eliminated, Low = Some (40%). Significant risks eliminated, Nominal = Often (60%). Significant risks eliminated, High = Generally (75%). Significant risks eliminated, Very High = Mostly (90%). Significant risks eliminated, Extra High = Full (100%). Team interaction process, Very Low = Very difficult interactions. Team interaction process, Low = Some difficult interactions. Team interaction process, Nominal = Basically cooperative interactions. Team interaction process, High = Largely cooperative. Team interaction process, Very High = Highly cooperative. Team interaction process, Extra High = Seamless interactions. Process maturity, Very Low = Determined by questionnaire. Process maturity, Low = Determined by questionnaire. Process maturity, Nominal = Determined by questionnaire. Process maturity, High = Determined by questionnaire. Process maturity, Very High = Determined by questionnaire. Process maturity, Extra High = Determined by questionnaire
+
+'Extra high' is equivalent to a rating of zero,'very
+
+
+[1]
+a richer system description than application points.
+
+By  stage  3, the  postarchitecture  stage, development  has  begun, and  far  more information is known. In this stage, sizing can be done in terms of function points or lines of code, and many cost factors can be estimated with some degree of comfort.
+
+COCOMO II also includes models of reuse, takes into account maintenance and breakage (i.e., the change in requirements over time), and more. As with the original COCOMO,the model includes cost factors to adjust the initial effort estimate.A research group at the University of Southern California is assessing and improving its accuracy.
+
+Let us look at COCOMO II in more detail.The basic model is of the form where the initial size-based estimate, is adjusted by the vector of cost driver information, m ( ). Table 3.9 describes the cost drivers at each stage, as well as the use of other models to modify the estimate. bS c , E = bS c m 1 X 2
+
+TABLE 3.9 Three Stages of COCOMO II
+
+Size, Stage 1: Application Composition = Application points. Size, Stage 2: Early Design = Function points (FPs) and language. Size, Stage 3: Postarchitecture = FP and language or source lines of code (SLOC). Reuse, Stage 1: Application Composition = Implict in model. Reuse, Stage 2: Early Design = Equivalent SLOCas function of other variables. Reuse, Stage 3: Postarchitecture = Equivalent SLOCas function of other variables. Requirements change, Stage 1: Application Composition = Implicit in model. Requirements change, Stage 2: Early Design = %change expressed as a cost factor. Requirements change, Stage 3: Postarchitecture = %change expressed as a cost factor. Maintenance, Stage 1: Application Composition = Application points, annual change traffic (ACT). Maintenance, Stage 2: Early Design = Function ofACT,software understanding, unfmiliarity. Maintenance, Stage 3: Postarchitecture = Function ofACT,software understanding, unfamiliarity. Scale (c) in nominal effort equation, Stage 1: Application Composition = 1.0. Scale (c) in nominal effort equation, Stage 2: Early Design = 0.91 to 1.23, depending on precedentedness, conform
+
+
+[2]
+1 year but fewer than 2 years of experience
+- very high if it has at least 2 years but fewer than 4 years of experience
+- extra high if it has at least 4 years of experience
+
+Similarly, analyst capability is measured on an ordinal scale based on percentile ranges. For instance, the rating is 'very high' if the analyst is in the ninetieth percentile and 'nominal'for the fifty-fifth percentile. Correspondingly, COCOMO II assigns an effort multiplier ranging from 1.42 for very low to 0.71 for very high.These multipliers reflect the notion that an analyst with very low capability expends 1.42 times as much effort as a nominal or average analyst, while one with very high capability needs about threequarters the effort of an average analyst. Similarly, Table 3.13 lists the cost driver categories for tool use, and the multipliers range from 1.17 for very low to 0.78 for very high.
+
+TABLE 3.13, 1 = Tool Use Categories. Category, 1 = Meaning. Very low, 1 = Edit, code,debug. Low, 1 = Simple front-end, back-end CASE,little integration. Nominal, 1 = Basic life-cycle tools, moderately integrated. High, 1 = Strong,mature life-cycle tools, moderately integrated. Very high, 1 = Strong, mature, proactive life-cycle tools, well-integrated with processes, methods, reuse
+
+Notice that stage 2 of COCOMO II is intended for use during the early stages of design.The set of cost drivers in this stage is smaller than the set used in stage 3, reflecting lesser understanding of the project's parameters at stage 2.
+
+The various components of the COCOMO model are intended to be tailored to fit  the  characteristics  of  your  own  organization. Tools  are  available  that  implement COCOMO II and compute the estimates from the project characteristics that you supply. Later in this chapter, we will apply COCOMO to our information system example.
+
+## Machine-Learning Methods
+
+In  the  past, most  effort-  and  cost-modeling  techniques  have  relied  on  algorithmic methods. That  is, researchers  have  examined  data  from  past  projects  and  generated equations from them that are used to predict effort and cost on future projec
+",0.422,5.253,0.9999999999,1.0,0.99999999995,0,1.0,0
+What machine learning techniques are recommended in the textbook for automating effort estimation beyond the COCOMO II model?,"The textbook recommends several machine learning techniques for automating effort estimation beyond the COCOMO II model.
+
+The recommended machine learning techniques include
+- Neural networks, which represent interconnected units (neurons) corresponding to activities, and are trained with data from past projects to identify patterns and produce effort estimates.
+- Regression trees, which have been used to produce predictions more accurate than the original COCOMO model and SLIM, though not as good as neural networks or function point models.
+- Tree induction techniques, which have been shown to produce better results using datasets like Kemerer and COCOMO.
+- Decision trees, which can identify project, process, and product characteristics useful in predicting effort and fault-prone modules.
+- Case-Based Reasoning (CBR), which builds a decision algorithm based on combinations of inputs encountered on projects, deals only with actual events, and is easier for users to understand than neural networks or rule chains.","
+[0]
+e quantity, so the paucity of data limits this technique's usefulness. Moreover, users tend to have difficulty understanding neural networks. However, if the technique produces more accurate estimates, organizations may be more willing to collect data for the networks.
+
+In  general, this 'learning' approach has been tried in different ways by other researchers. Srinivasan and Fisher (1995) used Kemerer's data (Kemerer 1989) with a statistical technique called a regression tree; they produced predictions more accurate than  those  of  the  original  COCOMO  model  and  SLIM, a  proprietary  commercial model. However, their results were not as good as those produced by a neural network or a model based on function points. Briand, Basili, and Thomas (1992) obtained better results  from  using  a  tree  induction  technique, using  the  Kemerer  and  COCOMO datasets. Porter and Selby (1990) also used a tree-based approach; they constructed a decision tree that identifies which project, process, and product characteristics may be useful in predicting likely effort.They also used the technique to predict which modules are likely to be fault-prone.
+
+A  machine-learning  technique  called Case-Based  Reasoning (CBR)  can  be applied to analogy-based estimates. Used by the artificial intelligence community, CBR builds a decision algorithm based on the several combinations of inputs that might be encountered on a project. Like  the  other  techniques  described  here, CBR  requires information about past projects. Shepperd (1997) points out that CBR offers two clear advantages over many of the other techniques. First, CBR deals only with events that actually occur, rather than with the much larger set of all possible occurrences. This
+
+same feature also allows CBR to deal with poorly understood domains. Second, it is easier for users to understand particular cases than to depict events as chains of rules or as neural networks.
+
+Estimation using CBR involves four steps:
+
+1. The user identifies a new problem as a case.
+2. The system retrieves similar cases from a repository of historical information.
+3. The sys
+
+
+[1]
+1 year but fewer than 2 years of experience
+- very high if it has at least 2 years but fewer than 4 years of experience
+- extra high if it has at least 4 years of experience
+
+Similarly, analyst capability is measured on an ordinal scale based on percentile ranges. For instance, the rating is 'very high' if the analyst is in the ninetieth percentile and 'nominal'for the fifty-fifth percentile. Correspondingly, COCOMO II assigns an effort multiplier ranging from 1.42 for very low to 0.71 for very high.These multipliers reflect the notion that an analyst with very low capability expends 1.42 times as much effort as a nominal or average analyst, while one with very high capability needs about threequarters the effort of an average analyst. Similarly, Table 3.13 lists the cost driver categories for tool use, and the multipliers range from 1.17 for very low to 0.78 for very high.
+
+TABLE 3.13, 1 = Tool Use Categories. Category, 1 = Meaning. Very low, 1 = Edit, code,debug. Low, 1 = Simple front-end, back-end CASE,little integration. Nominal, 1 = Basic life-cycle tools, moderately integrated. High, 1 = Strong,mature life-cycle tools, moderately integrated. Very high, 1 = Strong, mature, proactive life-cycle tools, well-integrated with processes, methods, reuse
+
+Notice that stage 2 of COCOMO II is intended for use during the early stages of design.The set of cost drivers in this stage is smaller than the set used in stage 3, reflecting lesser understanding of the project's parameters at stage 2.
+
+The various components of the COCOMO model are intended to be tailored to fit  the  characteristics  of  your  own  organization. Tools  are  available  that  implement COCOMO II and compute the estimates from the project characteristics that you supply. Later in this chapter, we will apply COCOMO to our information system example.
+
+## Machine-Learning Methods
+
+In  the  past, most  effort-  and  cost-modeling  techniques  have  relied  on  algorithmic methods. That  is, researchers  have  examined  data  from  past  projects  and  generated equations from them that are used to predict effort and cost on future projec
+
+
+[2]
+chine-Learning Methods
+
+In  the  past, most  effort-  and  cost-modeling  techniques  have  relied  on  algorithmic methods. That  is, researchers  have  examined  data  from  past  projects  and  generated equations from them that are used to predict effort and cost on future projects. However, some researchers are looking to machine learning for assistance in producing good estimates. For  example, neural  networks  can  represent  a  number  of  interconnected, interdependent units, so they are a promising tool for representing the various activities involved in producing a software product. In a neural network, each unit (called a neuron and represented by network node) represents an activity; each activity has inputs and outputs.Each unit of the network has associated software that performs an accounting of its inputs, computing a weighted sum;if the sum exceeds a threshold value,the unit produces an output.The output, in turn, becomes input to other related units in the network, until a final output value is produced by the network. The neural network is, in a sense, an extension of the activity graphs we examined earlier in this chapter.
+
+There are many ways for a neural network to produce its outputs. Some techniques involve looking back to what has happened at other nodes; these are called back-propagation techniques. They  are  similar  to  the  method  we  used  with  activity graphs to look back and determine the slack on a path. Other techniques look forward, to anticipate what is about to happen.
+
+Neural networks are developed by 'training' them with data from past projects. Relevant data are supplied to the network, and the network uses forward and backward algorithms to 'learn' by identifying patterns in the data. For example, historical data about past projects might contain information about developer experience; the network may identify relationships between level of experience and the amount of effort required to complete a project.
+
+Figure 3.13 illustrates how Shepperd (1997) used a neural network to produce an effort estimate. There are three layers in the network, and the netw
+",0.522,16.824,0.9999999999,0.8333333333333334,0.9090909090495868,0,0.5882352941176471,0
+"In Figure 2.6, what is the exact label of the box that appears between the ""Original Specification"" and the ""Transformed Specification"" in the operational specification process flow?","The exact label of the box that appears between the ""Original Specification"" and the ""Transformed Specification"" in the operational specification process flow in Figure 2.6 is ""Sample transformations can include"".","
+[0]
+The operational specification model.
+
+Sample transformations can include
+
+- changing the data representations
+- selecting algorithms
+- optimizing
+- compiling
+
+Because many paths can be taken from the specification to the delivered system, the sequence of transformations and the decisions they reflect are kept as a formal development record.
+
+The transformational approach holds great promise. However, a major impediment to its use is the need for a formal specification expressed precisely so the transformations can operate on it, as shown in Figure 2.7. As formal specification methods become more popular, the transformational model may gain wider acceptance.
+
+## Phased Development: Increments and Iterations
+
+In the early years of software development, customers were willing to wait a long time for software systems to be ready. Sometimes years would pass between the time the requirements documents were written and the time the system was delivered, called the cycle time . However, today's business environment no longer tolerates long delays. Software helps to distinguish products in the marketplace, and customers are always looking for new quality and functionality. For example, in 1996, 80 percent of HewlettPackard's revenues were derived from products introduced in the previous two years. Consequently, new process models were developed to help reduce cycle time.
+
+One way to reduce cycle time is to use phased development, as shown in Figure 2.8. The system is designed so that it can be delivered in pieces, enabling the users to have some functionality while the rest is being developed.Thus, there are usually two systems functioning  in  parallel: the  production  system  and  the  development  system. The
+
+FIGURE 2.7 The transformational model.
+
+operational or production system is the one currently being used by the customer and user;the development system is the next version that is being prepared to replace the current production system. Often, we refer to the systems in terms of their release numbers: the developers build Release 1, test it, and turn it over to the users as the first operational
+
+
+[1]
+hrough requirements and design again.
+
+## Operational Specification
+
+For many systems, uncertainty about the requirements leads to changes and problems later in development.Zave (1984) suggests a process model that allows the developers and customers to examine the requirements and their implications early in the development process, where they can discuss and resolve some of the uncertainty. In the operational specification  model , the system requirements are evaluated or executed in a way that demonstrates the behavior of the system.That is,once the requirements are specified,they can be enacted using a software package, so their implications can be assessed before design begins. For example, if the specification requires the proposed system to handle 24 users, an executable form of the specification can help analysts determine whether that number of users puts too much of a performance burden on the system.
+
+This type of process is very different from traditional models such as the waterfall model. The waterfall model separates the functionality of the system from the design (i.e., what the system is to do is separated from how the system does it), intending to keep the customer needs apart from the implementation. However,an operational specification allows the functionality and the design to be merged.Figure 2.6 illustrates how an operational specification works.Notice that the operational specification is similar to prototyping; the process enables user and developer to examine requirements early on.
+
+## Transformational Model
+
+Balzer's transformational model tries to reduce the opportunity for error by eliminating several major development steps. Using automated support, the transformational process applies a series of transformations to change a specification into a deliverable system (Balzer 1981a).
+
+FIGURE 2.6 The operational specification model.
+
+Sample transformations can include
+
+- changing the data representations
+- selecting algorithms
+- optimizing
+- compiling
+
+Because many paths can be taken from the specification to the delivered system, the sequence of transformations and the deci
+
+
+[2]
+at follow the matching input, until the execution reaches the next state construct.
+- SDL data type (algebraic specification): An SDL process may declare local variables, and SDL data type definitions are used to declare complex, user-defined variable types.
+
+In addition, an SDL specification is often accompanied by a set of Message Sequence Charts (MSC) (ITU 1996), each of which illustrates a single execution of the specification in terms of the messages passed between the specification's processes.
+
+## Software Cost Reduction (SCR)
+
+Software Cost Reduction (SCR) (Heitmeyer 2002) is a collection of techniques that were designed to encourage software developers to employ good software-engineering design principles.An SCR specification models software requirements as a mathematical function, REQ, that maps monitored variables , which are environmental variables that are sensed by the system, to controlled variables , which are environmental variables that are set by the system. The function REQ is decomposed into a collection of tabular functions, similar to Parnas tables. Each of these functions is responsible for setting the value of one controlled variable or the value of a term , which is a macro-like variable that is referred to in other functions' definitions.
+
+REQ is the result of composing these tabular functions into a network (a DFD, as shown in Figure 4.22), whose edges reflect the data dependencies among the functions. Every execution step starts with a change in the value of one monitored variable. This change is then propagated through the network, in a single, synchronized step. The specification's functions are applied in a topological sort that adheres to the functions' data dependencies:any function that refers to updated values of variables must execute after the functions that update those values. Thus, an execution step resembles a wave of  variable  updates  flowing  through  the  network, starting  with  newly  sensed  monitored-variable values, followed by updates to term variables, followed by updates to controlled-variable values.
+
+## Other Features of Requirements Notations
+",0.368,2.928,0.9999999999,0.2857142857142857,0.44444444443456793,0,0.0,0
+How does iterative development deliver functionality?,"Iterative development delivers a full system at the very beginning and then changes the functionality of each subsystem with each new release.
+
+For example, in a word processing package, iterative development would provide primitive forms of all types of functionality in Release 1, such as creating text and cutting and pasting, even if some functions are clumsy or slow initially.
+
+Each subsequent release improves on the previous ones by enhancing the quality and usability of the functionality, such as making cutting and pasting easy and quick in Release 2.","
+[0]
+formatting in Release 3. However, using iterative development, we would provide primitive forms of all three types of functionality in Release 1. For example, we can create text and then cut and paste it, but the cutting and pasting functions might be clumsy or slow. So  in  the  next  iteration, Release  2, we  have  the  same  functionality, but  have enhanced  the  quality; now  cutting  and  pasting  are  easy  and  quick. Each  release improves on the previous ones in some way.
+
+In  reality, many  organizations  use  a  combination  of  iterative  and  incremental development. A new release may include new functionality, but existing functionality from the current release may have been enhanced.These forms of phased development are desirable for several reasons:
+
+1. Training can begin on an early release, even if some functions are missing. The training process allows developers to observe how certain functions are executed, suggesting enhancements for later releases. In this way, the developers can be very responsive to the users.
+2. Markets can be created early for functionality that has never before been offered.
+3. Frequent releases allow developers to fix unanticipated problems globally and quickly, as they are reported from the operational system.
+4. The development team can focus on different areas of expertise with different releases. For instance, one release can change the system from a command-driven
+
+## Spiral Model
+
+Boehm (1988) viewed the software development process in light of the risks involved, suggesting that a spiral model could combine development activities with risk management to minimize and control risk. The spiral model, shown in Figure 2.10, is in some sense like the iterative development shown in Figure 2.9. Beginning with the requirements and an initial plan for development (including a budget, constraints, and alternatives for staffing, design, and development environment), the process inserts a step to evaluate risks and prototype alternatives before a 'concept of operations' document is produced to describe at a high level how the system should work. From that do
+
+
+[1]
+omer and user;the development system is the next version that is being prepared to replace the current production system. Often, we refer to the systems in terms of their release numbers: the developers build Release 1, test it, and turn it over to the users as the first operational release.Then, as the users use Release 1, the developers are building Release 2.Thus, the developers are always working on Release n + 1 while Release n is operational.
+
+There are many ways for the developers to decide how to organize development into releases.The two most popular approaches are incremental development and iterative development. In incremental development , the system as specified in the requirements  documents  is  partitioned  into  subsystems  by  functionality. The  releases  are defined by beginning with one small,functional subsystem and then adding functionality
+
+FIGURE 2.8 The phased-development model.
+
+FIGURE 2.9 The incremental and iterative models.
+
+with each new release.The top of Figure 2.9 shows how incremental development slowly builds up to full functionality with each new release.
+
+However, iterative development delivers a full system at the very beginning and then changes the functionality of each subsystem with each new release.The bottom of Figure 2.9 illustrates three releases in an iterative development.
+
+To understand the difference between incremental and iterative development, consider a word processing package. Suppose the package is to deliver three types of functionality: creating text, organizing text (i.e., cutting and pasting), and formatting text (such as using different type sizes and styles). To build such a system using incremental development, we might provide only the creation functions in Release 1, then both creation and organization in Release 2, and finally creation, organization, and formatting in Release 3. However, using iterative development, we would provide primitive forms of all three types of functionality in Release 1. For example, we can create text and then cut and paste it, but the cutting and pasting functions might be clumsy or slow. So  in  the  nex
+
+
+[2]
+re detail in Chapters 4 and 6. Each story relates one requirement; two or three sentences are all that is needed to explain the value of the requirement in sufficient detail for the developer to specify test cases and estimate resources for implementing the requirement. Once the stories are written, the prospective users prioritize requirements, splitting and merging them until consensus is reached on what is needed, what is testable, and what can be done with the resources available. The planners then generate a map of each release, documenting what the release includes and when it will be delivered.
+- Small releases: The system is designed so that functionality can be delivered as soon as possible. Functions are decomposed into small parts, so that some functionality
+
+- can be delivered early and then improved or expanded on in later releases. The small releases require a phased-development approach, with incremental or iterative cycles.
+- Metaphor: The development team agrees on a common vision of how the system will operate. To support its vision, the team chooses common names and agrees on a common way of addressing key issues.
+- Simple design: Design is kept simple by addressing only current needs.This approach reflects the philosophy that anticipating future needs can lead to unnecessary functionality. If a particular portion of a system is very complex, the team may build a spike-a quick and narrow implementation-to help it decide how to proceed.
+- Writing tests first: To ensure that the customer's needs are the driving force behind development, test cases are written first, as a way of forcing customers to specify requirements that can be tested and verified once the software is built.Two kinds of tests are used in XP: functional tests that are specified by the customer and executed by both developers and users, and unit tests that are written and run by developers. In XP , functional tests are automated and, ideally, run daily.The functional tests are considered to be part of the system specification. Unit tests are written both before and after coding, to verify that each modular portion
+",0.717,8.661,0.9999999999,1.0,0.99999999995,0.5054441337576153,0.875,1

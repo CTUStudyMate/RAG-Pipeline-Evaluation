@@ -16,10 +16,10 @@ from difflib import get_close_matches, SequenceMatcher
 
 load_dotenv()
 
-INPUT_DATAJSON = "new_dataset_final.json"
-INPUT_DATASET = "EXPs/v1/hsf_multi_80_20_nocite_with_dataset_v2.csv"
-OUTPUT_FILE = "hsf_multi_80_20_nocite_with_dataset_v2.csv"
-DATASET_NAME = "hsf_multi_80_20_nocite_with_dataset_v2"
+INPUT_DATAJSON = "abstain_set.json"
+INPUT_DATASET = "EXPs/v2/fixed_normal_cite_with_apbstain_set.csv"
+OUTPUT_FILE = "fixed_normal_cite_with_apbstain_set.csv"
+DATASET_NAME = "fixed_normal_cite_with_apbstain_set"
 
 def fuzzy_lookup(question, source_dict, cutoff=0.9):
     """
@@ -209,7 +209,7 @@ async def main():
     results = await run_experiment.arun(rag_dataset)
 
     # Save results to CSV
-    output_dir = Path(f"EXPs/v1/run_result")
+    output_dir = Path(f"EXPs/v2/run_result")
     output_dir.mkdir(exist_ok=True)
     output_file = output_dir / f"{OUTPUT_FILE}"
     

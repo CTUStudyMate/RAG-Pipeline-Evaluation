@@ -203,4 +203,4 @@ def calculate_average_metrics(directory_path: str, output_file: str = "experimen
 
 
 if __name__ == "__main__":
-    calculate_average_metrics("./calculate/v1")
+    calculate_average_metrics("./calculate/v1_datasetv1")
