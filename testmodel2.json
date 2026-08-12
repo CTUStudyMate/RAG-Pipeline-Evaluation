@@ -1,0 +1,252 @@
+[
+  {
+    "question": "According to IEEE Standard 729 terminology, what is a fault?",
+    "ground_truth": "A fault occurs when a human makes a mistake, called an error, in performing some software activity.",
+    "source_text": "A **fault** occurs when a human makes a mistake, **called an error,** in performing some soft-ware activity."
+  },
+  {
+    "question": "What is the purpose of McCall’s quality model?",
+    "ground_truth": "Figure 1.5 is an example of an early quality model built by McCall and his colleagues to show how external quality factors (on the left-hand side) relate to product quality criteria (on the right-hand side).",
+    "source_text": "Figure 1.5 is an example of an early quality model built by McCall and his colleagues to show how external quality factors (on the left-hand side) relate to product quality criteria (on the right-hand side)."
+  },
+  {
+    "question": "What is an abstraction?",
+    "ground_truth": "An abstraction is a description of the problem at some level of generalization that allows us to concentrate on the key aspects of the problem without getting mired in the details.",
+    "source_text": "**An abstraction** is a description of the problem at some level of generalization that allows us to concentrate on the key aspects of the problem without getting mired in the details."
+  },
+  {
+    "question": "What does prototyping mean in the context of user interface prototyping?",
+    "ground_truth": "Prototyping means building a small version of a system, usually with limited functionality, that can be used to help the user or customer identify the key requirements of a system or demonstrate the feasibility of a design or approach.",
+    "source_text": "**Prototyping** means building a small version of a system, usually with limited functionality, that can be used to\n* help the user or customer identify the key requirements of a system\n* demonstrate the feasibility of a design or approach"
+  },
+  {
+    "question": "How does incremental development build up a system?",
+    "ground_truth": "The top of Figure 2.9 shows how incremental development slowly builds up to full functionality with each new release.",
+    "source_text": "The top of Figure 2.9 shows how incremental development slowly builds up to full functionality with each new release."
+  },
+  {
+    "question": "What four characteristics of agility are emphasized by proponents of extreme programming (XP)?",
+    "ground_truth": "Proponents of XP emphasize four characteristics of agility: communication, simplicity, courage, and feedback.",
+    "source_text": "Proponents of XP emphasize four characteristics of agility: communication, simplicity, courage, and feedback."
+  },
+  {
+    "question": "What does refactoring refer to in extreme programming?",
+    "ground_truth": "Refactoring refers to revisiting the requirements and design, reformulating them to match new and existing needs.",
+    "source_text": "**Refactoring** refers to revisiting the requirements and design, reformulating them to match new and existing needs."
+  },
+  {
+    "question": "In Lai's notation for process modeling, what is \"Control\"?",
+    "ground_truth": "Control: An external influence over process enactment.",
+    "source_text": "**5. Control:** An external influence over process enactment."
+  },
+  {
+    "question": "What is the difference between an activity and a milestone?",
+    "ground_truth": "An activity is a part of the project that takes place over a period of time, whereas a milestone is the completion of an activity—a particular point in time.",
+    "source_text": "**An activity** is a part of the project that takes place over a period of time, **whereas a milestone** is the completion of an activity—a particular point in time."
+  },
+  {
+    "question": "What is a precursor?",
+    "ground_truth": "A precursor is an event or set of events that must occur before the activity can begin; it describes the set of conditions that allows the activity to begin.",
+    "source_text": "**A precursor** is an event or set of events that must occur before the activity can begin; it describes the set of conditions that allows the activity to begin."
+  },
+  {
+    "question": "How is slack time computed using available time and real time?",
+    "ground_truth": "Slack time = available time - real time.",
+    "source_text": "Slack time = available time - real time"
+  },
+  {
+    "question": "How do rational extroverts make decisions according to the work styles framework?",
+    "ground_truth": "The rational extroverts tend to assert their ideas and not let \"gut feeling\" affect their decision making.",
+    "source_text": "**The rational extroverts** tend to assert their ideas and not let “gut feeling” affect their decision making."
+  },
+  {
+    "question": "How does an egoless programming team approach responsibility?",
+    "ground_truth": "Instead of a single point of responsibility, an egoless approach holds everyone equally responsible.",
+    "source_text": "Instead of a single point of responsibility, **an egoless approach** holds everyone equally responsible."
+  },
+  {
+    "question": "How do you quantify the risk exposure for an identified risk?",
+    "ground_truth": "We can quantify the effects of the risks we identify by multiplying the risk impact by the risk probability, to yield the risk exposure.",
+    "source_text": "We can quantify the effects of the risks we identify by multiplying the risk impact by the risk probability, **to yield the risk exposure.**"
+  },
+  {
+    "question": "What are the three strategies for risk reduction?",
+    "ground_truth": "There are three strategies for risk reduction: avoiding the risk, transferring the risk, and assuming the risk.",
+    "source_text": "There are three strategies for risk reduction:\n* avoiding the risk, by changing requirements for performance or functionality\n* transferring the risk, by allocating risks to other systems or by buying insurance to\ncover any financial loss should the risk become a reality\n* assuming the risk, by accepting it and controlling it with the project’s resources"
+  },
+  {
+    "question": "When are two requirements considered inconsistent?",
+    "ground_truth": "In general, two requirements are inconsistent if it is impossible to satisfy both simultaneously.",
+    "source_text": "In general, **two requirements are inconsistent** if it is impossible to satisfy both simultaneously."
+  },
+  {
+    "question": "When are requirements considered externally complete?",
+    "ground_truth": "We say that the requirements are externally complete if all states, state changes, inputs, products, and constraints are described by some requirement.",
+    "source_text": "We say **that the requirements are externally complete** if all states, state changes, inputs, products, and constraints are described by some requirement."
+  },
+  {
+    "question": "What does an entity in an entity-relationship diagram represent?",
+    "ground_truth": "An entity, depicted as a rectangle, represents a collection (sometimes called a class) of real-world objects that have common properties and behaviors.",
+    "source_text": "**An entity,** depicted as a rectangle, represents a collec-tion (sometimes called a class) of real-world objects that have common properties and behaviors."
+  },
+  {
+    "question": "How is a message depicted in a Message Sequence Chart?",
+    "ground_truth": "Each vertical line represents a participating entity, and a message is depicted as an arrow from the sending entity to the receiving entity; the arrow’s label specifies the message name and data parameters, if any.",
+    "source_text": "**Each vertical line represents a participating entity,** and a **message** is depicted as an arrow from the sending entity to the receiving entity; the arrow’s label specifies the message name and data parameters, if any."
+  },
+  {
+    "question": "What happens when a transition fires in a Petri net?",
+    "ground_truth": "When a transition fires, it removes tokens from each of its input places and inserts tokens into each of its output places.",
+    "source_text": "When a transition fires, it removes tokens from each of its input places and inserts tokens into each of its output places."
+  },
+  {
+    "question": "What is a descriptive notation?",
+    "ground_truth": "A descriptive notation is a notation that describes a problem or a proposed solution in terms of its properties or its invariant behaviors.",
+    "source_text": "**A descriptive** notation is a notation that describes a problem or a proposed solution in terms of its properties or its invariant behaviors."
+  },
+  {
+    "question": "What do early design decisions regarding a system's architecture explain?",
+    "ground_truth": "Early design decisions address the system’s architecture, explaining how to decompose the system into units, how the units relate to one another, and describing any externally visible properties of the units.",
+    "source_text": "**Early design decisions address the system’s architecture,** explaining how to decompose the system into units, how the units relate to one another, and describing any externally visible properties of the units (Bass, Clements, and Kazman 2003)."
+  },
+  {
+    "question": "What information is mapped in a deployment view of an architecture?",
+    "ground_truth": "This view maps runtime entities, such as components and connectors, onto computer resources, such as processors, data stores, and communication networks.",
+    "source_text": "* **Deployment view:** This view maps runtime entities, such as components and connectors, onto computer resources, such as processors, data stores, and communication networks."
+  },
+  {
+    "question": "How do layered systems organize software units?",
+    "ground_truth": "Layered systems organize the system’s software units into layers, each of which provides services to the layer above it and acts as a client to the layer below.",
+    "source_text": "**Layered systems** organize the system’s software units into layers, each of which provides services to the layer above it and acts as a client to the layer below."
+  },
+  {
+    "question": "What is layer bridging?",
+    "ground_truth": "To improve performance, this constraint may be relaxed in some cases, allowing a layer to access the services of layers below its lower neighbor; this is called layer bridging.",
+    "source_text": "To improve performance, this constraint may be relaxed in some cases, allowing a layer to access the services of layers below its lower neighbor; **this is called layer bridging.**"
+  },
+  {
+    "question": "In a fault tree, when is a parent node drawn as an and-gate?",
+    "ground_truth": "Parent nodes are drawn as logic gate operators: an and-gate if both of the child nodes’ events must occur for the parent node’s event to occur.",
+    "source_text": "Parent nodes are drawn as logic gate operators: *an and-gate if both of the child nodes’ events* must occur for the parent node’s event to occur;"
+  },
+  {
+    "question": "How is the return on investment (ROI) of a design change calculated?",
+    "ground_truth": "The return on investment of making one of these design changes is the ratio of the benefits gained from making the change to the cost of its implementation: ROI = Benefits/Cost.",
+    "source_text": "The return on investment of making one of these design changes is the ratio of the benefits gained from making the change to the cost of its implementation:\nROI =  Benefits/Cost"
+  },
+  {
+    "question": "How is the payback period defined?",
+    "ground_truth": "Another useful measure is the payback period: the length of time before accumulated benefits recover the costs of implementation.",
+    "source_text": "**Another useful measure is the payback period:** the length of time before accumulated benefits recover the costs of implementation."
+  },
+  {
+    "question": "When is the term \"software unit\" used by developers?",
+    "ground_truth": "We use the term software unit when we want to talk about a system’s composite parts without being precise about what type of part.",
+    "source_text": "We use the term **software unit** when we want to talk about a system’s composite parts without being precise about what type of part."
+  },
+  {
+    "question": "When visually mapping requirements versus specifications, what domain sits exactly at the intersection where the Environment domain overlaps with the System domain?",
+    "ground_truth": "The Shared Interface sits exactly at the intersection where the Environment domain overlaps with the System domain.",
+    "source_text": "Figure 4.3 illustrates a Venn diagram representing the relationship between Requirements and Specification. The diagram consists of two overlapping circles labeled Environment and System. The area exactly where the Environment circle overlaps with the System circle is explicitly labeled as the Shared Interface."
+  },
+  {
+    "question": "In the reference architecture model for a compiler, which specific component bridges the gap between the Semantic analyzer and the Code generator?",
+    "ground_truth": "The Optimizer block bridges the gap between the Semantic analyzer and the Code generator.",
+    "source_text": "Figure 5.3 is a block diagram illustrating the reference model for a compiler. It maps the data flow and control flow between different processing components, including a Lexical analyzer, Parser, Semantic analyzer, Optimizer, and Code generator. In this sequential diagram, the Optimizer block is positioned exactly between the Semantic analyzer block and the Code generator block."
+  },
+  {
+    "question": "In the messy UML statechart diagram for the Publication class, what specific input event triggers the transition directly from the onloan state to the recall state?",
+    "ground_truth": "The specific input event that triggers the transition directly from the onloan state to the recall state is the event \"reserve\".",
+    "source_text": "For example, in the messy Publication statechart (Figure 4.10), the transition to state recall is enabled if the publication is in state onloan when a request to put the item on reserve is received.\n\nFigure 4.10, titled Messy UML statechart diagram for Publication class, shows a complex web of states. An arrow points directly from the state labeled onloan to the state labeled recall, and this specific transition arrow is labeled with the event reserve."
+  },
+  {
+    "question": "In the Petri net model of the library problem, what specific variables or tuples are shown being passed as inputs into the Process Payment transition?",
+    "ground_truth": "The specific variables or tuples passed as inputs into the Process Payment transition are \"payment\" and \"(patron, fines)\".",
+    "source_text": "A few of the transition predicates and actions are shown in Figure 4.13, such as the action on Process Payment, where the inputs are a payment and the patron's current fines, and the output is a new Fines tuple.\n\nFigure 4.13, titled Petri net of the library problem, shows a transition bar labeled Process Payment. There are two arcs pointing into this transition: one comes from the Payment place with the label payment, and the other comes from the Fines place with the label (patron, fines)."
+  },
+  {
+    "question": "In the use-case diagram for the library system, which two specific use cases are connected to the reserve item use case via an <<extend>> relationship?",
+    "ground_truth": "The two specific use cases connected to the reserve item use case via an <<extend>> relationship are the \"find item\" and \"borrow item\" use cases.",
+    "source_text": "In the use-case diagram, we draw a dashed arrow from the extension subcase to the base use case and annotate the arrow with stereotype <<extend>>. Examples of stereotypes are included in Figure 4.15.\n\nFigure 4.15, titled Library use cases, shows several ovals representing use cases. Dashed arrows annotated with the stereotype <<extend>> point from the find item oval and the borrow item oval directly to the reserve item oval."
+  },
+  {
+    "question": "In the fault tree analyzing a security breach, what are the two specific basic events that must both occur (linked by an AND-gate) for an Illegal access granted condition to be met?",
+    "ground_truth": "The two specific basic events that must both occur are \"Password exposed\" and \"Password not changed\".",
+    "source_text": "For example, consider the fault tree presented in Figure 5.11. The tree shows that a security breach could occur either if a previous logout is not recognized (leaving the previous user logged in) or an unauthorized user gains access to the system. For the latter to happen, both of two basic events must happen: a valid user's password is exposed, and the password is not changed between the time of the exposure and the time an unauthorized user attempts to use it.\n\nFigure 5.11, titled Fault tree for a security breach, maps events leading to a top-level failure. Under the intermediate event Illegal access granted, there is an AND logic gate symbol that directly connects to two lower-level basic event boxes labeled Password exposed and Password not changed."
+  },
+  {
+    "question": "In the diagram illustrating the relationship between computer science and software engineering, what specific component directly connects SOFTWARE ENGINEERING to the Problem?",
+    "ground_truth": "The specific component that directly connects SOFTWARE ENGINEERING to the Problem is \"Tools and Techniques to Solve Problem\".",
+    "source_text": "Software engineering takes the latter view, as shown in Figure 1.3. Instead of investigating hardware design or proving theorems about how algorithms work, a software engineer focuses on the computer as a problem-solving tool.\n\nFigure 1.3, titled The relationship between computer science and software engineering, illustrates two parallel paths. Under SOFTWARE ENGINEERING, an arrow goes to Tools and Techniques to Solve Problem, which then points directly to Problem."
+  },
+  {
+    "question": "According to the decision table for library functions, if the input conditions are that the event is reserve and the item is out on loan, what are the exact three actions that must be performed?",
+    "ground_truth": "The exact three actions that must be performed are \"Put item on reserve shelf\", \"Send recall notice\", and \"(Re-)Calculate due date\".",
+    "source_text": "Figure 4.16 shows a decision table for the library functions borrow, return, reserve, and unreserve. Similarly, column 7 illustrates the case where there is a request to put a book on reserve but the book is currently out on loan; in this case, the book is recalled and the due date is recalculated to reflect the recall.\n\nFigure 4.16, titled Decision table for library functions, is a matrix mapping conditions to actions. In the seventh column where (event) reserve is T and item out on loan is T, there are X marks corresponding to exactly three action rows: Put item on reserve shelf, Send recall notice, and (Re-)Calculate due date."
+  },
+  {
+    "question": "In the data-module solution architecture for KWIC, what are the four specific data access operations (represented as an annotated arrow) used by the Master control module to interact with the Index module?",
+    "ground_truth": "The four specific data access operations used by the Master control module to interact with the Index module are \"setup\", \"setchar\", \"char\", and \"word\".",
+    "source_text": "Figure 5.14 illustrates a second design that has a similar decomposition of functionality into sequentially called modules. Each module's data are accessible via access methods, rather than directly. Thus, the modules form data abstractions.\n\nFigure 5.14, titled Data-module solution for KWIC, illustrates the architecture using boxes and arrows. A Subprogram call arrow points from the Master control box to the Index box, and this specific arrow is explicitly labeled with four operation names: setup, setchar, char, and word."
+  },
+  {
+    "question": "How does the chronological relationship between errors, faults, and failures described in Chapter 1 fundamentally differ from the analytical direction used when constructing a fault-tree analysis as described in Chapter 5? -Required source types: both -Brief reasoning type label: comparison",
+    "ground_truth": "Chapter 1 describes a forward chronological sequence where a human error creates a software fault, which can subsequently lead to an observable system failure. This linear progression from error to fault to failure is visually depicted in Figure 1.4. In contrast, Chapter 5 describes fault-tree analysis as working in the opposite analytical direction, tracing backwards from an effect to its cause. In a fault tree, the root node represents a specific failure, and the analysis expands downward to identify the basic events or faults that must occur to cause that failure.",
+    "source_text": "A **fault** occurs when a human makes a mistake, **called an error,** in performing some soft-ware activity. [...] A **failure** is a departure from the system’s required behavior. [...] Figure 1.4 shows the genesis of a failure. [...] **Fault-tree analysis,** a method originally developed for the U.S. Minuteman missile program, helps us to examine a design and look for faults that might lead to failure. We build fault trees that trace back-wards through a design, along the logical path from effect to cause. [...] Next, we build an upside-down tree whose root node is some failure that we want to analyze, and whose other nodes are events or faults that realize or lead to the root node’s failure."
+  },
+  {
+    "question": "Contrast how the traditional Waterfall process model and the Extreme Programming (XP) agile method handle the documentation of requirements and the adaptation to changing requirements late in the development cycle. -Required source types: text -Brief reasoning type label: comparison",
+    "ground_truth": "The traditional Waterfall model mandates that all requirements be fully elicited, analyzed, and formally documented before any system design begins, creating a rigid process that struggles to accommodate requirements changes later in the development cycle. In contrast, Extreme Programming (XP) values working software over comprehensive documentation and foregoes traditional requirements documentation, choosing instead to encode requirements as functional test cases and brief user stories. Furthermore, XP is specifically structured to embrace change rather than follow a fixed plan, enabling customers to alter requirements late in the cycle by relying on short iterations, small releases, and continuous refactoring of the design.",
+    "source_text": "Thus, when all of the requirements are elicited from the customer, analyzed for completeness and consistency, and documented in a requirements document, then the development team can go on to system design activities. [...] They prefer to invest time in producing working software rather than in pro-ducing comprehensive documentation. [...] They concentrate on responding to change rather than on creating a plan and then following it, because they believe that it is impossible to anticipate all requirements at the beginning of development. [...] It is thought that by building flexibility into the development process, agile methods can enable customers to add or change requirements late in the development cycle. [...] Extreme programming (XP) takes agile requirements processes to the extreme, in that the system is built to the requirements that happen to be defined at the time, with no planning or designing for possible future requirements. Moreover, XP forgoes traditional requirements documentation, and instead encodes the requirements as test cases that the eventual imple-mentation must pass. [...] The users write stories about how the system should work, and the developers then estimate the resources necessary to realize the stories. [...] The small releases require a phased-development approach, with incremental or itera-tive cycles. [...] **Refactoring** refers to revisiting the requirements and design, reformulating them to match new and existing needs."
+  },
+  {
+    "question": "According to the V-model of software development, how do the specific objectives of validation and verification map to the different testing phases on the right side of the \"V\" relative to the analysis and design phases on the left? -Required source types: both -Brief reasoning type label: synthesis",
+    "ground_truth": "According to the V-model, validation ensures that the developer is building the right product according to the specification, while verification checks the quality of the implementation. These objectives map directly across the \"V\", where analysis and design are on the left and testing and maintenance are on the right. Unit and integration testing on the right side are used to verify the program design on the left side, ensuring that all aspects of the program design have been implemented correctly in the code. Similarly, system testing verifies the system design to make sure that all system design aspects are correctly implemented. Acceptance testing, which is conducted by the customer rather than the developer, validates the requirements by associating a testing step with each element of the specification; this type of testing checks to see that all requirements have been fully implemented before the system is accepted and paid for. Figure 2.4 visually reinforces this by showing arrows for \"Verify design\" and \"Validate requirements\" crossing from the left phases to the testing phases on the right.",
+    "source_text": "That is, validation makes sure that the developer is building the right product (according to the specification), and verification checks the quality of the implementation. [...] **The V model** is a variation of the waterfall model that demonstrates how the testing activities are related to analysis and design (German Ministry of Defense 1992). As shown in Figure 2.4, coding forms the point of the V, with analysis and design on the left, testing and maintenance on the right. [...] The V model suggests that unit and integration testing can also be used to verify the program design. That is, dur-ing unit and integration testing, the coders and test team members should ensure that all aspects of the program design have been implemented correctly in the code. Simi-larly, system testing should verify the system design, making sure that all system design aspects are correctly implemented. Acceptance testing, which is conducted by the cus-tomer rather than the developer, validates the requirements by associating a testing step with each element of the specification; this type of testing checks to see that all requirements have been fully implemented before the system is accepted and paid for. [...] Verify design\n\nValidate requirements\n\nFIGURE 2.4 The V model."
+  },
+  {
+    "question": "Why might a Chief Programmer team be a poor organizational choice if the majority of the team members are categorized as \"Rational Introverts\" in Jung's work styles framework, and what alternative team structure is recommended for highly uncertain projects? -Required source types: both -Brief reasoning type label: causal reasoning",
+    "ground_truth": "A Chief Programmer team concentrates all responsibility for system design and development onto a single chief programmer, who has the final say on every decision. Because the chief programmer must be good at making decisions quickly, the chief is likely to be an extrovert, making this structure potentially poor if most team members are introverts. In Jung's framework, rational introverts are information gatherers who take time to consider all possible courses of action and do not feel comfortable making decisions unless they are convinced all the facts are at hand. For highly uncertain projects, such as those where requirements may change or hardware specifications are unknown, a more democratic approach is recommended instead. An alternative structure like \"egoless\" programming is suitable because it features participation in decision making, a loosely defined hierarchy, and the encouragement of open communication. In an egoless approach, everyone is held equally responsible and all team members vote on decisions.",
+    "source_text": "**On a chief programmer team,** one person is totally responsible for a system’s design and development. All other team members report to the chief pro-grammer, who has the final say on every decision. [...] Clearly, the chief programmer must be good at making decisions quickly, so the chief is likely to be an extrovert. However, if most of the team members are introverts, the chief programmer team may not be the best structure for the project. [...] **The rational introverts** also avoid emotional decisions, but they are willing to take time to consider all possible courses of action. Rational introverts are information gatherers; they do not feel comfortable making a decision unless they are convinced that all the facts are at hand. [...] On the other hand, when there is much uncertainty involved in a project, a more democratic approach may be better. For example, if the requirements may change as development proceeds, the project has a degree of uncertainty. Likewise, suppose your customer is building a new piece of hardware to interface with a system; if the exact specification of the hardware is not yet known, then the level of uncertainty is high. Here, participation in decision making, a loosely defined hierarchy, and the encouragement of open communication can be effective. [...] An alterna-tive is based on the idea of “egoless” programming, as described by Weinberg (1971). Instead of a single point of responsibility, **an egoless approach** holds everyone equally responsible. [...] The egoless team structure is democratic, and all team members vote on a decision"
+  },
+  {
+    "question": "How does the Object Constraint Language (OCL) supplement a standard UML class diagram to enforce that no two publications can share the same call number, and what specific OCL navigational constructs are used to express this invariant? -Required source types: both -Brief reasoning type label: structure interpretation",
+    "ground_truth": "The Object Constraint Language (OCL) supplements a standard UML class diagram by allowing specifiers to express mathematically precise constraints, such as invariants, directly on the object models. To enforce that no two publications share the same call number, an OCL invariant is attached to the Publication class. This constraint uses the `allinstances` construct to return the collection of all instances of the Publication class, the `->` symbol to apply operations to all objects in that collection, and the `forall` and `implies` logical connectives to specify that for any two publications `p1` and `p2`, if they are not the same publication (`p1<>p2`), then their call numbers must also be different (`p1.callnumber <> p2.callnumber`).",
+    "source_text": "**The Object Constraint Language (OCL)** is an attempt to create a constraint language that is both mathematically precise and easy for nonmathematicians, like customers, to read, write, and understand. The language is specially designed for expressing con-straints on object models (i.e., ER diagrams), and introduces language constructs for navigating from one object to another via association paths, for dealing with collections of objects, and for expressing queries on object type. [...] The topmost constraint is an invariant on the Publication class, and specifies that call numbers are unique.This constraint introduces\n* *Construct allinstances,* which returns all instances of the Publication class\n* Symbol which applies the attribute or operation of its right operand to all of\nthe objects in its left operand\n* *Constructs forall, and,* and  *implies,* which correspond to the first-order connec-\ntives described above\nThus, the constraint literally says that for any two publications, p1 and p2, returned by  *allinstances,* if p1 and p2 are not the same publication, then they have different call numbers."
+  },
+  {
+    "question": "Using the Critical Path Method (CPM), how does a delay in an activity that has zero slack time logically affect the projected staff-days on a resource histogram, and what is the specific term for the path that contains these zero-slack activities? -Required source types: both -Brief reasoning type label: causal reasoning",
+    "ground_truth": "In the Critical Path Method (CPM), the specific term for the sequence of activities that all have zero slack time is the \"critical path\". Because there is no margin for error, a delay in an activity with zero slack time pushes all subsequent activities on the critical path forward in the schedule. Consequently, on a resource histogram—which plots projected staff-days over the project timeline—this delay will logically shift the required staff-days for all subsequent critical path activities to later dates. This temporal shift in staffing needs can disrupt the planned resource balance, potentially causing staff underloads during the delayed periods and resource overloads later in the project schedule.",
+    "source_text": "The longest path has a slack of zero for each of its nodes, because it is the path that determines whether or not the project is on schedule. For this reason, it is called the critical path. Thus, **the critical path** is the one for which the slack at every node is zero. [...] Since the critical path has no slack, there is no margin for error when performing the activities along its route.\n\nNotice what happens when an activity on the critical path begins late (i.e., later than its earliest start time). The late start pushes all subsequent critical path activities forward, forcing them to be late, too, if there is no slack. [...] Simple charts and graphs can provide information about resources, too. For example, Figure 3.7 graphs the relationship between the people assigned to the project and those needed at each stage of development; it is typical of graphs produced by project management tools."
+  },
+  {
+    "question": "How does a \"pure\" layered architecture (such as the OSI model) utilize the tactics of reducing coupling and using explicit interfaces to minimize the impact on indirectly affected software units when a layer is modified? -Required source types: both -Brief reasoning type label: synthesis",
+    "ground_truth": "A \"pure\" layered architecture minimizes the impact of changes on indirectly affected software units by strictly limiting how the different layers interact with one another. In this style, a software unit can only access other units within its own layer or the explicit interface of the layer immediately below it, which inherently lowers the coupling (dependencies) between different parts of the system. By forcing units to interact exclusively through these well-defined interfaces, the private design decisions of each layer are hidden. Consequently, when a layer is modified, the ripple effects are strictly contained to at most its two adjacent neighbors, leaving all other indirectly affected software layers completely untouched and fully portable.",
+    "source_text": "**Layered systems** organize the system’s software units into layers, each of which pro-vides services to the layer above it and acts as a client to the layer below. In a “pure” layered system, a software unit in a given layer can access only the other units in the same layer and services offered by the interface to the layer immediately below it. [...] Moreover, because a layer can interact only with its neighboring layers, layer modification is relatively easy; such changes should affect at most only the two adjacent layers. [...] *Coupling:* As we discuss in detail in Chapter 6, the level of coupling among software units is the degree to which the units depend on each other. By lowering coupling, we reduce the likelihood that a change to one unit will ripple to other units.\n* *Interfaces:* A software unit’s interface reveals the unit’s public requisites and responsibilities, and hides the unit’s private design decisions. If a unit interacts with other units only through their interfaces (e.g., calling public access methods), then changes to one unit will not spread beyond the unit’s boundary unless its interface changes"
+  },
+  {
+    "question": "How does the transition from Stage 1 (Application Composition) to Stage 3 (Postarchitecture) in the COCOMO II model change the metrics used to measure system size and the types of cost drivers that are applied to the effort estimate? -Required source types: both -Brief reasoning type label: process reasoning",
+    "ground_truth": "In Stage 1 (Application Composition) of the COCOMO II model, very little is known about the exact size of the final product, so system size is measured using \"application points\" (derived from counting high-level elements like screens, reports, and 3GL components). At this initial stage, cost drivers are not yet applied to the effort estimate; instead, the estimate relies simply on a productivity rate adjustment based on developer experience and CASE maturity. By the time the project reaches Stage 3 (Postarchitecture), far more information is available, so the size metric shifts to more precise measures like function points or source lines of code (SLOC). Additionally, the Stage 3 effort estimate is rigorously adjusted by a much larger, fine-grained set of cost drivers, which encompass specific product attributes (such as reliability and database size), platform constraints (such as execution time), detailed personnel capabilities, and specific project characteristics (like multisite development and tool use).",
+    "source_text": "The COCOMO II estimation process reflects three major stages of any develop-ment project. [...] At stage 1, projects usually build prototypes to resolve high-risk issues involving user interfaces, software and system interaction, per-formance, or technological maturity. Here, little is known about the likely size of the final product under consideration, so COCOMO II estimates size in what its creators call application points. As we shall see, this technique captures size in terms of high-level effort generators, such as the number of screens and reports, and the number of third-generation language components. [...] To use this number for effort estimation, you use an adjustment factor, called a produc-tivity rate, based on developer experience and capability, coupled with CASE maturity and capability. [...] At stage 1, the cost drivers are not applied to this effort estimate. [...] By stage 3, the postarchitecture stage, development has begun, and far more information is known. In this stage, sizing can be done in terms of function points or lines of code, and many cost factors can be estimated with some degree of comfort. [...] TABLE 3.9 Three Stages of COCOMO II\nModel Aspect [...] Stage 3: Postarchitecture\n*Size* [...] FP and language or source lines of code (SLOC) [...] *Product cost drivers* [...] Reliability, database size, documentation needs, required reuse, and product complexity\n*Platform cost drivers* [...] Execution time constraints, main storage constraints, and virtual machine volatility\n*Personnel cost drivers* [...] Analyst capability, applications experience, programmer capability, programmer experience, language and tool experience, and personnel continuity\n*Project cost drivers* [...] Use of software tools, required development schedule, and multisite development"
+  },
+  {
+    "question": "If a risk has an estimated probability of 0.25 and a potential loss impact of $500,000, what is the initial risk exposure, and what mathematical steps must a project manager take next to determine the \"risk reduction leverage\" if a proposed mitigation strategy costs $50,000? -Required source types: both -Brief reasoning type label: process reasoning",
+    "ground_truth": "The initial risk exposure is calculated by multiplying the risk probability (0.25) by the potential loss impact ($500,000), which yields $125,000. To determine the \"risk reduction leverage\" for the $50,000 mitigation strategy, the project manager must estimate the new risk exposure that will exist after the mitigation is applied, subtract this new \"risk exposure after reduction\" from the initial \"risk exposure before reduction\" ($125,000), and then divide the resulting difference by the $50,000 cost of risk reduction.",
+    "source_text": "We can quantify the effects of the risks we identify by multiplying the risk impact by the risk probability, to yield the risk exposure. [...] To aid decision making about risk reduction, we must take into account the cost of reducing the risk. We call risk leverage the difference in risk exposure divided by the cost of reducing the risk. In other words, risk reduction leverage is\n\n/1cost of risk reduction21Risk exposure before reduction - risk exposure after reduction2"
+  },
+  {
+    "question": "How does a Message Sequence Chart visually depict the passage of time and the creation of new entities differently from how a UML Statechart diagram depicts the local variables and internal activities of a single entity? -Required source types: both -Brief reasoning type label: structure interpretation",
+    "ground_truth": "In a Message Sequence Chart, the passage of time is visually depicted by making a message arrow slope downwards between the sending and receiving entities' vertical lines, while the creation of a new entity is depicted by a dashed arrow that spawns a new vertical entity line. In contrast, a UML Statechart diagram depicts local variables by declaring and initializing them in the center section of a state symbol, and it depicts internal activities by listing computations and actions in the lower section of the state symbol, often triggered by events or state entries.",
+    "source_text": "A message arrow may slope downwards (e.g., message recall notice) to reflect the passage of time between when the message is sent and when it is received. Entities may come and go during the course of a trace; a dashed arrow, optionally annotated with data parameters, represents a create event that spawns a new entity [...] The UML statechart diagram for the Loan association class in Figure 4.11 illustrates how states can be annotated with local variables (e.g., variable num renews), actions, and activities. Variables that are local to a state are declared and initialized in the center section of the state.The state’s lower section lists actions and activities on the state’s local variables as well as on the object’s attributes."
+  },
+  {
+    "question": "According to McCall's quality model, \"Flexibility\" is a key external quality factor. If an architect wants to achieve this factor by minimizing the number of indirectly affected software units when a change occurs, which specific modifiability tactics should be applied to the system's interfaces and coupling? -Required source types: both -Brief reasoning type label: synthesis",
+    "ground_truth": "While \"Flexibility\" is an external quality factor in McCall's quality model, achieving it through modifiability requires protecting indirectly affected units—those whose responsibilities do not change but whose implementations might otherwise need revision when other units are modified. To minimize the impact on these units, an architect should apply tactics that reduce dependencies, specifically focusing on coupling and interfaces. The architect should lower the coupling between software units to reduce the likelihood that a change in one unit ripples to another. Additionally, units should interact exclusively through well-defined interfaces (hiding private design decisions), so changes remain confined within the unit's boundary unless its interface changes. Finally, the architect can use multiple interfaces, allowing a modified unit to offer new data or services through a newly created interface while leaving dependencies on its existing interfaces completely unaffected.",
+    "source_text": "Figure 1.5 is an example of an early quality model built by McCall and his colleagues to show how external quality factors (on the left-hand side) relate to product quality criteria (on the right-hand side). [...] FIGURE 1.5 McCall’s quality model.\n[...]\nFlexibility [...] Given a particular change to a system, Bass, Clements, and Kazman (2003) distin-guish between the software units that are directly affected by the change and those that are indirectly affected. [...] The indirectly affected units are those whose respon-sibilities do not change, but whose implementations must be revised to accommodate changes in the directly affected units. [...] By contrast, tactics for minimizing the impact on indirectly affected software units focus on reducing dependencies among software units. The goal is to reduce the degree to which a change to a directly affected unit also affects the system’s other units:\n* *Coupling:* As we discuss in detail in Chapter 6, the level of coupling among software units is the degree to which the units depend on each other. By lowering coupling, we reduce the likelihood that a change to one unit will ripple to other units.\n* *Interfaces:* A software unit’s interface reveals the unit’s public requisites and responsibilities, and hides the unit’s private design decisions. If a unit interacts with other units only through their interfaces (e.g., calling public access methods), then changes to one unit will not spread beyond the unit’s boundary unless its interface changes (e.g., if method signatures, preconditions, or postconditions change).\n* *Multiple interfaces:* A unit modified to provide new data or services can offer them using a new interface to the unit without changing any of the unit’s existing interfaces.This way, dependencies on the existing interfaces are unaffected by the change."
+  },
+  {
+    "question": "When quantifying the risk exposure for failing to satisfy a subjective quality requirement like \"usability,\" how can the establishment of specific \"fit criteria\" during the requirements phase alter the parameters used in the risk reduction leverage calculation during project planning? -Required source types: text -Brief reasoning type label: causal reasoning",
+    "ground_truth": "Establishing \"fit criteria\" transforms a subjective quality requirement like \"usability\" into an objectively testable specification by quantifying exactly what must be met (e.g., \"75% of users shall judge the new system to be as usable as the existing system\"). Because the criteria are now objectively measurable, project managers can accurately estimate the two parameters that define risk exposure: the risk probability (likelihood of failing to meet the usability criteria) and the risk impact (the loss associated with that failure). In turn, these quantified parameters directly alter the risk reduction leverage calculation during project planning. The leverage is calculated as the difference in risk exposure (Risk exposure before reduction minus risk exposure after reduction) divided by the cost of the risk reduction strategy. Without the objective fit criteria established during the requirements phase, the risk exposure parameters would be too vague to calculate an accurate risk reduction leverage to justify the cost of mitigation.",
+    "source_text": "The idea is to quantify the extent to which each requirement must be met.Notice what happens when an activity on the critical path begins late (i.e., later than its earliest start time). The late start pushes all subsequent critical path activities forward, forcing them to be late, too, if there is no slack. [...] Simple charts and graphs can provide information about resources, too. For example, Figure 3.7 graphs the relationship between the people assigned to the project and those needed at each stage of development; it is typical of graphs produced by project management tools."
+  }
+]

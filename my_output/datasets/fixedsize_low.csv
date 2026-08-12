@@ -1,0 +1,95 @@
+question,response,retrieved_context,retrieve_time_sec,generate_time_sec
+What does refactoring refer to in extreme programming?,,,0.334,6.217
+"In the decision tree calculating risk exposure for regression testing, what is the exact combined risk exposure value in dollars if the development team chooses not to perform regression testing?",,,0.36,3.094
+"When quantifying the risk exposure for failing to satisfy a subjective quality requirement like ""usability,"" how can the establishment of specific ""fit criteria"" during the requirements phase alter the parameters used in the risk reduction leverage calculation during project planning? -Required source types: text -Brief reasoning type label: causal reasoning",,,0.491,7.805
+"In Lai's notation for process modeling, what is ""Control""?",,,0.506,3.867
+"Why would a highly hierarchical Chief Programmer team structure theoretically face fewer communication bottlenecks than a loosely structured, egoless team when developing a system specified with a tightly coupled algebraic specification notation like SDL Data? -Required source types: text -Brief reasoning type label: causal reasoning",,,0.484,7.327
+"When visually mapping requirements versus specifications, what domain sits exactly at the intersection where the Environment domain overlaps with the System domain?",,,0.397,8.518
+What is the difference between an activity and a milestone?,,,0.369,4.683
+"In the reference architecture model for a compiler, which specific component bridges the gap between the Semantic analyzer and the Code generator?",,,0.506,6.508
+"Based on the distinction between an error, a fault, and a failure outlined in Chapter 1, what does a single-element cut-set (e.g., {A1}) derived from a fault-tree analysis strictly represent in terms of a system's observable behavior versus its internal developer view? -Required source types: both -Brief reasoning type label: synthesis",,,0.473,4.266
+What is a precursor?,,,0.408,4.147
+How does the graphical representation of conditions and states in Lai's process transition diagram differ structurally from the representation of enabling conditions and state transitions in a high-level Petri net model like the one used for the library problem? -Required source types: both -Brief reasoning type label: structure interpretation,,,0.826,9.173
+"In the messy UML statechart diagram for the Publication class, what specific input event triggers the transition directly from the onloan state to the recall state?",,,0.478,5.235
+How is slack time computed using available time and real time?,,,0.353,5.528
+"In the Petri net model of the library problem, what specific variables or tuples are shown being passed as inputs into the Process Payment transition?",,,0.524,2.834
+What is the critical path?,,,0.491,4.602
+"If a system is designed using a pure publish-subscribe architectural style with implicit invocation, why would attempting to model the complete system's dynamic behavior using Message Sequence Charts (MSCs) be inherently difficult or misleading regarding the interactions between the publishing and subscribing components? -Required source types: both -Brief reasoning type label: causal reasoning",,,0.446,6.956
+"Contrast the treatment of future, unanticipated requirements in the Extreme Programming (XP) agile methodology with the strategic approach used when scoping and designing a core asset base for a Software Product Line architecture. -Required source types: text -Brief reasoning type label: comparison",,,0.483,5.013
+"In the use-case diagram for the library system, which two specific use cases are connected to the reserve item use case via an <<extend>> relationship?",,,0.381,6.634
+What are the two components used to describe a preferred work style?,,,0.332,3.776
+"How does the software industry's definition of Return on Investment (ROI), which focuses primarily on effort reduction and time savings, contrast with the mathematical calculation of a design's ""payback period"" when performing a formal cost-benefit analysis of architectural trade-offs? -Required source types: both -Brief reasoning type label: comparison",,,0.466,6.92
+"In the fault tree analyzing a security breach, what are the two specific basic events that must both occur (linked by an AND-gate) for an Illegal access granted condition to be met?",,,0.44,8.955
+How do rational extroverts make decisions according to the work styles framework?,,,0.347,4.678
+"In the diagram illustrating the relationship between computer science and software engineering, what specific component directly connects SOFTWARE ENGINEERING to the Problem?",,,0.52,6.452
+How does an egoless programming team approach responsibility?,,,0.344,5.19
+"In the structure of software development model by Abdel-Hamid, what specific components fall under the HUMAN RESOURCE MANAGEMENT category?",,,0.484,3.907
+How do you quantify the risk exposure for an identified risk?,,,0.608,5.585
+"In the three-tiered client-server architecture diagram, what specific software components are contained within the Client Presentation tier?",,,0.335,4.59
+What are the three strategies for risk reduction?,,,0.456,7.541
+What three milestones common to all software development processes were identified by Boehm?,,,0.546,8.468
+"In the Enrollment Management model used during Digital's Alpha AXP program, what are the four specific sub-elements or factors listed under the COMMITMENT DELEGATION quadrant?",,,0.364,10.254
+"According to the decision table for library functions, if the input conditions are that the event is reserve and the item is out on loan, what are the exact three actions that must be performed?",,,1.294,10.035
+"In the data-module solution architecture for KWIC, what are the four specific data access operations (represented as an annotated arrow) used by the Master control module to interact with the Index module?",,,0.497,8.481
+What is a functional requirement?,,,0.316,3.86
+"According to IEEE Standard 729 terminology, what is a fault?",,,2.348,11.433
+What is a design constraint?,,,0.417,3.679
+"How does the chronological relationship between errors, faults, and failures described in Chapter 1 fundamentally differ from the analytical direction used when constructing a fault-tree analysis as described in Chapter 5? -Required source types: both -Brief reasoning type label: comparison",,,0.374,10.001
+Contrast how the traditional Waterfall process model and the Extreme Programming (XP) agile method handle the documentation of requirements and the adaptation to changing requirements late in the development cycle. -Required source types: text -Brief reasoning type label: comparison,,,0.462,6.317
+When are two requirements considered inconsistent?,,,0.23,6.023
+When are requirements considered externally complete?,,,0.565,3.321
+"According to IEEE Standard 729 terminology, what is a failure?",,,0.999,6.472
+"In software architecture, how does the method of passing and storing data between computational units in a Pipe-and-Filter architecture differ from the interactions in a Blackboard repository architecture? -Required source types: both -Brief reasoning type label: structure interpretation",,,0.521,7.965
+"Based on the Application Point approach in COCOMO II Stage 1, how do the number of data tables and views determine the complexity weight of a screen, and how is that weight ultimately combined with CASE maturity and developer experience to calculate an initial effort estimate? -Required source types: both -Brief reasoning type label: process reasoning",,,0.65,11.369
+What does an entity in an entity-relationship diagram represent?,,,0.425,5.819
+What system functionality do UML use cases model?,,,0.615,3.563
+"In an object model, what does an aggregate association indicate?",,,0.374,4.138
+"According to the V-model of software development, how do the specific objectives of validation and verification map to the different testing phases on the right side of the ""V"" relative to the analysis and design phases on the left? -Required source types: both -Brief reasoning type label: synthesis",,,0.492,6.344
+How is a message depicted in a Message Sequence Chart?,,,0.359,3.033
+"Why might a Chief Programmer team be a poor organizational choice if the majority of the team members are categorized as ""Rational Introverts"" in Jung's work styles framework, and what alternative team structure is recommended for highly uncertain projects? -Required source types: both -Brief reasoning type label: causal reasoning",,,0.348,8.807
+What happens when a transition fires in a Petri net?,,,0.4,5.319
+"How does the Object Constraint Language (OCL) supplement a standard UML class diagram to enforce that no two publications can share the same call number, and what specific OCL navigational constructs are used to express this invariant? -Required source types: both -Brief reasoning type label: structure interpretation",,,0.501,7.783
+"In Garvin's five perspectives on quality, what does the manufacturing view examine?",,,1.22,3.233
+What is a descriptive notation?,,,0.508,5.263
+"Using the Critical Path Method (CPM), how does a delay in an activity that has zero slack time logically affect the projected staff-days on a resource histogram, and what is the specific term for the path that contains these zero-slack activities? -Required source types: both -Brief reasoning type label: causal reasoning",,,0.474,9.904
+"Why does the textbook argue that high-level Petri nets are better suited than state-machine models for representing processes like an emergency room triage, where multiple preliminary events must occur before a transition to treatment begins? -Required source types: text -Brief reasoning type label: comparison",,,0.469,9.509
+"How does the U.S. government's definition of Return on Investment (ROI) differ from industry's definition, and how is the ""payback period"" mathematically calculated when a company performs a cost-benefit analysis on a new software architecture design? -Required source types: text -Brief reasoning type label: comparison",,,0.68,6.612
+What do early design decisions regarding a system's architecture explain?,,,0.346,4.883
+How is system functionality achieved in a pipe-and-filter style architecture?,,,0.408,3.43
+What are the three categories into which participants in a software project usually fall?,,,0.471,3.609
+What is a reference model?,,,0.511,4.872
+Contrast the primary development goal of building a throwaway rapid prototype during the requirements elicitation phase versus building one during the software architecture design phase. -Required source types: text -Brief reasoning type label: comparison,,,0.867,6.45
+What is the purpose of McCall’s quality model?,,,0.323,4.122
+What defines a peer-to-peer (P2P) architecture?,,,0.388,6.705
+"How does the representation of conditions and states in a Parnas Table for calculating a library due date differ structurally from the representation of pre-conditions and post-conditions in a formal Z specification schema for a ""Return"" operation? -Required source types: both -Brief reasoning type label: structure interpretation",,,0.474,7.718
+"What does a software engineer focus on, as opposed to investigating hardware design or proving algorithms?",,,0.415,3.937
+How do components interact in a publish-subscribe architecture?,,,0.429,9.186
+What is an abstraction?,,,0.331,3.23
+"Why did the ""hot standby"" redundancy fault-recovery tactic fail during the Ariane-5 maiden flight, and how does the textbook explain this failure using the inherent difference between hardware failures and software failures? -Required source types: text -Brief reasoning type label: causal reasoning",,,0.496,7.912
+What does a process prescribe?,,,0.345,2.764
+What information is mapped in a deployment view of an architecture?,,,0.458,3.953
+"How does a ""pure"" layered architecture (such as the OSI model) utilize the tactics of reducing coupling and using explicit interfaces to minimize the impact on indirectly affected software units when a layer is modified? -Required source types: both -Brief reasoning type label: synthesis",,,0.515,9.774
+What does prototyping mean in the context of user interface prototyping?,,,0.387,6.582
+How do layered systems organize software units?,,,0.481,5.09
+How does the transition from Stage 1 (Application Composition) to Stage 3 (Postarchitecture) in the COCOMO II model change the metrics used to measure system size and the types of cost drivers that are applied to the effort estimate? -Required source types: both -Brief reasoning type label: process reasoning,,,0.523,6.245
+What is layer bridging?,,,0.562,3.167
+What is a process?,,,0.522,6.003
+"If a risk has an estimated probability of 0.25 and a potential loss impact of $500,000, what is the initial risk exposure, and what mathematical steps must a project manager take next to determine the ""risk reduction leverage"" if a proposed mitigation strategy costs $50,000? -Required source types: both -Brief reasoning type label: process reasoning",,,0.585,17.654
+"In a fault tree, when is a parent node drawn as an and-gate?",,,0.387,3.357
+"In the V model, what can unit and integration testing also be used to verify?",,,0.503,4.548
+How does a Message Sequence Chart visually depict the passage of time and the creation of new entities differently from how a UML Statechart diagram depicts the local variables and internal activities of a single entity? -Required source types: both -Brief reasoning type label: structure interpretation,,,0.843,8.632
+"According to Abdel-Hamid's system dynamics model of software development, how does increasing the staff size to alleviate schedule pressure inadvertently impact the average nominal potential productivity and communication overhead? -Required source types: both -Brief reasoning type label: causal reasoning",,,0.49,6.343
+How is the return on investment (ROI) of a design change calculated?,,,0.388,3.984
+What does the operational specification model allow to be merged?,,,0.491,2.896
+How is the payback period defined?,,,0.481,4.137
+What does the transformational process use to change a specification into a deliverable system?,,,0.343,3.362
+"How does a company mathematically and strategically justify the initial higher development costs of creating a core asset base for a software product line, and how does the ""scoping"" of product commonality affect the eventual return on investment for derived products? -Required source types: text -Brief reasoning type label: causal reasoning",,,0.483,11.258
+"How does the role of the ""Transformed Specification"" in the operational specification process model conceptually differ from the transition between a throwaway prototype and an evolutionary prototype during the requirements engineering phase? -Required source types: both -Brief reasoning type label: comparison",,,0.542,8.505
+"When is the term ""software unit"" used by developers?",,,0.381,3.991
+How does incremental development build up a system?,,,0.307,5.083
+"If a software development team uses a data-flow diagram to model a system's high-level functionality, how would the data stores and actors identified in the DFD directly influence the complexity weights used to calculate Application Points in Stage 1 of the COCOMO II estimation model? -Required source types: both -Brief reasoning type label: process reasoning",,,0.489,4.175
+What four characteristics of agility are emphasized by proponents of extreme programming (XP)?,,,0.471,3.734
+"According to McCall's quality model, what are the specific internal product quality criteria (on the right-hand side) that map to the external quality factors (on the left-hand side)?",,,0.372,7.687
+"According to McCall's quality model, ""Flexibility"" is a key external quality factor. If an architect wants to achieve this factor by minimizing the number of indirectly affected software units when a change occurs, which specific modifiability tactics should be applied to the system's interfaces and coupling? -Required source types: both -Brief reasoning type label: synthesis",,,0.367,11.042
+"Based on the work styles framework charting communication against decision-making, what are the two primary defining traits of a Rational Introvert?",,,0.495,4.216
+"Which specific personnel roles (e.g., analyst, designer, programmer, tester, trainer) are actively involved during the System Testing phase of the software development lifecycle?",,,0.539,5.003

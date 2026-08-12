@@ -1,21 +1,37 @@
 from ragas.metrics import DiscreteMetric
 from openai import AsyncOpenAI
 from ragas.llms import llm_factory
+from ragas.embeddings import embedding_factory
 
 import os
 from dotenv import load_dotenv
 import asyncio
 from ragas.metrics.collections import ContextRecall, ContextPrecision
 
+from testmodel import parse_retrieved_contexts
+
 
 load_dotenv()
 
-ollama_client = AsyncOpenAI(
-    base_url="http://localhost:11434/v1",
-    api_key="ollama"  # dummy, không quan trọng
-)
-llm = llm_factory("qwen3.5:cloud", client=ollama_client, max_tokens=12000)
-
+# ollama_client = AsyncOpenAI(
+#     base_url="http://localhost:11434/v1",
+#     api_key="ollama"  # dummy, không quan trọng
+# )
+# llm = llm_factory("qwen3.5:cloud", client=ollama_client, max_tokens=12000)
+openai_client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+# llm = llm_factory(
+#     "gpt-5-nano",
+#     client=openai_client,
+#     max_tokens=8192,
+#     reasoning_effort="minimal",
+# )
+# llm = llm_factory(
+#     "gpt-5-nano",
+#     client=openai_client,
+#     max_tokens=8192,
+#     reasoning_effort="minimal",
+# )
+embeddings = embedding_factory("openai", model="text-embedding-3-small", client=openai_client)
 # correctness = DiscreteMetric(
 #     name="correctness",
 #     prompt=(
@@ -25,8 +41,8 @@ llm = llm_factory("qwen3.5:cloud", client=ollama_client, max_tokens=12000)
 #     allowed_values=["pass", "fail"],
 # )
 
-ctx_rec_scorer = ContextRecall(llm=llm)
-ctx_prec_scorer = ContextPrecision(llm=llm)
+# ctx_rec_scorer = ContextRecall(llm=llm)
+# ctx_prec_scorer = ContextPrecision(llm=llm)
 
 # ---------- Experiment ----------
 
@@ -37,6 +53,7 @@ async def run_experiment(row):
     question = row.get("question", "")
     response = row.get("response", "")
     retrieved_context = row.get("retrieved_context", "")
+    retrieved_context = parse_retrieved_contexts(retrieved_context)
     
     grading_notes = mark.get(question, {}).get("grading_notes", "")
     reference = mark.get(question, {}).get("source_text","")
@@ -58,11 +75,11 @@ async def run_experiment(row):
         precision = await ctx_prec_scorer.ascore(
             user_input=question,
             reference=reference,
-            retrieved_contexts=[retrieved_context]
+            retrieved_contexts=retrieved_context
         )
         recall = await ctx_rec_scorer.ascore(
             user_input=question,
-            retrieved_contexts=[retrieved_context],
+            retrieved_contexts=retrieved_context,
             reference=reference
         )
         prec = precision.value
@@ -78,7 +95,10 @@ async def run_experiment(row):
         "f1": f1,
         # "correctness": correct_val,
     }
-    print(x)
+    print("Precision: ",x["precision"])
+    print("Recall: ", x["recall"])
+    print("F1: ",x["f1"])
+    
         
     return 
 
@@ -87,79 +107,148 @@ async def run_experiment(row):
 global mark
 
 mark = {
-    "The “Millenium Bug” or “Y2K problem” is perhaps the most infamous software maintenance problem. Find a discussion of the Y2K problem written for nonscientists. How many of the maintenance problems listed in section 11.3 are accurately presented in the article?": {
-        "grading_notes": "Many of the issues in section 11.3 relate in some way to the Y2K problem. Some examples: The limits of human understanding are certainly applicable. There is a definite limit to how quickly maintainers can approach a system that is unfamiliar to them and understand enough about it to make the correct changes for a maintenance problem. That difficulty is compounded when the system being maintained is old and the chances of missing documentation or even source code have increased. Management priorities have been a major contribution to the problem. Since Y2K maintenance does not result in a new product but rather keeps an old product running, management in many cases did not assign a high priority to maintenance in general and Y2K maintenance in particular. As a result, Y2K was often not a high priority until very close to the year 2000, when the problem was no longer avoidable. Morale has been a problem in some cases, in which software practitioners were assigned part-time to handle the Y2K problem in addition to their other duties. This type of situation tends to reinforce the belief that Y2K maintenance is not an important or interesting task.",
-        "ground_truth": "The textbook explicitly cites the \"year 2000 problem\" as a primary example of how \"simple but narrow design decisions can have a major effect on maintenance\" [1]. Most popular, non-scientist articles discussing Y2K successfully captured the technical difficulty of the problem, aligning with Section 11.3's concept of \"Limited Understanding\"\u2014specifically that there is a limit to the rate at which maintainers can study documentation and extract material to solve a problem in an old, unfamiliar legacy system [2, 3]. However, popular articles often missed the systemic organizational issues that contributed to the crisis. For example, they rarely discussed \"Management Priorities,\" where managers often override technical priorities to focus on new business applications, delaying necessary repairs (like Y2K fixes) until they become unavoidable [4]. Furthermore, popular media typically ignored the problem of \"Morale.\" Maintainers are often pulled in many directions and suffer from low morale because maintenance is sometimes viewed as a second-class status compared to new development [5, 6]. These management and personnel issues severely compounded the Y2K technical problem.",
-        "source_text": "The \"year 2000 problem,\" where many developers represented the year as only two characters, is a good example of how simple but narrow design decisions can have a major effect on maintenance. [1]\nThere is a limit to the rate at which a person can study documentation and extract material relevant to the problem being solved. [2] Parikh and Zvegintzov (1983) report that 47% of software maintenance effort is devoted to understanding the software to be modified. [3]\nManagement priorities often override technical ones; managers sometimes view maintaining and enhancing as more important than building new applications. In other words, companies must sometimes focus on business as usual, instead of investigating new alternatives. [4]\nThe Lientz and Swanson studies (1981) indicate that 11.9% of the problems during maintenance result from low morale and productivity. A major reason for low morale is the second-class status often accorded the maintenance team. [5]"
+    "When visually mapping requirements versus specifications, what domain sits exactly at the intersection where the Environment domain overlaps with the System domain?": {
+        "ground_truth": "The Shared Interface sits exactly at the intersection where the Environment domain overlaps with the System domain.",
+        "source_text": "Figure 4.3 illustrates a Venn diagram representing the relationship between Requirements and Specification. The diagram consists of two overlapping circles labeled Environment and System. The area exactly where the Environment circle overlaps with the System circle is explicitly labeled as the Shared Interface."
     }
 }
 
 # 2. obj chứa câu hỏi và ngữ cảnh mà LLM đã trả lời
 obj = {
-    "question": "The “Millenium Bug” or “Y2K problem” is perhaps the most infamous software maintenance problem. Find a discussion of the Y2K problem written for nonscientists. How many of the maintenance problems listed in section 11.3 are accurately presented in the article?",
+    "question": "When visually mapping requirements versus specifications, what domain sits exactly at the intersection where the Environment domain overlaps with the System domain?",
     "response": """
-    "The “Millennium Bug” or “Y2K problem” was a widely publicized software maintenance issue related to how dates were represented in computer systems. Many older programs stored years using only the last two digits (e.g., ""99"" for 1999), which caused concerns that when the year rolled over to 2000 (""00""), systems would misinterpret it as 1900, potentially leading to errors in calculations, data processing, and system operations.
-
-A good discussion of the Y2K problem written for nonscientists can be found in popular science articles, technology magazines, or reputable websites such as:
-
-- The BBC’s “The Y2K Bug: What Was It All About?”  
-- The Smithsonian Magazine’s article “The Y2K Bug: How the World Prepared for the Millennium Bug”  
-- The Computer History Museum’s overview of Y2K
-
-These articles explain the problem in accessible language, describing the potential risks, the global efforts to fix the issue, and the eventual minimal impact due to extensive maintenance and testing.
-
-Regarding the maintenance problems listed in section 11.3 (assuming this refers to a typical software engineering textbook section on software maintenance issues), common maintenance problems include:
-
-1. **Corrective Maintenance** – fixing bugs and errors found after deployment.  
-2. **Adaptive Maintenance** – modifying software to work in a changed environment.  
-3. **Perfective Maintenance** – improving performance or maintainability.  
-4. **Preventive Maintenance** – updating software to prevent future problems.
-
-The Y2K problem primarily involved **corrective** and **adaptive maintenance**:
-
-- **Corrective**, because many date-related bugs had to be fixed.  
-- **Adaptive**, because software had to be updated to handle the new century date format and comply with new standards.
-
-Additionally, the Y2K effort involved **preventive maintenance**, as organizations proactively updated systems to avoid future failures.
-
-In the nonscientific articles, these maintenance types are often described in terms of ""fixing bugs,"" ""updating systems,"" and ""preventing errors,"" which correspond well to the maintenance categories in section 11.3.
-
-Therefore, the maintenance problems related to Y2K as presented in these articles accurately reflect the categories of maintenance problems listed in section 11.3, though the articles may not use the formal terminology. They effectively communicate the nature of the maintenance work involved in addressing the Y2K problem.
-    """,
+Environmental assumptions (assumptions about what inputs the system will receive, or about how the environment will react to outputs).
+""",
     "retrieved_context": """
-    [Chunk 1]
-programmer's time result  in  conflicting  priorities. During  maintenance, 8%  of  the  problems  result from  a  programmer's  being  pulled  in  too  many  directions  at  once  and  thus  being unable to concentrate on one problem long enough to solve it.
+    [0]
+y refer only to those real-world objects (states, events, actions) that are sensed or actuated by the proposed system:
 
-## Technical Problems
+1. In  documenting  the  system's  interface, we  describe  all  inputs  and  outputs  in detail, including  the  sources  of  inputs, the  destinations  of  outputs, the  value ranges and data formats of input and output data, protocols governing the order in  which  certain  inputs  and  outputs  must  be  exchanged, window  formats  and organization, and any timing constraints. Note that the user interface is rarely the only system interface; the system may interact with other software components (e.g., a database), special-purpose hardware, the Internet, and so on.
+2. Next, we restate the required functionality in terms of the interfaces' inputs and outputs. We may use a functional notation or data-flow diagrams to map inputs to outputs, or use logic to document functions' pre-conditions and post-conditions.We may use state machines or event traces to illustrate exact sequences of operations
 
-Technical problems also affect maintenance productivity. Sometimes, they are a legacy of what developers and maintainers have done before.At other times, they result from particular paradigms or processes that have been adopted for the implementation.
+## SIDEBAR 4.7 HIDDEN ASSUMPTIONS
 
-Artifacts and Paradigms. If the design's logic is not obvious, the team may not easily determine whether the design can handle proposed changes.A flawed or inflexible design can require extra time for understanding, changing, and testing. For instance, developers may have included a component for input and output that handles only tape; major modifications must be made for disk access, because the disk is not constrained by the tape's sequential access. Similarly, the developers may not have anticipated changes; field and table sizes may be fixed, making them difficult to modify.The 'year 2000 problem,' where many developers represented the year as only two characters, is a good example of how simple but narrow design decisions can have a major effect on maintenance.
+Z ave and Jackson (1997) have looked carefully at problems in software requirements and specification, including undocumented assumptions about how the real world behaves.
 
-Maintaining  object-oriented  programs  can  be  problematic, too, because  the design often involves components that are highly interconnected by complex inheritance schemes. Incremental changes must be made with great care, since modifications can result in long chains of classes that hide others or that redefine objects in conflicting ways. Sidebar 11.2 describes more of the particular design trade-offs involved when maintaining object-oriented systems.
+There are actually two types of environmental behavior of interest: desired behavior to be  realized  by  the  proposed  system  (i.e., the  requirements)  and  existing  behavior  that  is unchanged by the proposed system.The latter type of behavior is often called assumptions or domain knowledge . Most requirements writers consider assumptions to be simply the conditions under which the system is guaranteed to operate correctly.While necessary, these conditions are not the only assumptions. We also make assumptions about how the environment will behave in response to the system's outputs.
 
-I
+Consider a railroad-crossing  gate  at  the  intersection  of  a  road  and  a  set  of  railroad tracks. Our requirement is that trains and cars do not collide in the intersection. However, the trains and cars are outside the control of our system; all our system can do is lower the crossing gate
 
-[Chunk 2]
-given organization depends on many things, including whether the system is an S-, P-, or E-system, and how quickly business needs change.
 
-## 11.3 MAINTENANCE PROBLEMS
+[1]
+e that if we implement a system that meets the specification, then that system will satisfy the customer's requirements. Most often, this is simply a check of traceability, where we ensure that each requirement in the definition document is traceable to the specification.
 
-Maintaining a system is difficult. Because the system is already operational, the maintenance team balances the need for change with the need for keeping a system accessible to users. For example, upgrading a system may require it to be unavailable to users for several hours. However, if the system is critical to the users' business or operation, there may not be a window of several hours when users can give up the system. For instance, a life-support system cannot be disconnected from a patient so that maintenance can be performed on the software. The maintenance team must find a way to implement changes without inconveniencing users.
+However, for critical systems, we may want to do more, and actually demonstrate that  the  specification  fulfills  the  requirements. This  is  a  more  substantial  effort, in which we prove that the specification realizes every function, event, activity, and constraint in the requirements. The specification by itself is rarely enough to make this kind of argument, because the specification is written in terms of actions performed at the system's interface, such as force applied to an unlocked turnstile, and we may want  to  prove  something  about  the  environment  away  from  the  interface, such  as about the number of entries into the zoo. To bridge this gap, we need to make use of our assumptions  about  how  the  environment  behaves-assumptions  about  what inputs the  system  will  receive, or  about  how  the  environment  will  react  to  outputs (e.g., that if an unlocked turnstile is pushed with sufficient force, it will rotate a halfturn, nudging  the  pusher  into  the  zoo). Mathematically, the  specification  (S)  plus our environmental assumptions (A) must be sufficient to prove that the requirements (R) hold:
 
-## Staff Problems
+<!-- formula-not-decoded -->
 
-There are many staff and organizational reasons that make maintenance difficult. The staff must act as an intermediary between the problem and its solution, tinkering and tailoring the software to ensure that the solution follows the course of the problem as it changes.
+For example, to show that a thermostat and furnace will control air temperature, we have to assume that air temperature changes continuously rather than abruptly, although the sensors may detect discrete value changes, and that an operating furnace will raise the air temperature.These assumptions may seem obvious, but if a building is sufficiently porous and the outside temperature is sufficiently cold, then our second assumption will not hold. In such a case, it would be prudent to set some boundaries on the requirement: as long as the outside temperature is above -100ºC, the thermostat and furnace will control the air temperature.
 
-Limited Understanding. In addition to balancing user needs with software and hardware needs, the  maintenance  team  deals  with  the  limitations  of  human  understanding. There is a limit to the rate at which a person can study documentation and extract material relevant to the problem being solved. Furthermore, we usually look for more clues than are really necessary for solving a problem.Adding the daily office distractions, we have a prescription for limited productivity.
+This use of environmental assumptions get
 
-Parikh and Zvegintzov (1983) report that 47% of software maintenance effort is devoted to understanding the software to be modified. This high figure is understandable when we consider the nu
+
+[2]
+do not stray into the solution space is to describe requirements and specifications in terms of environmental phenomena.
+- There are a variety of sources and means for eliciting requirements. There are both functional and quality requirements to keep in mind.The functional requirements explain what the system will do, and the quality requirements constrain solutions in terms of safety, reliability, budget, schedule, and so on.
+- There are many different types of definition and specification techniques. Some are descriptive, such as entity-relationship diagrams and logic, while others are behavioral, such as event traces, data-flow diagrams, and functions. Some have graphical notations, and some are based on mathematics. Each emphasizes a different  view  of  the  problem, and  suggests  different  criteria  for  decomposing  a problem into subproblems. It is often desirable  to  use  a  combination  of  techniques to specify the different aspects of a system.
+- The specification techniques also differ in terms of their tool support, maturity, understandability, ease of use, and mathematical formality. Each one should be judged for the project at hand, as there is no best universal technique.
+- Requirements questions can be answered using models or prototypes.In either case, the goal is to focus on the subproblem that is at the heart of the question, rather than necessarily modeling or prototyping the entire problem. If prototyping, you need to decide ahead of time whether the resulting software will be kept or thrown away.
+- Requirements must be validated to ensure that they accurately reflect the customer's expectations.The requirements should also be checked for completeness,
+
 """,
     "time_sec": 4.7
 }
 
-# 3. Chạy hàm
-asyncio.run(run_experiment(obj))
+
+obj2 = {
+    "question": "When visually mapping requirements versus specifications, what domain sits exactly at the intersection where the Environment domain overlaps with the System domain?",
+    "response": """
+The Shared Interface lies at the intersection of the Environment domain and the System domain.
+""",
+    "retrieved_context": """
+    [0]
+[SECTION]: Capturing the Requirements > 4.3 Types Of Requirements > Two Kinds of Requirements Documents
+[CONTENT]: (footnote: 1 A more intuitive expression of this second requirement, that anyone who pays should be allowed to enter the zoo, is not implementable. There is no way for the system to prevent external factors from keeping the paid visitor from entering the zoo: another visitor may push through the unlocked turnstile before the paid visitor, the zoo may close before the paid visitor enters the turnstile, the paid visitor may decide to leave, and so on (Jackson and Zave 1995).)
+[FIGURE 4.3 Requirements vs. Specification.] 
+[FIGURE_DESCRIPTIONS]
+[0] The diagram presents a layered systems engineering perspective with overlapping ovals representing environments, shared interfaces, system boundaries, and requirements/specifications. A large left ellipse labeled Environment intersects a central oval labeled Shared Interface, which in turn overlaps a smaller inner region labeled Specifications. The outermost gray shape on the right appears to denote the System and includes an overlap with the central Shared Interface. Text labels include Requirements near the top-left inside the large white area, Specifications near the inner overlap, and Environment, Shared Interface, and System along the bottom demarcating system boundaries. The diagram emphasizes the relationships between environmental context, interfaces, and formal requirements/specifications within a system engineering workflow.
+
+
+
+[1]
+[SECTION]: Capturing the Requirements > 4.8 Requirements Documentation > Requirements Specification
+[CONTENT]: The requirements specification covers exactly the same ground as the requirements definition, but from the perspective of the developers. Where the requirements definition  is  written  in  terms  of  the  customer's  vocabulary, referring  to  objects, states, events, and activities in the customer's world, the requirements specification is written in terms of the system's interface.We accomplish this by rewriting the requirements so that they refer only to those real-world objects (states, events, actions) that are sensed or actuated by the proposed system:
+ - In  documenting  the  system's  interface, we  describe  all  inputs  and  outputs  in detail, including  the  sources  of  inputs, the  destinations  of  outputs, the  value ranges and data formats of input and output data, protocols governing the order in  which  certain  inputs  and  outputs  must  be  exchanged, window  formats  and organization, and any timing constraints. Note that the user interface is rarely the only system interface; the system may interact with other software components (e.g., a database), special-purpose hardware, the Internet, and so on.
+ - Next, we restate the required functionality in terms of the interfaces' inputs and outputs. We may use a functional notation or data-flow diagrams to map inputs to outputs, or use logic to document functions' pre-conditions and post-conditions.We may use state machines or event traces to illustrate exact sequences of operations
+
+
+[2]
+[SECTION]: Capturing the Requirements > 4.8 Requirements Documentation > SIDEBAR 4.7 HIDDEN ASSUMPTIONS
+[CONTENT]: Z ave and Jackson (1997) have looked carefully at problems in software requirements and specification, including undocumented assumptions about how the real world behaves.
+There are actually two types of environmental behavior of interest: desired behavior to be  realized  by  the  proposed  system  (i.e., the  requirements)  and  existing  behavior  that  is unchanged by the proposed system.The latter type of behavior is often called assumptions or domain knowledge . Most requirements writers consider assumptions to be simply the conditions under which the system is guaranteed to operate correctly.While necessary, these conditions are not the only assumptions. We also make assumptions about how the environment will behave in response to the system's outputs.
+Consider a railroad-crossing  gate  at  the  intersection  of  a  road  and  a  set  of  railroad tracks. Our requirement is that trains and cars do not collide in the intersection. However, the trains and cars are outside the control of our system; all our system can do is lower the crossing gate upon the arrival of a train and lift the gate after the train passes. The only way our crossing gate will prevent collisions is if trains and cars follow certain rules. For one thing, we have to assume that the trains travel at some maximum speed, so that we know how early to lower the crossing gate to ensure that the gate is down well before a sensed train reaches the intersection. But we also have to make assumptions about how car drivers will react to the crossing gate being lowered: we have to assume that cars will not stay in or enter the intersection when the gate is down.
+or exact orderings of inputs and outputs. We may use an entity-relationship diagram to collect related activities and operations into classes. In the end, the specification  should  be  complete, meaning  that  it  should  specify  an  output  for  any feasible sequence of inputs.Thus, we include validity checks on inputs and system responses to exceptional situations, such as violated pre-conditions.
+
+
+[3]
+[SECTION]: Capturing the Requirements > 4.9 Validation And Verification
+[CONTENT]: For example, to show that a thermostat and furnace will control air temperature, we have to assume that air temperature changes continuously rather than abruptly, although the sensors may detect discrete value changes, and that an operating furnace will raise the air temperature.These assumptions may seem obvious, but if a building is sufficiently porous and the outside temperature is sufficiently cold, then our second assumption will not hold. In such a case, it would be prudent to set some boundaries on the requirement: as long as the outside temperature is above -100ºC, the thermostat and furnace will control the air temperature.
+This use of environmental assumptions gets at the heart of why the documentation  is  so  important: we  rely  on  the  environment  to  help  us  satisfy  the  customer's requirements, and if our assumptions about how the environment behaves are wrong, then our system may not work as the customer expects. If we cannot prove that our specification  and  our  assumptions fulfill  the  customer's  requirements, then  we  need either to change our specification, strengthen our assumptions about the environment, or  weaken  the  requirements  we  are  trying  to  achieve. Sidebar  4.9  discusses  some techniques for automating these proofs.
+
+""",
+    "time_sec": 4.7
+}
+async def run_three_times(label, scorer_object):
+    print(label)
+
+    for run_number in range(1, 4):
+        print(f"Run {run_number}")
+        await run_experiment(scorer_object)
+
+
+async def main():
+    global llm, ctx_rec_scorer, ctx_prec_scorer
+
+    # Nano minimal
+    llm = llm_factory(
+        "gpt-5-nano",
+        client=openai_client,
+        max_tokens=8192,
+        reasoning_effort="minimal",
+        seed=42,
+    )
+
+    ctx_rec_scorer = ContextRecall(llm=llm)
+    ctx_prec_scorer = ContextPrecision(llm=llm)
+
+    print("Model: gpt-5-nano")
+    print("Reasoning effort: minimal")
+
+    await run_three_times("Fixed size:", obj)
+    await run_three_times("HSF:", obj2)
+
+    print("------------------")
+
+    # Nano medium
+    llm = llm_factory(
+        "gpt-5-nano",
+        client=openai_client,
+        max_tokens=8192,
+        reasoning_effort="medium",
+        seed=42,
+    )
+
+    ctx_rec_scorer = ContextRecall(llm=llm)
+    ctx_prec_scorer = ContextPrecision(llm=llm)
+
+    print("Model: gpt-5-nano")
+    print("Reasoning effort: medium")
+
+    await run_three_times("Fixed size:", obj)
+    await run_three_times("HSF:", obj2)
+
+
+asyncio.run(main())
 
 
 
